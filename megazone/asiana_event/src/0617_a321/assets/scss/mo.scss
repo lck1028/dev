@@ -1,0 +1,1685 @@
+$point-color :#273691;
+$arial : Arial,'Noto Sans KR','AppeGothic','Malgun Gothic','맑은 고딕','돋음','Dotum','Apple SD Gothic Neo',Helvetica,sans-serif;
+$roboto : Roboto,'Noto Sans KR','AppeGothic','Malgun Gothic','맑은 고딕','돋음','Dotum','Apple SD Gothic Neo',Arial,Helvetica,sans-serif;
+$bg : '/assets/img/';
+
+body,
+.container{
+	overflow-x:visible;
+}
+
+
+.text-point{
+	color:$point-color;
+	font : {
+		family : $roboto
+	}
+
+}
+.text-pointbold{
+	color:$point-color;
+	font : {
+		weight:900;
+		family : $roboto;
+	}
+	letter-spacing:-1px;
+}
+.text-bold{
+	font : {
+		weight:700;
+		family : $roboto;
+	}
+	letter-spacing:-1px;
+}
+
+.slick{
+	&-slider{
+		&:hover{
+			.slick-arrow{
+				display:block !important;
+			}
+		}
+	}
+	&-dots{
+		display:block;
+		margin-top:15px;
+		text-align:center;
+		>li{
+			display:inline-block;
+			padding:0 5px;
+			vertical-align:top;
+			&:only-child{
+				display:none;
+			}
+			&.slick-active{
+				button{
+					background-color:$point-color;
+				}
+			}
+		}
+		button{
+			display:block;
+			width:10px;
+			height:10px;
+			border-radius:50%;
+			background-color:#ffffff;
+			box-shadow:1px 1px 5px 0 rgba(0,0,0,0.3);
+			font : 0/0 a;
+
+		}
+	}
+	&-arrow{
+		position:absolute;
+		top:50%;
+		display:none !important;
+		width:30px;
+		height:30px;
+		margin-top:-70px;
+		background : {
+			color:rgba(0,0,0,0.5);
+			position:50% 50%;
+			repeat:no-repeat;
+			size:30px auto;
+		}
+		z-index:1;
+		font:0/0 a;
+		&.slick-prev{
+			left:0;
+			background-image:url('https://ozimg.flyasiana.com/editor/image/20190701/3c3b5b06-0088-4f1d-9d9b-1b96810bad63.png');
+		}
+		&.slick-next{
+			right:0;
+			background-image:url('https://ozimg.flyasiana.com/editor/image/20190701/2b2cb7c5-ea49-43dc-9a25-f5f6c00aa1df.png');
+		}
+	}
+}
+
+.a321{
+	&-btn__arrow{
+		position:relative;
+		display:inline-block;
+		box-sizing:border-box;
+		min-width:220px;
+		padding:11px 60px 11px 13px;
+		background-color:$point-color;
+		color:#ffffff;
+		font : {
+			size:12px;
+		}
+		letter-spacing:-0.5px;
+		vertical-align:middle;
+		text-align:left;
+		&::after{
+			content:'';
+			position:absolute;
+			right:12px;
+			top:16px;
+			display:block;
+			width:30px;
+			height:6px;
+			background : {
+				image:url('https://ozimg.flyasiana.com/editor/image/20190701/aad0b0c2-dd25-42d1-aaf2-102a029bac46.png');
+				position:50% 50%;
+				repeat:no-repeat;
+				size:30px auto;
+			}
+
+
+
+		}
+	}
+	&-layer{
+		display:none;
+		img{
+			max-width:100%;
+		}
+		&.a321-layer--is-active{
+			display:block;
+		}
+		&__dim{
+			position:fixed;
+			left:0;
+			top:0;
+			width:100%;
+			height:100%;
+			background-color:rgba(0,0,0,0.6);
+			z-index:10;
+		}
+		&__wrap{
+			position:absolute;
+			left:0;
+			top:65px;
+			box-sizing:border-box;
+			width:100%;
+			background-color:#ffffff;
+			z-index:11;
+		}
+		&__header{
+			margin:0 10px 15px;
+			padding:20px 0px 10px;
+			border-bottom:2px solid #000000;
+			text-align:center;
+			&-title{
+				color:#000000;
+				font : {
+					size:15px;
+					weight:700;
+				}
+			}
+			&-subtitle{
+				color:#b21444;
+				font : {
+					size:12px;
+					weight:400;
+				}
+			}
+		}
+
+		&__btn-close{
+			position:absolute;
+			top:-35px;
+			right:0;
+			width:25px;
+			height:25px;
+			background : {
+				image:url('https://ozimg.flyasiana.com/editor/image/20190701/706b261a-75c4-4e06-8c2d-6088c40724ec.png');
+				position:50% 50%;
+				repeat:no-repeat;
+				size:25px auto;
+			}
+			font:0/0 a;
+			z-index:11;
+		}
+		&__vr{
+			position:fixed;
+			left:0;
+			top:0;
+			display:block;
+			width:100vw;
+			height:100vh;
+			background : {
+				color:#000000;
+			}
+			z-index:1000;
+			&-iframe{
+				width:100%;
+				height:100%;
+				margin:0;
+				padding:0;
+				border:none;
+			}
+			&-close{
+				position:absolute;
+				top:15px;
+				right:15px;
+				width:20px;
+				height:20px;
+				background : {
+					image:url('https://ozimg.flyasiana.com/editor/image/20190701/706b261a-75c4-4e06-8c2d-6088c40724ec.png');
+					position:50% 50%;
+					repeat:no-repeat;
+					size:cover;;
+				}
+				font:0/0 a;
+				opacity:1;
+				z-index:10001;
+			}
+		}
+	}
+	&-bullet{
+		&__list{
+
+		}
+		&__item{
+			position:relative;
+			padding-left:7px;
+			font-size:12px;
+			>small{
+				display:block;
+			}
+			.a321-bullet__list--type-dash &{
+				&::before{
+					content:'';
+					position:absolute;
+					left:0;
+					top:7px;
+					display:block;
+					width:3px;
+					height:1px;
+					background-color:#000000;
+				}
+			}
+			.a321-bullet__list--type-square &{
+				&::before{
+					content:'';
+					position:absolute;
+					left:0;
+					top:7px;
+					display:block;
+					width:2px;
+					height:2px;
+					background-color:#000000;
+				}
+			}
+			&-box{
+				margin-top:10px;
+				padding:10px 15px 10px 15px;
+				background-color:#eeeeee;
+				> small{
+					display:block;
+					color:#000000;
+				}
+			}
+		}
+	}
+
+	&-article{
+		h3{
+			margin:0;
+			font-size:14px;
+			color: #000;
+			text-align: left;
+			font-weight: 700;
+			line-height: 1.4;
+		}
+		img{
+			max-width:100%;
+		}
+
+	}
+
+	&-header{
+		position:fixed;
+		left:0;
+		top:0;
+		width:100%;
+		height:100%;
+		background:#000000;
+		z-index:1000;
+		.intro--is-skip &{
+			display:none;
+		}
+		&__intro{
+			position:relative;
+			width:100vw;
+			height:100vh;
+		}
+		&__video{
+			position:absolute;
+			left:50%;
+			top:50%;
+			min-width:100vw;
+			min-height:100vh;
+			transform:translateX(-50%) translateY(-50%);
+			//object-fit : cover;
+		}
+		&__title{
+			color:#ffffff;
+			font : {
+				family : $roboto;
+			};
+			text-align:center;
+			&-box{
+				position:absolute;
+				left:0;
+				top:0;
+				display:block;
+				box-sizing:border-box;
+				width:100%;
+				height:100%;
+				padding:50px 20px;
+				background-color:rgba(0,0,0,0.4);
+			}
+			&-neo{
+				display:block;
+				font : {
+					size:18px;
+					weight:400;
+				}
+				letter-spacing:6px;
+			}
+			&-a321{
+				display:block;
+				font : {
+					size:56px;
+					weight:900;
+				}
+				line-height:1.2;
+			}
+
+		}
+		&__btns{
+			position:absolute;
+			left:0;
+			bottom:100px;
+			width:100%;
+			text-align:center;
+		}
+		&__btn{
+			min-width:120px;
+			padding:7px 5px;
+			border:1px solid #ffffff;
+			color:#ffffff;
+			font : {
+				size:18px;
+			}
+			letter-spacing:-0.25px;
+			text-align:center;
+		}
+	}
+	&-main{
+		display:block;
+	}
+	&-nav{
+		position:-webkit-sticky;
+		position:sticky;
+		//left:0;
+		top:53px;
+		.is-app &{
+			top:0;
+		}
+		//position: relative;
+		z-index:100;
+		float: none;
+		height: auto;
+		box-sizing: border-box;
+		// &--position-sticky{
+		// 	position:fixed;
+		// 	top:53px;
+		// 	z-index:10;
+		// }
+		&__list{
+			display:table;
+			width:100%;
+			max-width:1180px;
+			table-layout:fixed;
+		}
+		&__item{
+			display:table-cell;
+			padding:16px 2px;
+			border-left:1px solid #d7d7d7;
+			background-color:#ededed;
+			color:#999999;
+			font : {
+				size:12px;
+				weight:700;
+			}
+			text-align:center;
+			vertical-align:middle;
+			&:first-child{
+				border-left:none;
+			}
+			&::before{
+				content:'';
+				display:inline-block;
+				width:21px;
+				height:21px;
+				background : {
+					image:url('https://ozimg.flyasiana.com/editor/image/20190701/b11f3dd9-1940-4858-9b2f-ad6387915489.png');
+					position:50% 50%;
+					repeat:no-repeat;
+					size:54px auto;
+				}
+			}
+			&--type-neo{
+				&::before{
+					background-position:0 0;
+				}
+				&.a321-nav__item--is-active{
+					&::before{
+						background-position:-33px 0;
+					}
+				}
+			}
+			&--type-seatmap{
+				&::before{
+					background-position:0 -33px;
+				}
+				&.a321-nav__item--is-active{
+					&::before{
+						background-position:-33px -33px;
+					}
+				}
+
+			}
+			&--type-service{
+				&::before{
+					background-position:0 -66px;
+				}
+				&.a321-nav__item--is-active{
+					&::before{
+						background-position:-33px -66px;
+					}
+				}
+			}
+			&--type-event{
+				display:none;
+				&::before{
+					background-position:0 -100px;
+				}
+				&.a321-nav__item--is-active{
+					&::before{
+						background-position:-33px -000px;
+					}
+				}
+				[lang='ko'] &{
+					display:block;
+				}
+			}
+			&--is-active{
+				background-color:#2c529e;
+				color:#ffffff;
+			}
+			&-inner{
+				display:block;
+			}
+		}
+	}
+	&-main{
+
+	}
+	&-contents{
+		display:none;
+		&--is-active{
+			display:block;
+		}
+	}
+	&-section{
+
+	}
+	&-neo{
+		background : {
+			color:#fdfdfd;
+			image:url('https://ozimg.flyasiana.com/editor/image/20190701/a58989c1-d2dd-44e7-83fd-383d031f88ac.jpeg');
+			position:50% 100%;
+			repeat:no-repeat;
+			size:cover;;
+		}
+		&__header{
+			position:relative;
+			height:376px;
+			background : {
+				image:url('https://ozimg.flyasiana.com/editor/image/20190701/0d407a88-b504-45ca-9bdb-a56a818a59f7.jpeg');
+				position:50% 50%;
+				repeat:no-repeat;
+				size:cover;
+			}
+			color:#000000;
+			&::after{
+				content:'';
+				position:absolute;
+				left:-115px;
+				top:286px;
+				display:block;
+				width:115px;
+				height:200px;
+				background : {
+					image:url('https://ozimg.flyasiana.com/editor/image/20190701/5bb5318a-f5d9-4ed8-a417-2a157d386b34.png');
+					position:0 0;
+					repeat:no-repeat;
+				}
+			}
+			&-inner{
+				position:absolute;
+				left:0;
+				bottom:100px;
+				box-sizing:border-box;
+				width:100%;
+				padding:0 15px;
+			}
+			&-logo{
+				position:absolute;
+				left:13px;
+				top:13px;
+				width:100px;
+			}
+			&-title{
+				color:#ffffff;
+				font : {
+					size:16px;
+					weight:300;
+				}
+				line-height:1.2;
+				text-align:center;
+
+			}
+			&-innertitle{
+				font : {
+					size:20px;
+					weight:700;
+				}
+			}
+
+			.a321-btn__arrow{
+				position:absolute;
+				left:50%;
+				bottom:35px;
+				max-width:280px;
+				background: rgba(232,18,64,1);
+				background: -moz-linear-gradient(left, rgba(232,18,64,1) 0%, rgba(49,48,145,1) 100%);
+				background: -webkit-gradient(left top, right top, color-stop(0%, rgba(232,18,64,1)), color-stop(100%, rgba(49,48,145,1)));
+				background: -webkit-linear-gradient(left, rgba(232,18,64,1) 0%, rgba(49,48,145,1) 100%);
+				background: -o-linear-gradient(left, rgba(232,18,64,1) 0%, rgba(49,48,145,1) 100%);
+				background: -ms-linear-gradient(left, rgba(232,18,64,1) 0%, rgba(49,48,145,1) 100%);
+				background: linear-gradient(to right, rgba(232,18,64,1) 0%, rgba(49,48,145,1) 100%);
+				transform:translateX(-50%);
+			}
+		}
+
+		&__point{
+			padding-top:10px;
+
+			counter-reset:point;
+			&-box{
+
+
+			}
+			&-img{
+				position:relative;
+
+			}
+			&-contents{
+				position:relative;
+				box-sizing:border-box;
+				margin:-25px 13px 0;
+				padding:0 5px 25px;
+				color:#000000;
+				background-color:#ffffff;
+				.a321-btn__arrow{
+
+					margin-top:20px;
+				}
+				text-align:center;
+			}
+			&-title{
+				position:relative;
+				padding:45px 0 16px;
+				font : {
+					size:20px;
+					weight:700;
+				}
+				text-align:center !important;
+				&::before{
+					counter-increment:point;
+					content:counter(point, decimal-leading-zero);
+					position:absolute;
+					left:0;
+					top:30px;
+					display:block;
+					width:100%;
+					color:#eeeeee;
+					font : {
+						size:40px;
+						weight:300;
+						style:italic;
+					}
+					line-height:0.7;
+					letter-spacing:-5px;
+					text-align:center;
+				}
+				&::after{
+					content:'';
+					position:absolute;
+					left:50%;
+					bottom:0;
+					display:block;
+					width:40px;
+					height:2px;
+					margin-left:-20px;
+					background-color:#000000;
+				}
+			}
+			&-innertitle{
+				position:relative;
+				font-size:20px;
+				line-height:1;
+			}
+			&-subtitle{
+				display:block;
+				margin-top:20px;
+				font-size:18px;
+				font-weight:500;
+				line-height:1;
+			}
+			&-description{
+				margin-top:10px;
+				font-size:12px;
+			}
+			&-required{
+				margin-top:15px;
+				padding:5px 10px;
+				background-color:#eeeeee;
+			}
+			&-alert{
+				display:block;
+				padding:3px 0;
+				color:#000000;
+				font : {
+					size:11px;
+				}
+				line-height:1.4;
+				>img{
+					width:16px;
+					vertical-align:bottom;
+				}
+			}
+		}
+
+		&__info{
+			padding:30px 0 30px;
+			&-tab{
+				display:table;
+				table-layout:fixed;
+				box-sizing:border-box;
+				width:calc(100% - 30px);
+				margin:0 auto;
+				padding:0 13px;
+			}
+			&-tabitem{
+				position:relative;
+				display:table-cell;
+				vertical-align:middle;
+				&::after{
+					content:'';
+					position:absolute;
+					left:0;
+					bottom:0;
+					display:none;
+					width:100%;
+					height:3px;
+					background-color:$point-color;
+
+				}
+				&--is-active{
+					&::after{
+						display:block;
+					}
+				}
+			}
+			&-tabbtn{
+				position:relative;
+				display:block;
+				width:100%;
+				padding:10px 0;
+				color:#000000;
+				font : {
+					size:13px;
+					weight:700;
+				}
+				text-align:center;
+				.a321-neo__info-tabitem--is-active &{
+					color:$point-color;
+				}
+
+			}
+			&-text{
+				font-weight:700;
+			}
+			&-contents{
+				margin-top:25px;
+			}
+			&-content{
+				position:relative;
+				display:none;
+				padding:0 13px;
+				&.slick-slider{
+					display:none;
+				}
+
+				&.a321-feature{
+				}
+				&.a321-size{
+					padding-bottom:87.104%;
+					background : {
+						image:url('https://ozimg.flyasiana.com/editor/image/20190701/b7238118-611a-48a9-a5dc-c932b95e1b1d.jpeg');
+						position:0 0;
+						repeat:no-repeat;
+						size:cover;
+					}
+					.a321-size{
+						&__list{
+							position:absolute;
+							right:25px;
+							bottom:20px;
+						}
+						&__item{
+							padding:3px 0;
+							color:#000000;
+							font : {
+								size:13px;
+							}
+							strong{
+								display:inline-block;
+								padding-left:10px;
+								font : {
+									size:17px;
+								}
+								vertical-align:-1px;
+							}
+						}
+					}
+				}
+				&--is-active{
+					&.slick-slider{
+						display:block;
+					}
+					display:block;
+				}
+			}
+		}
+		&__spec{
+			margin:40px 0 0 0;
+			&-heading{
+				font : {
+					size:18px !important;
+					weight:700;
+				}
+				text-align:center !important;
+			}
+			&-list{
+				margin-top:20px;
+				padding:0 10px 0 30px;
+			}
+			&-item{
+				display:table;
+				padding:5px 0;
+				letter-spacing:-0.5px;
+				@for $i from 1 to 6 {
+					&:nth-child(#{$i}){
+						.a321-neo__spec-icon{
+							&::before{
+								background-position:#{0px} -(($i - 1)*100px);
+							}
+						}
+					}
+
+				}
+			}
+			&-icon{
+				position:relative;
+				display:table-cell;
+				width:50px;
+				height:50px;
+				border-radius:50%;
+				box-shadow:4px 4px 7px 0 rgba(0,0,0,0.1);
+				background : {
+					color:#ffffff;
+				}
+			}
+			&-obj{
+				position:absolute;
+				left:50%;
+				top:50%;
+				display:block;
+				width:30px;
+				height:30px;
+				margin:-15px 0 0 -15px;
+				background : {
+					position:50% 50%;
+					repeat:no-repeat;
+					size:30px auto;
+				}
+				&::before,
+				&::after{
+					content:'';
+					position:absolute;
+					left:0;
+					top:0;
+					display:block;
+					width:100%;
+					height:100%;
+					background : {
+						position:50% 50%;
+						repeat:no-repeat;
+						size:30px auto;
+					}
+				}
+				.a321-neo__spec-icon--type-maker &{
+					background-image:url('https://ozimg.flyasiana.com/editor/image/20190701/ed14f152-5bf9-46aa-be7d-738d5da42e63.png');
+					animation : spec-maker 10s linear 0s infinite normal;
+					@keyframes spec-maker{
+						0%{
+							transform : rotate(0deg)
+						}
+						100%{
+							transform : rotate(360deg)
+						}
+					}
+				}
+				.a321-neo__spec-icon--type-time &{
+					background-image:url('https://ozimg.flyasiana.com/editor/image/20190701/9eb1a42b-002b-4dd4-956e-f673f8cb0bb9.png');
+					&::before{
+						background-image:url('https://ozimg.flyasiana.com/editor/image/20190701/8187572d-3ef8-4915-b545-1d04c7536674.png');
+						animation : spec-time01 3s linear 0s infinite normal;
+					}
+					&::after{
+						background-image:url('https://ozimg.flyasiana.com/editor/image/20190701/7f8eb29a-2419-4a75-8bac-3c61917c6b1e.png');
+						animation : spec-time02 18s linear 0s infinite normal;
+					}
+					@keyframes spec-time01{
+						0%{
+							transform : rotate(0deg)
+						}
+						100%{
+							transform : rotate(360deg)
+						}
+					}
+					@keyframes spec-time02{
+						0%{
+							transform : rotate(0deg)
+						}
+						100%{
+							transform : rotate(360deg)
+						}
+					}
+				}
+				.a321-neo__spec-icon--type-distance &{
+					background-image:url('https://ozimg.flyasiana.com/editor/image/20190701/6bca03d9-3485-4d1f-bb53-dd5e5c7c79fc.png');
+					&::before{
+						background-image:url('https://ozimg.flyasiana.com/editor/image/20190701/dcdb74a4-e08f-4143-b7e5-9eada65abacf.png');
+						animation : spec-distance01 3s linear 0s infinite normal;
+					}
+					&::after{
+						background-image:url('https://ozimg.flyasiana.com/editor/image/20190701/eafa338c-0830-4f03-8548-517a3d4e74b8.png');
+						animation : spec-distance02 3s linear 0s infinite normal;
+
+					}
+					@keyframes spec-distance01{
+						0%{
+							opacity:1
+						}
+						12.5%{
+							opacity:0
+						}
+						25%{
+							opacity:1
+						}
+						37.5%{
+							opacity:0
+						}
+						50%{
+							opacity:1
+						}
+						62.5%{
+							opacity:1
+						}
+						75%{
+							opacity:1
+						}
+						87.5%{
+							opacity:1
+						}
+						100%{
+							opacity:1
+						}
+					}
+					@keyframes spec-distance02{
+						0%{
+							opacity:1
+						}
+						12.5%{
+							opacity:1
+						}
+						25%{
+							opacity:1
+						}
+						37.5%{
+							opacity:1
+						}
+						50%{
+							opacity:1
+						}
+						62.5%{
+							opacity:1
+						}
+						75%{
+							opacity:0
+						}
+						87.5%{
+							opacity:1
+						}
+						100%{
+							opacity:1
+						}
+					}
+				}
+				.a321-neo__spec-icon--type-altitude &{
+					background-image:url('https://ozimg.flyasiana.com/editor/image/20190701/d1e16a35-2010-4e7d-a572-4301a70f060b.png');
+					&::before{
+						background-image:url('https://ozimg.flyasiana.com/editor/image/20190701/bb5f8f3c-6cdb-4807-8590-811b937786ef.png');
+						animation : spec-altitude 1s linear 0s infinite alternate;
+						transform-origin:50% 0%;
+					}
+					@keyframes spec-altitude{
+						0%{
+							transform : translateY(-10px);
+						}
+						100%{
+							transform : translateY(0px);
+						}
+					}
+				}
+				.a321-neo__spec-icon--type-speed &{
+					background-image:url('https://ozimg.flyasiana.com/editor/image/20190701/e2bc9cba-5eae-4980-9657-dc3b48f6f363.png');
+					&::before{
+						background-image:url('https://ozimg.flyasiana.com/editor/image/20190701/1e9389ff-12b5-40bd-9adc-07cd049e7b0c.png');
+						animation : spec-speed 2s linear 0s infinite alternate;
+						transform-origin:50% 56.6%;
+					}
+					@keyframes spec-speed{
+						0%{
+							transform : rotate(-90deg);
+						}
+						100%{
+							transform : rotate(30deg);
+						}
+					}
+				}
+
+			}
+			&-box{
+				display:table-cell;
+				padding-left:20px;
+				vertical-align:middle;
+			}
+			&-title{
+				display:inline-block;
+				margin-right:10px;
+				color:#000000;
+				font : {
+					size:13px;
+					weight:700;
+				}
+			}
+			&-data{
+				display:inline-block;
+				color:#2c529e;
+				font : {
+					size:15px;
+					weight:700;
+				}
+			}
+		}
+	}
+
+	&-marker{
+		position:relative;
+		&__img{
+
+		}
+		&__detail{
+			position:absolute;
+			left:0;
+			bottom:0;
+			box-sizing:border-box;
+			width:100%;
+			padding:15px 5px;
+			background : {
+				color:rgba(0,0,0,0.8);
+				position:0 0;
+				repeat:no-repeat;
+			}
+			color:#ffffff;
+			font : {
+				size:12px;
+			};
+			text-align:center;
+			&::before{
+				content:'';
+				position:absolute;
+				display:block;
+			}
+
+		}
+		&__click{
+			position:absolute;
+			right:-200px;
+			top:-100px;
+			border-bottom:1px solid #000000;
+			color:#000000;
+			font-size:38px;
+			line-height:1;
+			letter-spacing:0;
+			&::before{
+				content:'';
+				position:absolute;
+				left:0;
+				top:calc(100% + 1px);
+				display:block;
+				width:1px;
+				height:130px;
+				background-color:#000000;
+				transform-origin:100% 0;
+				transform :rotate(60deg);
+			}
+		}
+	}
+
+	&-wireless{
+		&__step{
+			padding-bottom:20px;
+			background-color:#ffffff;
+		}
+		&__ios{
+			padding-bottom:20px;
+			background-color:#f7f7f7;
+		}
+		&__list{
+			counter-reset:point;
+			padding:0 10px;
+		}
+		&__item{
+			&-img{
+				position:relative;
+			}
+			&-contents{
+				box-sizing:border-box;
+				padding:15px 0 20px;
+				text-align:center;
+				&::before{
+					counter-increment:point;
+					content:counter(point, decimal-leading-zero);
+					display:block;
+					color:#8e8e8e;
+					font : {
+						size:20px;
+						weight:600;
+					}
+					letter-spacing:-1px;
+					line-height:1;
+					.a321-wireless__ready &{
+						display:none;
+					}
+				}
+			}
+			&-subtitle{
+				display:block;
+				margin-bottom:10px;
+				color:#273691;
+				font : {
+					size:15px;
+					weight:700;
+				}
+				letter-spacing:-1px;
+			}
+			&-ready{
+				position:absolute;
+				left:0;
+				top:0;
+				display:inline-block;
+				padding:5px 10px;
+				background-color:#273691;
+				color:#ffffff;
+			}
+			&-text{
+				margin-top:10px;
+				color:#000000;
+				font : {
+					size:12px;
+				}
+				line-height:1.2;
+			}
+		}
+		&__notice{
+			background:#e3e3e3;
+			padding:15px 10px 20px;
+			&-title{
+				color:#000000;
+				font : {
+					size:15px;
+					weight:700;
+				};
+			}
+			&-contents{
+				margin-top:15px;
+				.a321-bullet__item{
+					margin-top:5px;
+					font-size:12px;
+					&:first-child{
+						margin-top:0;
+					}
+					&::before{
+						top:7px;
+					}
+				}
+
+			}
+		}
+	}
+
+
+
+	&-seatmap{
+		position:relative;
+		background-color:#f7f7f7;
+		padding:40px 13px 50px;
+		&__title{
+			color:#000000;
+			font : {
+				size:32px;
+				weight:400;
+			}
+			line-height:1.2;
+			letter-spacing:-0.5px;
+			text-align:center;
+			.text-bold{
+				font : {
+					size:33px;
+				}
+			}
+
+		}
+		&__btn-vr{
+			display:none !important;
+			position:relative;
+			display:block;
+			max-width:60%;
+			margin:15px auto 0;
+			padding:13px 40px 13px 17px;
+			border:2px solid #000000;
+			box-shadow :10px 10px 10px 0 rgba(0,0,0,0.2);
+			font : {
+				size:13px;
+				weight:400;
+			}
+			&::after{
+				content:'';
+				position:absolute;
+				right:10px;
+				top:50%;
+				display:block;
+				width:19px;
+				height:18px;
+				margin-top:-9px;
+				background : {
+					image:url('https://ozimg.flyasiana.com/editor/image/20190701/8b4382e2-886f-4101-bb8a-d8d6a6cd2201.png');
+					position:50% 50%;
+					repeat:no-repeat;
+					size:19px auto;
+				};
+			}
+		}
+		&__legend{
+			display:none;
+			position:absolute;
+			right:80px;
+			top:140px;
+			min-width:340px;
+			&-list{
+				padding:30px;
+				border-radius:10px;
+				background-color:#ffffff;
+				&::after{
+					content:'';
+					display:block;
+					clear:both;
+				}
+			}
+			&-item{
+				position:relative;
+				box-sizing:border-box;
+				width:50%;
+				margin-top:20px;
+				padding-left:30px;
+				color:#555555;
+				font : {
+					size:13px;
+				}
+				&:nth-child(1),
+				&:nth-child(2){
+					margin-top:0;
+				}
+				&:nth-child(odd){
+					float:left;
+					clear:left;
+				}
+				&:nth-child(even){
+					float:right;
+					clear:right;
+				}
+				&::before{
+					content: '';
+					position: absolute;
+					left: 0;
+					top: 0;
+					display: block;
+					width: 24px;
+					height: 22px;
+					background: {
+						image:url('https://flyasiana.com/C/pc/image/sub/sp_icon_airplane.png');
+						position:inherit;
+						repeat:no-repeat;
+					}
+				}
+				&--type-exit{background-position: 0 0}
+				&--type-baby{background-position: -24px 0}
+				&--type-toilet{background-position: -48px 0}
+				&--type-gall{background-position: -72px 0}
+				&--type-wing{background-position: -96px 0}
+				&--type-stairs{background-position: -120px 0}
+				&--type-preferred{background-position: -144px 0}
+				&--type-diaper{background-position: -168px 0}
+				&--type-smartium{background-position: -192px 0}
+			}
+			&-alert{
+				display:block;
+				margin-top:30px;
+				padding-left:30px;
+				background: {
+					image:url('https://flyasiana.com/C/pc/image/common/bul_cir1_gray.png');
+					position:0 0;
+					repeat:no-repeat;
+				}
+				color:#555555;
+				font : {
+					size:15px;
+				}
+				line-height:1.2;
+			}
+		}
+		&__map{
+			position:relative;
+			padding-top:40px;
+			&-img{
+				position:relative;
+				width:80%;
+				margin:30px auto 0;
+			}
+			&-btns{
+				position:relative;
+				display:table;
+				table-layout:fixed;
+				box-sizing:border-box;
+				width:100%;
+				padding:0 13px;
+			}
+			&-btnbox{
+				display:table-cell;
+			}
+			&-btn{
+				width:100%;
+				height:40px;
+				border:1px solid #d8d8d8;
+				background-color:#d8d8d8;
+				color:#7b7b7b;
+				font : {
+					size:13px;
+				}
+				text-align:center;
+				&--is-active{
+					background-color:#ffffff;
+					color:#273691;
+				}
+			}
+		}
+		&__class{
+			.slick-dots{
+				position:absolute;;
+				left:0;
+				bottom:5px;
+				width:100%;
+			}
+
+			&-visual{
+			}
+
+			&-box{
+				padding:20px 15px 20px;
+
+			}
+			&-title{
+				.a321-article &{
+					font: {
+						size:14px;
+						weight:700;
+					}
+					text-align:center;
+				}
+			}
+			&-info{
+				margin-top:10px;
+				border-top:1px solid #000000;
+				border-bottom:1px solid #000000;
+			}
+		}
+		&__table{
+			width:100%;
+			border-collapse: collapse;
+			border-spacing: 0;
+			th,
+			td{
+				padding:10px 5px;
+				border-top:1px solid #dedede;
+				border-bottom:1px solid #dedede;
+				color:#000000;
+				font : {
+					size:12px;
+				}
+				vertical-align:middle;
+			}
+			th{
+				font : {
+					weight:700;
+				}
+				text-align:center;
+			}
+
+			.col01{
+				width:90px;
+			}
+		}
+
+	}
+	&-service{
+		background-color:#f7f7f7;
+		padding:30px 0 ;
+
+
+		&__box{
+			position:relative;
+			margin-top:30px;
+			padding:40px 0 0;
+			&:first-child{
+				margin-top:0;
+			}
+		}
+		&__title{
+			position:absolute;
+			top:30px;
+			left:0;
+			width:100%;
+			font : {
+				size:20px;
+				weight:400;
+			}
+			text-align:center;
+			letter-spacing:5px;
+			line-height:1;
+			z-index:1;
+			.a321-service--class-business &{
+				color:#b17d46;
+			}
+			.a321-service--class-economy &{
+				color:#dd6a62;
+			}
+			.text-bold{
+				color:#000000;
+				font : {
+					size:33px;
+				}
+			}
+		}
+		&__nav{
+			display:table;
+			table-layout:fixed;
+			width:100%;
+			border-top:1px solid #000000;
+			border-bottom:1px solid #000000;
+			&-item{
+				display:table-cell;
+				position:relative;
+				height:78px;
+				font : {
+					size:24px;
+				}
+				text-align:center;
+				vertical-align:middle;
+				&::after{
+					content:'';
+					position:absolute;
+					left:0;
+					bottom:-1px;
+					display:none;
+					width:100%;
+					height:8px;
+					.a321-service--class-business &{
+						background-color:#b17d46;
+					}
+					.a321-service--class-economy &{
+						background-color:#dd6a62;
+					}
+
+				}
+
+
+				&--is-active{
+					font-weight:700;
+					&::after{
+						display:block
+					}
+				}
+			}
+		}
+
+		&__list{
+			position:relative;
+
+
+
+		}
+
+		&__item{
+			margin-top:10px;
+			padding-top:20px;
+			background-color:#ffffff;
+			&:first-child{
+				padding-top:50px;
+			}
+			&-heading{
+				text-align:center !important;
+			}
+			&-text{
+				position:relative;
+				display:inline-block;
+				font : {
+					size:25px;
+					weight:700;
+				}
+				&::before{
+					content:'';
+					position:absolute;
+					left:-4px;
+					right:-4px;
+					bottom:1px;
+					display:block;
+					height:5px;
+					.a321-service--class-business &{
+						background-color:#d0b190;
+					}
+					.a321-service--class-economy &{
+						background-color:#dd6a62;
+					}
+
+				}
+				>span{
+					position:relative;
+					display:block;
+				}
+			}
+			.slick-dots{
+				position:absolute;;
+				left:0;
+				bottom:5px;
+				width:100%;
+			}
+			&-slide{
+				margin-top:15px;
+			}
+			&-img{
+
+			}
+			&-box{
+				box-sizing:border-box;
+				padding:15px 13px 20px;
+				color:#000000;
+			}
+			&-title{
+				display:block;
+
+				font : {
+					size:16px;
+				}
+			}
+			&-description{
+				margin-top:10px;
+				font : {
+					size:12px;
+				}
+			}
+			&-info{
+				margin-top:15px;
+			}
+		}
+		&__special{
+			display:block;
+			padding-top:20px;
+			color:#a07469;
+			font : {
+				size:12px;
+			}
+			letter-spacing:-0.5px;
+			&-mark{
+				display:inline-block;
+				margin-bottom:10px;
+				background-color:#fef3d0;
+				font : {
+					size:14px;
+					family : 'Segoe Script','Noto Sans KR','AppeGothic','Malgun Gothic','맑은 고딕','돋음','Dotum','Apple SD Gothic Neo',Helvetica,sans-serif;
+					style : normal;
+				}
+				line-height:1.2;
+			}
+		}
+	}
+
+}
+
+
+
+
+.event{
+	&-article{
+		img{
+			max-width:100%;
+		}
+	}
+	&-header{
+		position:static;
+		height:auto;
+		background:transparent;
+	}
+	&-main{
+		display:block;
+		margin-top:30px;
+	}
+	&-section{
+		position:relative;
+		margin-top:30px;
+		padding:0 13px;
+		&:first-child{
+			margin-top:0;
+		}
+		&__head{
+			position:relative;
+			display:inline-block;
+			min-width:120px;
+			padding-top:10px;
+			border-top:3px solid #eeeeee;
+			color:#000000;
+			font : {
+				size:19px;
+				weight:700;
+			};
+			letter-spacing:-0.5px;;
+			&::before{
+				content:'';
+				position:absolute;
+				left:0;
+				top:-3px;
+				width:120px;
+				display:block;
+				width:30px;
+				border-bottom:3px solid $point-color;
+				border-right:7px solid transparent;
+			}
+		}
+		&__body{
+			padding-top:15px;
+		}
+	}
+	&-info{
+		&__list{}
+		&__item{
+			position:relative;
+			margin-top:10px;
+			&:first-child{
+				margin-top:0;
+			}
+
+		}
+		&__title{
+			display:inline-block;
+			min-width:80px;
+			padding:0 10px;
+			height:22px;
+			border-radius:11px;
+			background-color:$point-color;
+			color:#ffffff;
+			font : {
+				size:12px;
+				weight:500;
+			}
+			text-align:center;
+			line-height:22px;
+		}
+		&__description{
+			margin-top:10px;
+			color:#212121;
+			font : {
+				size:13px;
+			}
+			line-height:1.3
+		}
+	}
+	&-notice{
+		margin-top:10px;
+		padding:20px 13px;
+		background-color:#f7f7f7;
+		.event-notice__title{
+			margin:0;
+			color:#010101;
+			font : {
+				size:15px;
+				weight:700
+			}
+			letter-spacing:-0.5px;
+			text-align:left;
+		}
+
+		&__list{
+			margin-top:7px;
+		}
+		&__item{
+			position:relative;
+			padding-left:10px;
+			margin-top:5px;
+			font : {
+				size:13px;
+			}
+			&:first-child{
+				margin-top:0;
+			}
+			&::before{
+				content:'';
+				position:absolute;
+				left:0;
+				top:8px;
+				display:block;
+				width:3px;
+				height:3px;
+				background-color:#565656;
+			}
+		}
+	}
+
+}

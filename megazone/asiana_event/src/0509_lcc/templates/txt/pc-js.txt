@@ -1,0 +1,3 @@
+<script>;
+@@include('assets/js/pc.js')
+</script>

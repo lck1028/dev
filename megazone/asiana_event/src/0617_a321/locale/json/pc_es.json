@@ -1,0 +1,211 @@
+{
+	"common": {
+		"blank": "Nueva ventana",
+		"close": "Cerrar"
+	},
+	"intro": {
+		"subtitle": "New Engine Technology",
+		"title": "A321neo",
+		"skip": "SKIP"
+	},
+	"tab": {
+		"item01": "A321neo",
+		"item02": "SEAT MAP",
+		"item03": "SERVICE",
+		"item04": "EVENT"
+	},
+	"neo": {
+		"header": "seguro, cómodo y responsable con el medioambiente.<br><br><strong class='a321-neo__header-innertitle'><span class='text-en'>Vuele con Asiana Airlines en el</span><br>ASIANA 321neo</strong>",
+		"btn": "Ver el vídeo de vuelo del A321neo"
+	},
+	"point": {
+		"section01": {
+			"title": "NEW ENGINE<br>Technology",
+			"alt": "NEW ENGINE Technology",
+			"subtitle": "¡Una flota responsable con el<br><span class='text-bold'>medioambiente que cuida de nuestro entorno!</span>",
+			"description": "Con los nuevos motores de alta eficiencia, la eficiencia del combustible del avión ha mejorado en un 15 % en comparación con nuestros modelos equivalentes."
+		},
+		"section02": {
+			"title": "SAFETY",
+			"alt": "SAFETY",
+			"subtitle": "<span class='text-bold'>Seguridad y más seguridad</span>",
+			"description": "Verificada por 276 operadores de todo el mundo, la serie A320 garantiza una seguridad de primer nivel.<br>En este mismo momento, más de 8500 aviones de la serie A320 vuelan de forma segura."
+		},
+		"section03": {
+			"title": "FUN AND JOY",
+			"alt": "FUN AND JOY",
+			"subtitle": "Wireless In - Flight <br>Entertainment",
+			"description": "Disfrute de una amplia oferta de entretenimiento inalámbrico a bordo con sus dispositivos móviles personales. <br>Cree su propia sala de cine en una cabina silenciosa.",
+			"btn": "Cómo acceder al entretenimiento inalámbrico",
+			"alert01": "※ Traiga sus auriculares para disfrutar de horas de entretenimiento.",
+			"alert02": "※ Instale la aplicación ‘<img src='https://ozimg.flyasiana.com/editor/image/20190722/8235c1dd-d2f8-4de0-80e8-2bf7e6e9af73.png' alt='Cabin Media Player'>Cabin Media Player’ por adelantado cuando use un dispositivo iOS (Apple). "
+		}
+	},
+	"info": {
+		"tab01": "<strong class='a321-neo__info-text'>A321 Neo</strong> Características",
+		"tab02": "<strong class='a321-neo__info-text'>A321 Neo</strong> Descripción general de los materiales del avión",
+		"btn": "Ver detalles",
+		"detail01": "Ventanas (22,9 cm de altura x 32,5 cm de anchura)",
+		"detail02": "Impresionante acabado exterior con pintura ZORRO (igual que el A350)",
+		"detail03": "Reducción del ruido del motor en -12 db para proporcionar un entorno más silencioso,<br>en comparación con otras flotas Airbus de tamaño similar.",
+		"detail04": "Las curvas de las alas de tipo “sharklet” reducen la resistencia al viento",
+		"detail05": "La eficiencia del combustible ha mejorado en un 15 % con el nuevo motor de alta eficiencia",
+		"detail06": "Longitud 44.51m",
+		"detail07": "Profundidad del ala 35.8m",
+		"detail08": "Altura<br>11.76m",
+		"spec01": {
+			"title": "Fabricante",
+			"data": "Airbus"
+		},
+		"spec02": {
+			"title": "Tiempo máximo de vuelo",
+			"data": "7.3hr"
+		},
+		"spec03": {
+			"title": "Distancia máxima de vuelo",
+			"data": "6,111km"
+		},
+		"spec04": {
+			"title": "Altitud máxima de vuelo",
+			"data": "12,131m"
+		},
+		"spec05": {
+			"title": "Velocidad de vuelo económica",
+			"data": "841km/h"
+		}
+	},
+	"seatmap": {
+		"title": "<span class='text-bold'>A321neo</span><br>Mapa de asientos",
+		"vr": "Disfrute de la realidad virtual 360°",
+		"legend01": "Salida de emergencia",
+		"legend02": "Moisés",
+		"legend03": "Baño",
+		"legend04": "Cocina",
+		"legend05": "Alas",
+		"legend06": "Escaleras",
+		"legend07": "Asiento preferido",
+		"legend08": "Estación para cambiar a bebés",
+		"alert": "La estructura interna y los tipos de asiento pueden diferir según el número de asientos, aunque sea el mismo tipo de aeronave.",
+		"bizmore": "Obtenga más información sobre clase Business",
+		"ecomore": "Obtenga más información sobre clase Turista"
+	},
+	"service": {
+		"biz": {
+			"title": "<span class='text-bold'>A321neo</span><br>Business Class",
+			"tab01": "Asientos",
+			"tab02": "En el aeropuerto",
+			"tab03": "Sala VIP",
+			"tab04": "Equipaje",
+			"tab05": "Servicios durante el vuelo",
+			"sub01": {
+				"title": "Asientos de clase Business",
+				"description": "Los cómodos asientos lo harán sentirse relajado.",
+				"data01": "<strong>Número de asientos</strong> : 8 asientos",
+				"data02": "<strong>Anchura del asiento</strong> : 53,3 cm",
+				"data03": "<strong>Espacio entre asientos</strong> : 106,7 cm",
+				"data04": "<strong>Enchufe/USB</strong> : Disponible en todos los asientos",
+				"data05": "<strong>Entretenimiento inalámbrico</strong> : Al utilizar sus dispositivos móviles personales, puede conectarse al wifi de OZ y acceder a “Asiana Portal” para disfrutar de programas de entretenimiento inalámbrico.",
+				"required": "<small>※ Traiga sus auriculares para disfrutar de horas deentretenimiento.</small><small>※ Instale la aplicación &lsquo;Cabin Media Player&rsquo; por adelantado cuando use un dispositivo iOS (Apple).</small>"
+			},
+			"sub02": {
+				"title": "Mostrador de facturación exclusivo de clase Business",
+				"description": "Puede facturar fácilmente en los mostradores de facturación dispuestos a tal efecto.",
+				"data01": "<strong>Aeropuerto de Incheon</strong> : Mostrador A, zona de facturación premium, tercera planta, terminal 1"
+			},
+			"sub03": {
+				"title": "Sala VIP exclusiva de clase Business",
+				"description": "Relájese en la exclusiva sala VIP de Asiana con bebidas y aperitivos antes de embarcar.",
+				"data01": "<strong>Sala VIP Business de la zona central del aeropuerto de Incheon</strong> : Frente a la puerta 26",
+				"data02": "<strong>Sala VIP Business del ala este del aeropuerto de Incheon</strong> : Frente a la puerta 11"
+			},
+			"sub04": {
+				"title": "Equipaje de clase Business",
+				"description": "Ofrecemos beneficios de equipaje gratuito en función de la clase de vuelo y la afiliación.<br>El equipaje de los pasajeros de clase Business se etiquetará como prioritario; de esta forma, podrán disfrutar de la recogida prioritaria de su equipaje."
+			},
+			"sub05": {
+				"title": "Servicio de bebidas y comidas durante el vuelo de clase Business",
+				"description": "Disfrute de vinos seleccionados por los mejores sumilleres del mundo que maridan a la perfección con nuestras comidas durante el vuelo y del café ecológico certificado por Rainforest Alliance (RA).",
+				"special": "Servicios especiales",
+				"mark": "Hemos preparado un elegante menú de comidas durante el vuelo en colaboración con el Instituto gastronómico de la corte real coreana y La Cucina, el líder de la cocina italiana en Corea."
+			}
+		},
+		"eco": {
+			"title": "<span class='text-bold'>A321neo</span><br>Economy Class",
+			"tab01": "Asientos",
+			"tab02": "En el aire",
+			"sub01": {
+				"title": "Asientos de clase Turista",
+				"description": "Sienta algún centímetro más de comodidad extra con nuestros asientos más finos.",
+				"data01": "<strong>Número de asientos</strong> : 180 asientos",
+				"data02": "<strong>Anchura del asiento</strong> : 18 inch",
+				"data03": "<strong>Espacio entre asientos</strong> : 31 inch",
+				"data04": "<strong>Enchufes</strong> : 2 enchufes por cada 3 asientos",
+				"data05": "<strong>USB</strong> : Disponible en todos los asientos",
+				"data06": "<strong>Entretenimiento inalámbrico</strong> : Al utilizar sus dispositivos móviles personales, puede conectarse al wifi de OZ y acceder a “Asiana Portal” para disfrutar de programas de entretenimiento inalámbrico.",
+				"required": "<small>※ Traiga sus auriculares para disfrutar de horas deentretenimiento.</small><small>※ Instale la aplicación &lsquo;Cabin Media Player&rsquo; por adelantado cuando use un dispositivo iOS (Apple).</small>"
+			},
+			"sub02": {
+				"title": "Servicio durante el vuelo en clase Turista",
+				"description": "Reducción del ruido del motor en -12 db para proporcionar un entorno más silencioso, en comparación con otras flotas Airbus de tamaño similar."
+			}
+		}
+	},
+	"wireless": {
+		"step": {
+			"title": "How to Access the a321-wireless Entertainment System",
+			"con01": "Seleccione OZ WiFi en un dispositivo que pueda conectarse a la red wifi.",
+			"con02": "Seleccione Chrome, Safari o Firefox y ábralo.",
+			"con03": "Se conectará automáticamente con el portal de Asiana. Si la página no se carga, introduzca ozwifi.flyasiana.com. "
+		},
+		"ready": {
+			"title": "Cómo acceder al entretenimiento inalámbrico",
+			"earphone": {
+				"ready": "Antes de embarcar",
+				"title": "Traiga sus auriculares",
+				"con01": "Traiga sus auriculares para disfrutar de horas de entretenimiento."
+			},
+			"ios": {
+				"ready": "Antes de embarcar",
+				"title": "Instalación de ‘Cabin Media Player’ App - iOS (Apple)",
+				"con01": "1. Descárguese ‘Cabin Media Player’ gratis desde la App Store.",
+				"con02": "2. Los usuarios de Android o portátiles no necesitan ‘Cabin Media Player’."
+			}
+		},
+		"notice": {
+			"title": "Notice",
+			"con01": "El sistema de entretenimiento durante el vuelo está optimizado para Chrome, Safari y Firefox. ",
+			"con02": "El sistema de entretenimiento durante el vuelo funciona en dispositivos con Android 5.0 e iOS 9 o versiones superiores. ",
+			"con03": "Se recomienda utilizar auriculares mientras se utilizan estos servicios para mantener un entorno tranquilo en el avión.  ",
+			"con04": "El wifi del vuelo solo puede utilizarse para acceder al servicio de entretenimiento inalámbrico ofrecido por Asiana Airlines. ",
+			"con05": "Configure y mantenga todos los dispositivos electrónicos en modo vuelo durante el vuelo. "
+		}
+	},
+	"biz": {
+		"title": "Business Class",
+		"caption": "Información sobre los asientos de clase Business",
+		"th01": "Asientos",
+		"th02": "Entretenimiento<br>inalámbrico",
+		"th03": "Fuente de alimentación",
+		"th04": "Puertos USB para cargar",
+		"td0101": "Espacio entre asientos : 42 inch",
+		"td0102": "Anchura del asiento (Width) : 21 inch",
+		"td0103": "Ángulo de inclinación del asiento : 127º",
+		"td0201": "Al utilizar sus dispositivos móviles personales, puede conectarse al wifi de OZ y acceder a “Asiana Portal” para disfrutar de programas de entretenimiento inalámbrico.<small>※ Traiga sus auriculares para disfrutar de horas deentretenimiento.</small><small>※ Instale la aplicación &lsquo;Cabin Media Player&rsquo; por adelantado cuando use un dispositivo iOS (Apple).</small>",
+		"td0301": "Disponible en todos los asientos",
+		"td0401": "Disponible en todos los asientos"
+	},
+	"eco": {
+		"title": "Clase Turista",
+		"caption": "Información de los asientos de clase Turista",
+		"th01": "Asientos",
+		"th02": "Entretenimiento<br>inalámbrico",
+		"th03": "Fuente de alimentación",
+		"th04": "Puertos USB para cargar",
+		"td0101": "Espacio entre asientos : 31 inch",
+		"td0102": "Anchura del asiento (Width) : 18 inch",
+		"td0103": "Ángulo de inclinación del asiento : 116º",
+		"td0201": "Al utilizar sus dispositivos móviles personales, puede conectarse al wifi de OZ y acceder a “Asiana Portal” para disfrutar de programas de entretenimiento inalámbrico.<small>※ Traiga sus auriculares para disfrutar de horas deentretenimiento.</small><small>※ Instale la aplicación &lsquo;Cabin Media Player&rsquo; por adelantado cuando use un dispositivo iOS (Apple).</small>",
+		"td0301": "2 enchufes por cada 3 asientos",
+		"td0401": "Disponible en todos los asientos"
+	}
+}

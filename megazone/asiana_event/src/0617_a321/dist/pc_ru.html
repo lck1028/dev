@@ -1,0 +1,1406 @@
+<style type="text/css">
+	@charset "UTF-8";
+.text-point { color: #273691; font-family: Roboto, "Noto Sans KR", "AppeGothic", "Malgun Gothic", "맑은 고딕", "돋음", "Dotum", "Apple SD Gothic Neo", Arial, Helvetica, sans-serif; }
+
+.text-pointbold { color: #273691; font-weight: 900; font-family: Roboto, "Noto Sans KR", "AppeGothic", "Malgun Gothic", "맑은 고딕", "돋음", "Dotum", "Apple SD Gothic Neo", Arial, Helvetica, sans-serif; letter-spacing: -1px; }
+
+.text-bold { font-weight: 700; font-family: Roboto, "Noto Sans KR", "AppeGothic", "Malgun Gothic", "맑은 고딕", "돋음", "Dotum", "Apple SD Gothic Neo", Arial, Helvetica, sans-serif; letter-spacing: -1px; }
+
+.slick-slider:hover .slick-arrow { display: block !important; }
+
+.slick-dots { display: block; margin-top: 15px; text-align: center; }
+
+.slick-dots > li { display: inline-block; padding: 0 5px; vertical-align: top; }
+
+.slick-dots > li:only-child { display: none; }
+
+.slick-dots > li.slick-active button { background-color: #273691; }
+
+.slick-dots button { display: block; width: 10px; height: 10px; border-radius: 50%; background-color: #ffffff; box-shadow: 1px 1px 5px 0 rgba(0, 0, 0, 0.3); font: 0/0 a; }
+
+.slick-arrow { position: absolute; top: 50%; display: none !important; width: 110px; height: 110px; margin-top: -55px; background-color: rgba(0, 0, 0, 0.5); background-position: 50% 50%; background-repeat: no-repeat; z-index: 1; font: 0/0 a; }
+
+.slick-arrow.slick-prev { left: 0; background-image: url("https://ozimg.flyasiana.com/editor/image/20190701/3c3b5b06-0088-4f1d-9d9b-1b96810bad63.png"); }
+
+.slick-arrow.slick-next { right: 0; background-image: url("https://ozimg.flyasiana.com/editor/image/20190701/2b2cb7c5-ea49-43dc-9a25-f5f6c00aa1df.png"); }
+
+.a321-btn__arrow { position: relative; display: inline-block; box-sizing: border-box; min-width: 286px; padding: 18px 120px 19px 25px; background-color: #273691; color: #ffffff; font-size: 18px; text-align: left; letter-spacing: -0.5px; vertical-align: middle; }
+
+.a321-btn__arrow::after { content: ''; position: absolute; right: 27px; top: 24px; display: block; width: 45px; height: 12px; background-image: url("https://ozimg.flyasiana.com/editor/image/20190701/aad0b0c2-dd25-42d1-aaf2-102a029bac46.png"); background-position: 50% 50%; background-repeat: no-repeat; }
+
+.a321-layer { display: none; }
+
+.a321-layer.a321-layer--is-active { display: block; }
+
+.a321-layer__dim { position: fixed; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.6); z-index: 500; }
+
+.a321-layer__wrap { position: absolute; left: 50%; top: 65px; width: 900px; margin-left: -450px; background-color: #ffffff; z-index: 501; }
+
+.a321-layer__header { margin: 0 40px 30px; padding: 55px 0px 20px; border-bottom: 4px solid #000000; }
+
+.a321-layer__header-title { color: #000000; font-size: 27px; font-weight: 700; }
+
+.a321-layer__header-subtitle { color: #b21444; font-size: 24px; font-weight: 400; }
+
+.a321-layer__btn-close { position: absolute; top: -90px; right: 0; width: 60px; height: 60px; background-image: url("https://ozimg.flyasiana.com/editor/image/20190701/706b261a-75c4-4e06-8c2d-6088c40724ec.png"); background-position: 50% 50%; background-repeat: no-repeat; font: 0/0 a; z-index: 11; }
+
+.a321-layer__vr { position: fixed; left: 0; top: 0; display: block; width: 100vw; height: 100vh; background-color: #000000; z-index: 1000; }
+
+.a321-layer__vr-iframe { width: 100%; height: 100%; margin: 0; padding: 0; border: none; }
+
+.a321-layer__vr-close { position: absolute; top: 30px; right: 30px; width: 60px; height: 60px; background-image: url("https://ozimg.flyasiana.com/editor/image/20190701/706b261a-75c4-4e06-8c2d-6088c40724ec.png"); background-position: 50% 50%; background-repeat: no-repeat; font: 0/0 a; opacity: 0.2; z-index: 10001; }
+
+.a321-layer__vr-close:hover { opacity: 1; }
+
+.a321-bullet__item { position: relative; padding-left: 17px; font-size: 22px; }
+
+.a321-bullet__item > small { display: block; text-indent: -22px; padding-left: 22px; }
+
+.a321-bullet__list--type-dash .a321-bullet__item::before { content: ''; position: absolute; left: 0; top: 15px; display: block; width: 6px; height: 2px; background-color: #000000; }
+
+.a321-bullet__list--type-square .a321-bullet__item::before { content: ''; position: absolute; left: 0; top: 15px; display: block; width: 4px; height: 4px; border-radius: 1px; background-color: #000000; }
+
+.a321-bullet__item-box { margin-top: 40px; padding: 15px 30px 15px 30px; background-color: #eeeeee; }
+
+.a321-bullet__item-box > small { display: block; padding-left: 20px; color: #000000; font-size: 22px; text-indent: -22px; }
+
+.a321-article h3 { margin: 0; font-size: 14px; color: #000; text-align: left; font-weight: 700; line-height: 1.4; }
+
+.a321-header { position: fixed; left: 0; top: 0; width: 100vw; height: 100vh; background: #000000; z-index: 1000; }
+
+.intro--is-skip .a321-header { display: none; }
+
+.a321-header__intro { position: relative; width: 100vw; height: 100vh; }
+
+.a321-header__video { position: absolute; left: 50%; top: 50%; min-width: 100vw; min-height: 100vh; transform: translateX(-50%) translateY(-50%); }
+
+.a321-header__title { color: #ffffff; font-family: Roboto, "Noto Sans KR", "AppeGothic", "Malgun Gothic", "맑은 고딕", "돋음", "Dotum", "Apple SD Gothic Neo", Arial, Helvetica, sans-serif; text-align: center; }
+
+.a321-header__title-box { position: absolute; left: 0; top: 0; display: block; box-sizing: border-box; width: 100%; height: 100%; padding: 100px; background-color: rgba(0, 0, 0, 0.4); }
+
+.a321-header__title-neo { display: block; font-size: 30px; font-weight: 400; letter-spacing: 6px; }
+
+.a321-header__title-a321 { display: block; font-size: 90px; font-weight: 900; line-height: 1.2; }
+
+.a321-header__btns { position: absolute; left: 0; bottom: 100px; width: 100%; text-align: center; }
+
+.a321-header__btn { min-width: 120px; padding: 7px 5px; border: 1px solid #ffffff; color: #ffffff; font-size: 24px; letter-spacing: -0.25px; text-align: center; }
+
+.a321-main { display: block; }
+
+.a321-nav { position: relative; float: none; height: auto; box-sizing: border-box; }
+
+.a321-nav--position-sticky { position: fixed; top: 0; z-index: 10; }
+
+.a321-nav__list { display: table; width: 100%; max-width: 1180px; table-layout: fixed; }
+
+.a321-nav__item { display: table-cell; padding: 25px 5px; border-left: 1px solid #d7d7d7; background-color: #ededed; color: #999999; font-size: 24px; font-weight: 900; font-family: Roboto, "Noto Sans KR", "AppeGothic", "Malgun Gothic", "맑은 고딕", "돋음", "Dotum", "Apple SD Gothic Neo", Arial, Helvetica, sans-serif; text-align: center; vertical-align: middle; }
+
+.a321-nav__item:first-child { border-left: none; }
+
+.a321-nav__item::before { content: ''; display: inline-block; width: 64px; height: 64px; background-image: url("https://ozimg.flyasiana.com/editor/image/20190701/b11f3dd9-1940-4858-9b2f-ad6387915489.png"); background-position: 50% 50%; background-repeat: no-repeat; }
+
+.a321-nav__item--type-neo::before { background-position: 0 0; }
+
+.a321-nav__item--type-neo.a321-nav__item--is-active::before { background-position: -100px 0; }
+
+.a321-nav__item--type-seatmap::before { background-position: 0 -100px; }
+
+.a321-nav__item--type-seatmap.a321-nav__item--is-active::before { background-position: -100px -100px; }
+
+.a321-nav__item--type-service::before { background-position: 0 -200px; }
+
+.a321-nav__item--type-service.a321-nav__item--is-active::before { background-position: -100px -200px; }
+
+.a321-nav__item--type-event { display: none; }
+
+.a321-nav__item--type-event::before { background-position: 0 -300px; }
+
+.a321-nav__item--type-event.a321-nav__item--is-active::before { background-position: -100px -300px; }
+
+[lang='ko'] .a321-nav__item--type-event { display: block; }
+
+.a321-nav__item--is-active { background-color: #2c529e; color: #ffffff; }
+
+.a321-nav__item-inner { display: block; }
+
+.a321-contents { display: none; }
+
+.a321-contents--is-active { display: block; }
+
+.a321-neo { background-color: #fdfdfd; background-image: url("https://ozimg.flyasiana.com/editor/image/20190701/a58989c1-d2dd-44e7-83fd-383d031f88ac.jpeg"); background-position: 50% 100%; background-repeat: no-repeat; }
+
+.a321-neo__header { position: relative; height: 667px; background-image: url("https://ozimg.flyasiana.com/editor/image/20190701/f417ef1d-631f-4d64-b156-3e909571dd1b.jpeg"); background-position: 50% 50%; background-repeat: no-repeat; color: #000000; }
+
+.a321-neo__header::after { content: ''; position: absolute; left: -115px; top: 286px; display: block; width: 115px; height: 200px; background-image: url("https://ozimg.flyasiana.com/editor/image/20190701/5bb5318a-f5d9-4ed8-a417-2a157d386b34.png"); background-position: 0 0; background-repeat: no-repeat; }
+
+.a321-neo__header-inner { position: absolute; left: 670px; top: 60px; }
+
+.a321-neo__header-logo { position: absolute; left: 40px; top: 60px; }
+
+.a321-neo__header-title { color: #ffffff; font-size: 30px; font-weight: 100; line-height: 1.2; }
+
+.a321-neo__header-innertitle { font-size: 40px; font-weight: 500; }
+
+[lang="es"] .a321-neo__header-innertitle, [lang="fr"] .a321-neo__header-innertitle { font-size: 36px; }
+
+.a321-neo__header-innertitle .text-en { font-family: Roboto, "Noto Sans KR", "AppeGothic", "Malgun Gothic", "맑은 고딕", "돋음", "Dotum", "Apple SD Gothic Neo", Arial, Helvetica, sans-serif; }
+
+.a321-neo__header .a321-btn__arrow { position: absolute; left: 670px; bottom: 115px; background: #e81240; background: -moz-linear-gradient(left, #e81240 0%, #313091 100%); background: -webkit-gradient(left top, right top, color-stop(0%, #e81240), color-stop(100%, #313091)); background: -webkit-linear-gradient(left, #e81240 0%, #313091 100%); background: -o-linear-gradient(left, #e81240 0%, #313091 100%); background: -ms-linear-gradient(left, #e81240 0%, #313091 100%); background: linear-gradient(to right, #e81240 0%, #313091 100%); }
+
+.a321-neo__point { padding-top: 120px; counter-reset: point; }
+
+.a321-neo__point-box { margin-top: 120px; padding: 0 40px; }
+
+.a321-neo__point-box:after { content: ''; display: block; clear: both; }
+
+.a321-neo__point-box:first-child { margin-top: 0; }
+
+.a321-neo__point-box:nth-child(odd) .a321-neo__point-img { float: right; }
+
+.a321-neo__point-box:nth-child(odd) .a321-neo__point-contents { float: left; padding: 0 55px 0 0; }
+
+.a321-neo__point-box:nth-child(even) .a321-neo__point-img { float: left; height: auto; }
+
+.a321-neo__point-box:nth-child(even) .a321-neo__point-contents { float: right; padding: 0 0 0 70px; }
+
+.a321-neo__point-box:nth-child(1) .a321-neo__point-img img { max-width: none; }
+
+.a321-neo__point-img { position: relative; width: 665px; height: 460px; }
+
+.a321-neo__point-contents { position: relative; box-sizing: border-box; width: 435px; color: #000000; }
+
+.a321-neo__point-contents .a321-btn__arrow { min-width: 320px; margin-top: 50px; padding: 16px 120px 17px 25px; }
+
+.a321-neo__point-title { position: relative; padding: 70px 0 25px; font-weight: 700; font-family: Roboto, "Noto Sans KR", "AppeGothic", "Malgun Gothic", "맑은 고딕", "돋음", "Dotum", "Apple SD Gothic Neo", Arial, Helvetica, sans-serif; }
+
+.a321-neo__point-title::before { counter-increment: point; content: counter(point, decimal-leading-zero); position: absolute; left: 0; top: 0; color: #eeeeee; font-size: 140px; font-weight: 300; font-family: Roboto, "Noto Sans KR", "AppeGothic", "Malgun Gothic", "맑은 고딕", "돋음", "Dotum", "Apple SD Gothic Neo", Arial, Helvetica, sans-serif; font-style: italic; line-height: 0.7; letter-spacing: -5px; transform: scale(1.2, 0.9); transform-origin: 0 50%; }
+
+.a321-neo__point-title::after { content: ''; position: absolute; left: 0; bottom: 0; display: block; width: 90px; height: 6px; background-color: #000000; }
+
+.a321-neo__point-innertitle { position: relative; font-size: 42px; line-height: 1; }
+
+.a321-neo__point-subtitle { display: block; margin-top: 45px; font-size: 36px; font-weight: 500; line-height: 1; }
+
+.a321-neo__point-description { margin-top: 30px; font-size: 18px; }
+
+.a321-neo__point-required { padding: 15px 30px 15px 50px; background-color: #eeeeee; }
+
+.a321-neo__point-alert { display: block; padding: 0; color: #000000; font-size: 18px; line-height: 1.4; text-indent: -22px; }
+
+.a321-neo__point-alert > img { width: 28px; vertical-align: bottom; }
+
+.a321-neo__info { padding: 150px 0 160px; }
+
+.a321-neo__info-tab { display: table; table-layout: fixed; box-sizing: border-box; width: calc(100% - 30px); margin: 0 auto; padding: 0 40px; }
+
+.a321-neo__info-tabitem { position: relative; display: table-cell; border-top: 1px solid #000000; border-bottom: 1px solid #000000; vertical-align: middle; }
+
+.a321-neo__info-tabitem::after { content: ''; position: absolute; left: 0; bottom: 0; display: none; width: 100%; height: 8px; background-color: #273691; }
+
+.a321-neo__info-tabitem--is-active:after { display: block; }
+
+.a321-neo__info-tabbtn { position: relative; display: block; width: 100%; padding: 23px 0; color: #000000; font-size: 30px; font-weight: 500; text-align: center; }
+
+.a321-neo__info-text { font-weight: 400; }
+
+.a321-neo__info-content { position: relative; display: none; height: 800px; background-position: 50% 50%; background-repeat: no-repeat; }
+
+.a321-neo__info-content.a321-feature { background-image: url("https://ozimg.flyasiana.com/editor/image/20190701/3a2a2e3b-fb0e-4d46-940a-cf10e2d52baf.png"); }
+
+.a321-neo__info-content.a321-size { background-image: url("https://ozimg.flyasiana.com/editor/image/20190701/e159d1ad-1c71-4bbf-873f-56cb53a0cc4a.png"); }
+
+.a321-neo__info-content--is-active { display: block; }
+
+.a321-neo__spec-list { display: table; table-layout: fixed; box-sizing: border-box; width: 100%; padding: 0 20px; }
+
+.a321-neo__spec-item { display: table-cell; text-align: center; vertical-align: top; letter-spacing: -0.5px; }
+
+.a321-neo__spec-item:nth-child(1) .a321-neo__spec-icon::before { background-position: 0px -0px; }
+
+.a321-neo__spec-item:nth-child(2) .a321-neo__spec-icon::before { background-position: 0px -100px; }
+
+.a321-neo__spec-item:nth-child(3) .a321-neo__spec-icon::before { background-position: 0px -200px; }
+
+.a321-neo__spec-item:nth-child(4) .a321-neo__spec-icon::before { background-position: 0px -300px; }
+
+.a321-neo__spec-item:nth-child(5) .a321-neo__spec-icon::before { background-position: 0px -400px; }
+
+.a321-neo__spec-icon { position: relative; display: block; width: 160px; height: 160px; margin: 0 auto; border-radius: 50%; box-shadow: 12px 12px 20px 0 rgba(0, 0, 0, 0.1); background-color: #ffffff; }
+
+.a321-neo__spec-obj { position: absolute; left: 50%; top: 50%; display: block; width: 76px; height: 76px; margin: -38px 0 0 -38px; background-position: 50% 50%; background-repeat: no-repeat; }
+
+.a321-neo__spec-obj::before, .a321-neo__spec-obj::after { content: ''; position: absolute; left: 0; top: 0; display: block; width: 100%; height: 100%; background-position: 50% 50%; background-repeat: no-repeat; }
+
+.a321-neo__spec-icon--type-maker .a321-neo__spec-obj { background-image: url("https://ozimg.flyasiana.com/editor/image/20190701/ed14f152-5bf9-46aa-be7d-738d5da42e63.png"); animation: spec-maker 10s linear 0s infinite normal; }
+
+@keyframes spec-maker { 0% { transform: rotate(0deg); }
+				100% { transform: rotate(360deg); } }
+
+.a321-neo__spec-icon--type-time .a321-neo__spec-obj { background-image: url("https://ozimg.flyasiana.com/editor/image/20190701/9eb1a42b-002b-4dd4-956e-f673f8cb0bb9.png"); }
+
+.a321-neo__spec-icon--type-time .a321-neo__spec-obj::before { background-image: url("https://ozimg.flyasiana.com/editor/image/20190701/8187572d-3ef8-4915-b545-1d04c7536674.png"); animation: spec-time01 3s linear 0s infinite normal; }
+
+.a321-neo__spec-icon--type-time .a321-neo__spec-obj::after { background-image: url("https://ozimg.flyasiana.com/editor/image/20190701/7f8eb29a-2419-4a75-8bac-3c61917c6b1e.png"); animation: spec-time02 18s linear 0s infinite normal; }
+
+@keyframes spec-time01 { 0% { transform: rotate(0deg); }
+				100% { transform: rotate(360deg); } }
+
+@keyframes spec-time02 { 0% { transform: rotate(0deg); }
+				100% { transform: rotate(360deg); } }
+
+.a321-neo__spec-icon--type-distance .a321-neo__spec-obj { background-image: url("https://ozimg.flyasiana.com/editor/image/20190701/6bca03d9-3485-4d1f-bb53-dd5e5c7c79fc.png"); }
+
+.a321-neo__spec-icon--type-distance .a321-neo__spec-obj::before { background-image: url("https://ozimg.flyasiana.com/editor/image/20190701/dcdb74a4-e08f-4143-b7e5-9eada65abacf.png"); animation: spec-distance01 3s linear 0s infinite normal; }
+
+.a321-neo__spec-icon--type-distance .a321-neo__spec-obj::after { background-image: url("https://ozimg.flyasiana.com/editor/image/20190701/eafa338c-0830-4f03-8548-517a3d4e74b8.png"); animation: spec-distance02 3s linear 0s infinite normal; }
+
+@keyframes spec-distance01 { 0% { opacity: 1; }
+				12.5% { opacity: 0; }
+				25% { opacity: 1; }
+				37.5% { opacity: 0; }
+				50% { opacity: 1; }
+				62.5% { opacity: 1; }
+				75% { opacity: 1; }
+				87.5% { opacity: 1; }
+				100% { opacity: 1; } }
+
+@keyframes spec-distance02 { 0% { opacity: 1; }
+				12.5% { opacity: 1; }
+				25% { opacity: 1; }
+				37.5% { opacity: 1; }
+				50% { opacity: 1; }
+				62.5% { opacity: 1; }
+				75% { opacity: 0; }
+				87.5% { opacity: 1; }
+				100% { opacity: 1; } }
+
+.a321-neo__spec-icon--type-altitude .a321-neo__spec-obj { background-image: url("https://ozimg.flyasiana.com/editor/image/20190701/d1e16a35-2010-4e7d-a572-4301a70f060b.png"); }
+
+.a321-neo__spec-icon--type-altitude .a321-neo__spec-obj::before { background-image: url("https://ozimg.flyasiana.com/editor/image/20190701/bb5f8f3c-6cdb-4807-8590-811b937786ef.png"); animation: spec-altitude 1s linear 0s infinite alternate; transform-origin: 50% 0%; }
+
+@keyframes spec-altitude { 0% { transform: translateY(-10px); }
+				100% { transform: translateY(0px); } }
+
+.a321-neo__spec-icon--type-speed .a321-neo__spec-obj { background-image: url("https://ozimg.flyasiana.com/editor/image/20190701/e2bc9cba-5eae-4980-9657-dc3b48f6f363.png"); }
+
+.a321-neo__spec-icon--type-speed .a321-neo__spec-obj::before { background-image: url("https://ozimg.flyasiana.com/editor/image/20190701/1e9389ff-12b5-40bd-9adc-07cd049e7b0c.png"); animation: spec-speed 2s linear 0s infinite alternate; transform-origin: 50% 56.6%; }
+
+@keyframes spec-speed { 0% { transform: rotate(-90deg); }
+				100% { transform: rotate(30deg); } }
+
+.a321-neo__spec-title { display: block; margin-top: 30px; color: #000000; font-size: 24px; }
+
+.a321-neo__spec-data { display: block; color: #273691; font-size: 22px; }
+
+.a321-marker { position: absolute; }
+
+.a321-marker__btn { position: relative; display: block; width: 46px; height: 46px; border-radius: 50%; background-color: #273691; font: 0/0 a; }
+
+.a321-marker__btn::before { content: ''; position: absolute; left: 0; top: 0; display: block; width: 100%; height: 100%; border-radius: 50%; background-color: inherit; opacity: 0.3; animation: wave 1s ease-out 0s infinite normal; }
+
+@keyframes wave { 0% { opacity: 0.5;
+								transform: scale(1); }
+				100% { opacity: 0;
+								transform: scale(1.4); } }
+
+.a321-marker__btn:focus + .a321-marker__detail, .a321-marker__btn:hover + .a321-marker__detail { display: block; }
+
+.a321-marker__btn-inner { position: relative; display: block; width: 100%; height: 100%; }
+
+.a321-marker__btn-inner::before, .a321-marker__btn-inner::after { content: ''; position: absolute; left: 50%; top: 50%; display: block; background-color: #ffffff; }
+
+.a321-marker__btn-inner::before { width: 20px; height: 4px; margin: -2px 0 0 -10px; }
+
+.a321-marker__btn-inner::after { width: 4px; height: 20px; margin: -10px 0 0 -2px; }
+
+.a321-marker__detail { position: absolute; display: none; box-sizing: border-box; width: 350px; background-color: transparent; background-position: -10px -10px; background-repeat: no-repeat; border-width: 10px; border-style: solid; border-color: rgba(191, 195, 206, 0.7); color: #000000; font-size: 18px; white-space: nowrap; }
+
+.a321-marker__detail::before { content: ''; position: absolute; display: block; }
+
+.a321-feature .a321-marker__detail-inner { display: block; max-width: 500px; padding: 10px 15px; background-color: #e2e5ee; white-space: normal; }
+
+.a321-marker__detail--arrow-TL::before { left: -10px; top: -24px; border-top: 7px solid transparent; border-right: 7px solid transparent; border-bottom: 7px solid rgba(191, 195, 206, 0.7); border-left: 7px solid rgba(191, 195, 206, 0.7); }
+
+.a321-marker__detail--arrow-TR::before { right: -10px; top: -24px; border-top: 7px solid transparent; border-right: 7px solid transparent; border-bottom: 7px solid rgba(191, 195, 206, 0.7); border-left: 7px solid rgba(191, 195, 206, 0.7); }
+
+.a321-marker__detail--arrow-RT::before { top: -10px; right: -24px; border-top: 7px solid rgba(191, 195, 206, 0.7); border-right: 7px solid transparent; border-bottom: 7px solid transparent; border-left: 7px solid rgba(191, 195, 206, 0.7); }
+
+.a321-marker__detail--arrow-RB::before { bottom: -10px; right: -24px; border-top: 7px solid transparent; border-right: 7px solid transparent; border-bottom: 7px solid rgba(191, 195, 206, 0.7); border-left: 7px solid rgba(191, 195, 206, 0.7); }
+
+.a321-marker__detail--arrow-BL::before { left: -10px; bottom: -24px; border-top: 7px solid rgba(191, 195, 206, 0.7); border-right: 7px solid transparent; border-bottom: 7px solid transparent; border-left: 7px solid rgba(191, 195, 206, 0.7); }
+
+.a321-marker__detail--arrow-BR::before { right: -10px; bottom: -24px; border-top: 7px solid rgba(191, 195, 206, 0.7); border-right: 7px solid rgba(191, 195, 206, 0.7); border-bottom: 7px solid transparent; border-left: 7px solid transparent; }
+
+.a321-marker__detail--arrow-LT::before { top: -10px; left: -24px; border-top: 7px solid rgba(191, 195, 206, 0.7); border-right: 7px solid rgba(191, 195, 206, 0.7); border-bottom: 7px solid transparent; border-left: 7px solid transparent; }
+
+.a321-marker__detail--arrow-LB::before { bottom: -10px; left: -24px; border-top: 7px solid transparent; border-right: 7px solid rgba(191, 195, 206, 0.7); border-bottom: 7px solid rgba(191, 195, 206, 0.7); border-left: 7px solid transparent; }
+
+.a321-marker__detail--size-width { width: 544px; height: 180px; background-image: url("https://ozimg.flyasiana.com/editor/image/20190725/02b206a5-ed9b-4486-860f-9b84be354cf8.png"); }
+
+.a321-marker__detail--size-width .a321-marker__detail-inner { position: absolute; top: 20px; right: 30px; }
+
+.a321-marker__detail--size-height { width: 380px; height: 180px; background-image: url("https://ozimg.flyasiana.com/editor/image/20190725/277cc3f2-2735-469c-a84a-5e95479f7323.png"); }
+
+.a321-marker__detail--size-height .a321-marker__detail-inner { position: absolute; top: 35px; left: 270px; }
+
+.a321-marker__detail--size-wing { width: 700px; height: 180px; background-image: url("https://ozimg.flyasiana.com/editor/image/20190725/ea3fb3bd-36ed-477b-8f52-2aa5c907eeed.png"); }
+
+.a321-marker__detail--size-wing .a321-marker__detail-inner { position: absolute; top: 25px; right: 60px; }
+
+.a321-marker__click { position: absolute; right: -200px; top: -100px; border-bottom: 1px solid #000000; color: #000000; font-size: 38px; line-height: 1; letter-spacing: 0; }
+
+.a321-marker__click::before { content: ''; position: absolute; left: 0; top: calc(100% + 1px); display: block; width: 1px; height: 130px; background-color: #000000; transform-origin: 100% 0; transform: rotate(60deg); }
+
+.a321-wireless__step { padding-bottom: 60px; background-color: #ffffff; }
+
+.a321-wireless__ios { padding-bottom: 60px; background-color: #ffffff; }
+
+.a321-wireless__list { counter-reset: point; padding: 0 40px 0; }
+
+.a321-wireless__item::after { content: ''; display: block; clear: both; }
+
+.a321-wireless__item-img { float: left; width: 400px; }
+
+.a321-wireless__item-subtitle { display: block; margin-bottom: 30px; color: #273691; font-size: 24px; font-weight: 700; letter-spacing: -1px; }
+
+.a321-wireless__item-ready { display: inline-block; margin: 0 20px 5px 0; padding: 7px 20px; border-radius: 8px; background-color: #273691; color: #ffffff; vertical-align: middle; }
+
+.a321-wireless__item-contents { float: right; box-sizing: border-box; width: 390px; padding: 0 5px 0 30px; }
+
+.a321-wireless__item-contents::before { counter-increment: point; content: counter(point, decimal-leading-zero); display: block; color: #8e8e8e; font-size: 50px; font-weight: 300; letter-spacing: -1px; line-height: 1; }
+
+.a321-wireless__ready .a321-wireless__item-contents::before { display: none; }
+
+.a321-wireless__item-text { margin-top: 20px; color: #000000; font-size: 20px; line-height: 1.2; }
+
+.a321-wireless__list--type-ios .a321-wireless__item-text { padding-left: 22px; text-indent: -22px; }
+
+.a321-wireless__notice { background: #e3e3e3; padding: 35px 40px 40px; }
+
+.a321-wireless__notice-title { color: #000000; font-size: 26px; font-weight: 700; }
+
+.a321-wireless__notice-contents { margin-top: 15px; }
+
+.a321-wireless__notice-contents .a321-bullet__item { margin-top: 10px; font-size: 15px; }
+
+.a321-wireless__notice-contents .a321-bullet__item:first-child { margin-top: 0; }
+
+.a321-wireless__notice-contents .a321-bullet__item::before { top: 9px; }
+
+.a321-seatmap { position: relative; background-color: #f7f7f7; padding: 140px 80px 170px; }
+
+.a321-seatmap__title { color: #000000; font-size: 52px; font-weight: 400; line-height: 1.2; letter-spacing: -0.5px; }
+
+.a321-seatmap__title .text-bold { font-size: 64px; }
+
+.a321-seatmap__btn-vr { display: none !important; position: relative; display: inline-block; margin-top: 55px; padding: 18px 140px 18px 30px; border: 3px solid #000000; box-shadow: 20px 20px 21px 0 rgba(0, 0, 0, 0.2); font-size: 24px; font-weight: 500; }
+
+.a321-seatmap__btn-vr::after { content: ''; position: absolute; right: 30px; top: 50%; display: block; width: 53px; height: 51px; margin-top: -26px; background-image: url("https://ozimg.flyasiana.com/editor/image/20190701/8b4382e2-886f-4101-bb8a-d8d6a6cd2201.png"); background-position: 50% 50%; background-repeat: no-repeat; }
+
+.a321-seatmap__legend { position: absolute; right: 80px; top: 140px; min-width: 340px; max-width: 340px; z-index: 1; }
+
+.a321-seatmap__legend-list { padding: 30px; border-radius: 10px; background-color: #ffffff; }
+
+.a321-seatmap__legend-list::after { content: ''; display: block; clear: both; }
+
+.a321-seatmap__legend-item { position: relative; box-sizing: border-box; width: 50%; margin-top: 20px; padding-left: 30px; color: #555555; font-size: 13px; }
+
+.a321-seatmap__legend-item:nth-child(1), .a321-seatmap__legend-item:nth-child(2) { margin-top: 0; }
+
+.a321-seatmap__legend-item:nth-child(odd) { float: left; clear: left; }
+
+.a321-seatmap__legend-item:nth-child(even) { float: right; clear: right; }
+
+.a321-seatmap__legend-item::before { content: ''; position: absolute; left: 0; top: 0; display: block; width: 24px; height: 22px; background-image: url("https://flyasiana.com/C/pc/image/sub/sp_icon_airplane.png"); background-position: inherit; background-repeat: no-repeat; }
+
+.a321-seatmap__legend-item--type-exit { background-position: 0 0; }
+
+.a321-seatmap__legend-item--type-baby { background-position: -24px 0; }
+
+.a321-seatmap__legend-item--type-toilet { background-position: -48px 0; }
+
+.a321-seatmap__legend-item--type-gall { background-position: -72px 0; }
+
+.a321-seatmap__legend-item--type-wing { background-position: -96px 0; }
+
+.a321-seatmap__legend-item--type-stairs { background-position: -120px 0; }
+
+.a321-seatmap__legend-item--type-preferred { background-position: -144px 0; }
+
+.a321-seatmap__legend-item--type-diaper { background-position: -168px 0; }
+
+.a321-seatmap__legend-item--type-smartium { background-position: -192px 0; }
+
+.a321-seatmap__legend-alert { display: block; margin-top: 30px; padding-left: 30px; background-image: url("https://flyasiana.com/C/pc/image/common/bul_cir1_gray.png"); background-position: 0 0; background-repeat: no-repeat; color: #555555; font-size: 15px; line-height: 1.2; }
+
+.a321-seatmap__map { margin-top: 150px; }
+
+.a321-seatmap__map-img { position: relative; width: 652px; margin: 0 auto; }
+
+.a321-seatmap__class .slick-dots { position: absolute; left: 0; bottom: 10px; width: 100%; }
+
+.a321-seatmap__class-visual { min-height: 514px; }
+
+.a321-seatmap__class-box { padding: 35px 30px 60px; }
+
+.a321-layer .a321-seatmap__class-title { margin: 0; font-size: 36px; font-weight: 700; text-align: center; }
+
+.a321-seatmap__class-info { margin-top: 25px; border-top: 2px solid #000000; border-bottom: 2px solid #000000; }
+
+.a321-seatmap__table { width: 100%; border-collapse: collapse; border-spacing: 0; }
+
+.a321-seatmap__table th, .a321-seatmap__table td { padding: 30px 25px; border-top: 1px solid #dedede; border-bottom: 1px solid #dedede; color: #000000; font-size: 22px; vertical-align: middle; }
+
+.a321-seatmap__table th { font-weight: 700; text-align: center; }
+
+.a321-seatmap__table .col01 { width: 210px; }
+
+.a321-service { background-color: #f7f7f7; padding: 220px 90px 190px; }
+
+.a321-service__box { position: relative; margin-top: 220px; padding: 124px 50px 50px; box-shadow: 22px 22px 24px 0 rgba(0, 0, 0, 0.05); background-color: #ffffff; }
+
+.a321-service__box:first-child { margin-top: 0; }
+
+.a321-service__title { position: absolute; top: -55px; left: 0; width: 100%; font-size: 34px; font-weight: 700; font-family: Roboto, "Noto Sans KR", "AppeGothic", "Malgun Gothic", "맑은 고딕", "돋음", "Dotum", "Apple SD Gothic Neo", Arial, Helvetica, sans-serif; text-align: center; letter-spacing: 10px; }
+
+.a321-service--class-business .a321-service__title { color: #b17d46; }
+
+.a321-service--class-economy .a321-service__title { color: #dd6a62; }
+
+.a321-service__title .text-bold { color: #000000; font-size: 70px; }
+
+.a321-service__nav { display: table; table-layout: fixed; width: 100%; border-top: 1px solid #000000; border-bottom: 1px solid #000000; }
+
+.a321-service__nav-item { display: table-cell; position: relative; height: 78px; font-size: 24px; text-align: center; vertical-align: middle; }
+
+.a321-service__nav-item::after { content: ''; position: absolute; left: 0; bottom: -1px; display: none; width: 100%; height: 8px; }
+
+.a321-service--class-business .a321-service__nav-item::after { background-color: #b17d46; }
+
+.a321-service--class-economy .a321-service__nav-item::after { background-color: #dd6a62; }
+
+.a321-service__nav-item--is-active { font-weight: 700; }
+
+.a321-service__nav-item--is-active::after { display: block; }
+
+.a321-service__list { position: relative; padding-top: 30px; }
+
+.a321-service__item { display: none; }
+
+.a321-service__item .slick-dots { position: absolute; left: 0; bottom: 10px; width: 100%; }
+
+.a321-service__item--is-active { display: block; }
+
+.a321-service__item-heading { display: none; }
+
+.a321-service__item-slide { min-height: 400px; }
+
+.a321-service__item-img { min-height: 400px; }
+
+.a321-service__item-box { box-sizing: border-box; min-height: 150px; padding: 35px 40px 0; }
+
+.a321-service__item-title { display: block; font-size: 36px; }
+
+.a321-service__item-description { margin-top: 10px; font-size: 24px; }
+
+.a321-service__item-info { margin-top: 40px; }
+
+.a321-service__special { display: block; padding-top: 40px; color: #a07469; font-size: 21px; letter-spacing: -0.5px; }
+
+.a321-service__special-mark { display: inline-block; margin-bottom: 10px; background-color: #fef3d0; font-size: 24px; font-family: 'Segoe Script','Noto Sans KR','AppeGothic','Malgun Gothic','맑은 고딕','돋음','Dotum','Apple SD Gothic Neo',Helvetica,sans-serif; font-style: normal; line-height: 1.2; }
+
+.event-header { position: static; height: auto; background: transparent; }
+
+.event-main { display: block; margin-top: 50px; }
+
+.event-section { position: relative; margin-top: 50px; padding: 0 0 40px 200px; }
+
+.event-section:first-child { margin-top: 0; }
+
+.event-section__head { position: absolute; left: 0; top: 0; width: 160px; padding-top: 16px; border-top: 4px solid #eeeeee; color: #000000; font-size: 23px; font-weight: 700; letter-spacing: -0.5px; }
+
+.event-section__head::before { content: ''; position: absolute; left: 0; top: -4px; width: 100%; display: block; width: 34px; border-bottom: 5px solid red; border-right: 10px solid transparent; }
+
+.event-info__item { position: relative; padding: 8px 0 0 144px; margin-top: 30px; }
+
+.event-info__item:first-child { margin-top: 0; }
+
+.event-info__title { position: absolute; left: 0; top: 0; display: block; width: 115px; height: 38px; border-radius: 19px; background-color: #273691; color: #ffffff; font-size: 18px; font-weight: 500; text-align: center; line-height: 38px; }
+
+.event-info__description { color: #212121; font-size: 19px; line-height: 1.3; }
+
+.event-notice { padding: 40px; background-color: #f7f7f7; }
+
+.event-notice .event-notice__title { margin: 0; color: #010101; font-size: 23px; font-weight: 700; letter-spacing: -0.5px; text-align: left; }
+
+.event-notice__list { margin-top: 20px; }
+
+.event-notice__item { position: relative; padding-left: 12px; margin-top: 8px; }
+
+.event-notice__item:first-child { margin-top: 0; }
+
+.event-notice__item::before { content: ''; position: absolute; left: 0; top: 11px; display: block; width: 3px; height: 3px; background-color: #565656; }
+
+</style>
+
+
+<link href="https://flyasiana.com/C/pc/css/slick.css" rel="stylesheet" type="text/css">
+<article class="a321-article ">
+	<header class="a321-header ">
+		<div class="a321-header__intro" aria-hidden="true">
+			<video class="a321-header__video" autoplay loop muted preload="auto">
+				<source src="https://aisff.s3-ap-northeast-1.amazonaws.com/2019/A321-neo/a321_intro.mp4" type="video/mp4">
+			</video>
+			<div class="a321-header__title-box">
+				<h1 class="a321-header__title">
+
+					<span class="a321-header__title-neo">New Engine Technology</span>
+					<strong class="a321-header__title-a321">A321neo</strong>
+				</h1>
+				<span class="a321-header__btns">
+					<button class="a321-header__btn" type="button">SKIP</button>
+				</span>
+			</div>
+		</div>
+	</header>
+	<nav class="a321-nav">
+		<div class="a321-nav__list">
+			<a class="a321-nav__item a321-nav__item--type-neo a321-nav__item--is-active" href="#a321-neo"><span
+					class="a321-nav__item-inner">A321neo</span></a>
+			<a class="a321-nav__item a321-nav__item--type-seatmap" href="#a321-seatmap"><span
+					class="a321-nav__item-inner">SEAT MAP</span></a>
+			<a class="a321-nav__item a321-nav__item--type-service" href="#a321-service"><span
+					class="a321-nav__item-inner">SERVICE</span></a>
+			<a class="a321-nav__item a321-nav__item--type-event" data-open="false" href="https://flyasiana.com/C/KR/KO/event/detail/CM201907040001142236" ><span class="a321-nav__item-inner">EVENT</span></a>
+		</div>
+	</nav>
+	<main class="a321-main">
+		<div id="a321-neo" class="a321-contents a321-contents--is-active">
+			<section class="a321-section a321-neo">
+				<div class="a321-neo__header">
+					<strong class="a321-neo__header-logo"><img src="https://ozimg.flyasiana.com/editor/image/20190701/ed0495c0-1261-432f-8055-7a98ecf06dad.png" alt="ASIANA 321neo"></strong>
+					<div class="a321-neo__header-inner">
+						<h2 class="a321-neo__header-title">Летайте вместе с Asiana Airlines<br><br><strong class='a321-neo__header-innertitle'><span class='text-en'>на экологичном, безопасном и удобном</span><br>ASIANA 321neo.</strong></h2>
+
+					</div>
+					<button type="button" class="a321-btn__arrow" id="introReplay">Посмотреть видео полета A321neo</button>
+				</div>
+
+
+				<div class="a321-neo__point">
+					<div class="a321-neo__point-box">
+						<div class="a321-neo__point-img"><img
+								src="https://ozimg.flyasiana.com/editor/image/20190701/2a73324e-5c0c-4d26-af1a-4bb33e251773.png"
+								alt="SAFETY"></div>
+						<div class="a321-neo__point-contents">
+							<h3 class="a321-neo__point-title"><span class="a321-neo__point-innertitle">SAFETY</span></h3>
+							<strong class="a321-neo__point-subtitle"><span class='text-bold'>Безопасность — превыше всего</span></strong>
+							<p class="a321-neo__point-description">A320 обеспечивает непревзойденный уровень безопасности — проверено 276 перевозчиками по всему миру! <br>Только представьте, в этот самый момент более 8500 самолетов семейства A320 выполняют совершенно безопасные рейсы.</p>
+						</div>
+					</div>
+					<div class="a321-neo__point-box">
+						<div class="a321-neo__point-img"><img
+								src="https://ozimg.flyasiana.com/editor/image/20190701/9aa58f94-522a-4177-855a-beb87756033c.jpeg"
+								alt="FUN AND JOY">
+							<div class="a321-neo__point-required">
+								<small class="a321-neo__point-alert">※ Возьмите с собой наушники, чтобы часами наслаждаться развлекательными программами. </small>
+								<small class="a321-neo__point-alert">※ Пожалуйста, заранее установите приложение ‘<img src='https://ozimg.flyasiana.com/editor/image/20190722/8235c1dd-d2f8-4de0-80e8-2bf7e6e9af73.png' alt='Cabin Media Player'>Cabin Media Player’ при использовании устройства iOS (Apple).</small>
+							</div>
+						</div>
+						<div class="a321-neo__point-contents">
+							<h3 class="a321-neo__point-title"><span class="a321-neo__point-innertitle">FUN AND JOY</span></h3>
+							<strong class="a321-neo__point-subtitle">Wireless In - Flight <br>Entertainment</strong>
+							<p class="a321-neo__point-description">На борту настроена беспроводная связь, что позволит вам получить доступ к разнообразными развлекательными программами прямо со своего мобильного устройства. <br>Устройте свой собственный кинотеатр на борту, ведь здесь так тихо</p>
+							<button class="a321-btn__arrow a321-layer__btn" type="button"
+								data-layer="layer-wireless">Как настроить доступ к развлекательным программам по беспроводной сети</button>
+						</div>
+
+					</div>
+					<div class="a321-neo__point-box">
+						<div class="a321-neo__point-img"><img src="https://ozimg.flyasiana.com/editor/image/20190701/a8a2bc5d-04a5-40df-b2ab-a06e5a0cf7ab.jpeg" alt="NEW ENGINE Technology">
+						</div>
+						<div class="a321-neo__point-contents">
+							<h3 class="a321-neo__point-title"><span class="a321-neo__point-innertitle">NEW ENGINE<br>Technology</span></h3>
+							<strong class="a321-neo__point-subtitle">Экологичный флот,<br><span class='text-bold'>с заботой об окружающей среде!</span></strong>
+							<p class="a321-neo__point-description">Данный самолет оснащен новыми высокопроизводительными двигателями, повышающими эффективность использования топлива на 15% по сравнению с эквивалентными моделями.</p>
+						</div>
+
+					</div>
+
+				</div>
+
+
+
+				<div class="a321-neo__info">
+					<div class="a321-neo__info-tab">
+						<span class="a321-neo__info-tabitem a321-neo__info-tabitem--is-active">
+							<a href="#a321Feature" class="a321-neo__info-tabbtn" type="button"><strong class='a321-neo__info-text'>A321 Neo</strong> Характеристики</a>
+						</span>
+						<span class="a321-neo__info-tabitem">
+							<a href="#a321Size" class="a321-neo__info-tabbtn" type="button"><strong class='a321-neo__info-text'>A321 Neo</strong> Информация о материалах, использованных для производства самолета</a>
+						</span>
+					</div>
+					<div class="a321-neo__info-contents">
+						<div id="a321Feature"
+							class="a321-neo__info-content a321-feature a321-neo__info-content--is-active">
+							<div class="a321-marker" style="left:510px; top:380px;">
+								<button type="button" class="a321-marker__btn"><span
+										class="a321-marker__btn-inner">Посмотреть подробную информацию</span></button>
+								<div class="a321-marker__detail a321-marker__detail--arrow-BR"
+									style="right:30px; bottom:70px;">
+									<div class="a321-marker__detail-inner">Окна (23 см в длину и 32,5 см в ширину)</div>
+								</div>
+							</div>
+							<div class="a321-marker" style="left:940px; top:400px;">
+								<button type="button" class="a321-marker__btn"><span
+										class="a321-marker__btn-inner">Посмотреть подробную информацию</span></button>
+								<div class="a321-marker__detail a321-marker__detail--arrow-BR"
+									style="right:30px; bottom:70px;">
+									<div class="a321-marker__detail-inner">Впечатляющая внешняя отделка корпуса с изображением маски ZORRO (такая же, как и у модели A350)</div>
+								</div>
+							</div>
+							<div class="a321-marker" style="left:780px; top:420px;">
+								<button type="button" class="a321-marker__btn"><span
+										class="a321-marker__btn-inner">Посмотреть подробную информацию</span></button>
+								<div class="a321-marker__detail a321-marker__detail--arrow-TL"
+									style="left:30px; top:70px">
+									<div class="a321-marker__detail-inner">Снижение уровня шума от двигателя на 12 дБ — более тихий салон по сравнению <br>с другими самолетами Airbus таких же размеров.</div>
+								</div>
+							</div>
+							<div class="a321-marker" style="left:160px; top:470px;">
+								<button type="button" class="a321-marker__btn"><span
+										class="a321-marker__btn-inner">Посмотреть подробную информацию</span></button>
+								<div class="a321-marker__detail a321-marker__detail--arrow-TL"
+									style="left:30px; top:70px">
+									<div class="a321-marker__detail-inner">Форма концевой аэродинамической поверхности крыла снижает уровень сопротивления ветру</div>
+								</div>
+							</div>
+							<div class="a321-marker" style="left:630px; top:560px;">
+								<button type="button" class="a321-marker__btn"><span
+										class="a321-marker__btn-inner">Посмотреть подробную информацию</span></button>
+								<div class="a321-marker__detail a321-marker__detail--arrow-LT"
+									style="left: 80px;top: 35px;">
+									<div class="a321-marker__detail-inner">Эффективность использования топлива выше на 15% благодаря новым высокопроизводительным двигателям</div>
+								</div>
+							</div>
+
+						</div>
+						<div id="a321Size" class="a321-neo__info-content a321-size ">
+							<div class="a321-marker" style="left:560px; top:350px;">
+								<button type="button" class="a321-marker__btn"><span
+										class="a321-marker__btn-inner">Посмотреть подробную информацию</span></button>
+								<div class="a321-marker__detail a321-marker__detail--size-width"
+									style="right:-120px; bottom:70px;">
+									<div class="a321-marker__detail-inner">Длина 44.51m</div>
+								</div>
+							</div>
+							<div class="a321-marker" style="left:780px; top:430px;">
+								<button type="button" class="a321-marker__btn"><span
+										class="a321-marker__btn-inner">Посмотреть подробную информацию</span></button>
+								<div class="a321-marker__detail a321-marker__detail--size-wing"
+									style="right:-150px; top:70px;">
+									<div class="a321-marker__detail-inner">Размах крыла 35.8m</div>
+								</div>
+							</div>
+							<div class="a321-marker" style="left:850px; top:280px;">
+								<button type="button" class="a321-marker__btn"><span
+										class="a321-marker__btn-inner">Посмотреть подробную информацию</span></button>
+								<div class="a321-marker__detail a321-marker__detail--size-height"
+									style="right:-140px; bottom:70px;">
+									<div class="a321-marker__detail-inner">Высота<br>11.76m</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="a321-neo__spec">
+						<ul class="a321-neo__spec-list">
+							<li class="a321-neo__spec-item">
+								<span class="a321-neo__spec-icon a321-neo__spec-icon--type-maker"><span
+										class="a321-neo__spec-obj"></span></span>
+								<span class="a321-neo__spec-box">
+									<span class="a321-neo__spec-title">Производитель</span>
+									<span class="a321-neo__spec-data">Airbus</span>
+								</span>
+							</li>
+							<li class="a321-neo__spec-item">
+								<span class="a321-neo__spec-icon a321-neo__spec-icon--type-time"><span
+										class="a321-neo__spec-obj"></span></span>
+								<span class="a321-neo__spec-box">
+									<span class="a321-neo__spec-title">Максимальная продолжительность полета</span>
+									<span class="a321-neo__spec-data">7.3hr</span>
+								</span>
+							</li>
+							<li class="a321-neo__spec-item">
+								<span class="a321-neo__spec-icon a321-neo__spec-icon--type-distance"><span
+										class="a321-neo__spec-obj"></span></span>
+								<span class="a321-neo__spec-box">
+									<span class="a321-neo__spec-title">Максимальная дальность полета</span>
+									<span class="a321-neo__spec-data">6,111km</span>
+								</span>
+							</li>
+							<li class="a321-neo__spec-item">
+								<span class="a321-neo__spec-icon a321-neo__spec-icon--type-altitude"><span
+										class="a321-neo__spec-obj"></span></span>
+								<span class="a321-neo__spec-box">
+									<span class="a321-neo__spec-title">Максимальная высота полета</span>
+									<span class="a321-neo__spec-data">12,131m</span>
+								</span>
+							</li>
+							<li class="a321-neo__spec-item">
+								<span class="a321-neo__spec-icon a321-neo__spec-icon--type-speed"><span
+										class="a321-neo__spec-obj"></span></span>
+								<span class="a321-neo__spec-box">
+									<span class="a321-neo__spec-title">Крейсерская скорость</span>
+									<span class="a321-neo__spec-data">841km/h</span>
+								</span>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+			</section>
+		</div>
+
+
+		<div id="a321-seatmap" class="a321-contents ">
+			<section class="a321-section a321-seatmap">
+				<h2 class="a321-seatmap__title"><span class='text-bold'>A321neo</span><br>Карта мест</h2>
+				<button class="a321-seatmap__btn-vr" type="button" title="Новое окно" id="btnVR">Попробуйте 360 VR</button>
+				<div class="a321-seatmap__legend">
+					<ul class="a321-seatmap__legend-list">
+						<li class="a321-seatmap__legend-item a321-seatmap__legend-item--type-exit">Аварийный выход</li>
+						<li class="a321-seatmap__legend-item a321-seatmap__legend-item--type-baby">Детская люлька</li>
+						<li class="a321-seatmap__legend-item a321-seatmap__legend-item--type-toilet">Уборная</li>
+						<li class="a321-seatmap__legend-item a321-seatmap__legend-item--type-gall">Кухня</li>
+						<li class="a321-seatmap__legend-item a321-seatmap__legend-item--type-wing">Крылья</li>
+						<li class="a321-seatmap__legend-item a321-seatmap__legend-item--type-stairs">Лестница</li>
+						<li class="a321-seatmap__legend-item a321-seatmap__legend-item--type-preferred">Платные места</li>
+						<li class="a321-seatmap__legend-item a321-seatmap__legend-item--type-diaper">Пеленальный столик</li>
+					</ul>
+					<small class="a321-seatmap__legend-alert">Внутренняя планировка и типы кресел могут варьироваться в зависимости от количества мест даже в самолетах одного и того же типа.</small>
+				</div>
+				<div class="a321-seatmap__map">
+					<div class="a321-seatmap__map-img">
+						<img src="https://ozimg.flyasiana.com/editor/image/20190701/9331f0a1-bde6-4cbb-82d9-5edc1b888ca6.jpeg" alt="A321 seatmap">
+						<div class="a321-marker" style="right:220px;top:460px;">
+							<button type="button" class="a321-marker__btn a321-layer__btn"
+								data-layer="layer-businessClass"><span class="a321-marker__btn-inner">Узнайте больше о бизнес-классе</span></button>
+							<div class="a321-marker__click text-bold">click</div>
+
+
+						</div>
+						<div class="a321-marker" style="right:220px;top:980px;">
+							<button type="button" class="a321-marker__btn a321-layer__btn"
+								data-layer="layer-economyClass"><span class="a321-marker__btn-inner">Узнайте больше об эконом-классе</span></button>
+							<div class="a321-marker__click text-bold">click</div>
+
+
+
+						</div>
+					</div>
+
+				</div>
+
+			</section>
+		</div>
+
+		<div id="a321-service" class="a321-contents">
+			<section class="a321-section a321-service">
+				<div class="a321-service__box a321-service--class-business">
+					<h2 class="a321-service__title"><span class='text-bold'>A321neo</span><br>Business Class</h2>
+					<div class="a321-service__nav">
+						<a class="a321-service__nav-item a321-service__nav-item--is-active" href="#business-seat">Места</a>
+						<a class="a321-service__nav-item" href="#business-airport">В аэропорту</a>
+						<a class="a321-service__nav-item" href="#business-lounge">Зал ожидания</a>
+						<a class="a321-service__nav-item" href="#business-baggage">Багаж</a>
+						<a class="a321-service__nav-item" href="#business-service">Обслуживание на борту</a>
+					</div>
+					<div class="a321-service__contents">
+						<div class="a321-service__list">
+							<div class="a321-service__item a321-service__item--is-active" id="business-seat">
+								<h3 class="a321-service__item-heading">Места</h3>
+								<div class="a321-service__item-slide">
+									<div class="a321-service__item-img"><img data-lazy="https://ozimg.flyasiana.com/editor/image/20190701/32f29dd1-b9a5-430a-8e37-2637727a9b18.jpeg">
+									</div>
+									<div class="a321-service__item-img"><img data-lazy="https://ozimg.flyasiana.com/editor/image/20190701/64bfafe0-8b25-434f-8eb1-71f22dd61c79.jpeg">
+									</div>
+									<div class="a321-service__item-img"><img data-lazy="https://ozimg.flyasiana.com/editor/image/20190701/e058b50f-df51-4782-96f8-55ac5ba6f870.jpeg">
+									</div>
+									<div class="a321-service__item-img"><img data-lazy="https://ozimg.flyasiana.com/editor/image/20190701/d3271872-6a1e-4e78-be1a-d9be9f73f6f1.jpeg">
+									</div>
+								</div>
+								<div class="a321-service__item-box">
+									<strong class="a321-service__item-title">Места бизнес-класса</strong>
+									<p class="a321-service__item-description">Комфортабельные места подарят вам полное расслабление.</p>
+									<div class="a321-service__item-info">
+										<ul class="a321-bullet__list a321-bullet__list--type-square">
+											<li class="a321-bullet__item"><strong>Количество мест</strong> : 8 мест</li>
+											<li class="a321-bullet__item"><strong>Ширина кресла</strong> : 53 см</li>
+											<li class="a321-bullet__item"><strong>Расстояние между креслами</strong> : 107 см</li>
+											<li class="a321-bullet__item"><strong>Источник питания/USB</strong> : Доступно для всех мест</li>
+											<li class="a321-bullet__item"><strong>Развлечения по беспроводной сети</strong> : Вы можете подключить свое мобильное устройство к сети OZ Wifi, перейти на портал Asiana Portal и получить доступ к развлекательным программа по беспроводной сети.</li>
+										</ul>
+										<div class="a321-bullet__item-box"><small>※ Возьмите с собой наушники, чтобы часами наслаждатьсяразвлекательными программами.</small><small>※ Пожалуйста, заранее установите приложение &lsquo;Cabin Media Player&rsquo;при использовании устройства iOS (Apple).</small></div>
+									</div>
+								</div>
+							</div>
+
+							<div class="a321-service__item" id="business-airport">
+								<h3 class="a321-service__item-heading">В аэропорту</h3>
+								<div class="a321-service__item-slide">
+									<div class="a321-service__item-img"><img data-lazy="https://ozimg.flyasiana.com/editor/image/20190701/f819eea7-ff95-4c27-ae49-19844c7a87af.jpeg">
+									</div>
+								</div>
+								<div class="a321-service__item-box">
+									<strong class="a321-service__item-title">Специальная стойка регистрации для бизнес-класса</strong>
+									<p class="a321-service__item-description">Вы можете с легкостью зарегистрироваться на рейс на специальных стойках регистрации.</p>
+									<div class="a321-service__item-info">
+										<ul class="a321-bullet__list a321-bullet__list--type-square">
+											<li class="a321-bullet__item"><strong>Аэропорт Инчхон</strong> : Стойка А, премиальная зона регистрации на рейс, 3-й этаж, терминал 1</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="a321-service__item" id="business-lounge">
+								<h3 class="a321-service__item-heading">Зал ожидания</h3>
+								<div class="a321-service__item-slide">
+									<div class="a321-service__item-img"><img data-lazy="https://ozimg.flyasiana.com/editor/image/20190701/e71cf60e-86fb-4143-a73f-9c2ff1d2bf3b.jpeg">
+									</div>
+									<div class="a321-service__item-img"><img data-lazy="https://ozimg.flyasiana.com/editor/image/20190701/bf19e4bb-f023-4bc3-86cf-f29bef7a9c66.jpeg">
+									</div>
+									<div class="a321-service__item-img"><img data-lazy="https://ozimg.flyasiana.com/editor/image/20190701/90ab6bb1-1dfa-4418-82d9-c96c803630d6.jpeg">
+									</div>
+
+								</div>
+								<div class="a321-service__item-box">
+									<strong class="a321-service__item-title">Специальный зал ожидания для бизнес-класса</strong>
+									<p class="a321-service__item-description">Отдохните в эксклюзивном зале ожидания Asiana, насладившись легкими закусками и напитками перед посадкой на рейс.</p>
+									<div class="a321-service__item-info">
+										<ul class="a321-bullet__list a321-bullet__list--type-square">
+											<li class="a321-bullet__item"><strong>Центральный зал ожидания бизнес-класса в аэропорту Инчхон</strong> : Перед выходом 26</li>
+											<li class="a321-bullet__item"><strong>Зал ожидания бизнес-класса в восточном крыле аэропорта Инчхон</strong> : Перед выходом 11</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="a321-service__item" id="business-baggage">
+								<h3 class="a321-service__item-heading">Багаж</h3>
+								<div class="a321-service__item-slide">
+									<div class="a321-service__item-img"><img data-lazy="https://ozimg.flyasiana.com/editor/image/20190701/55478f52-ac14-474b-b820-fe612441108c.jpeg">
+									</div>
+
+								</div>
+								<div class="a321-service__item-box">
+									<strong class="a321-service__item-title">Багаж бизнес-класса</strong>
+									<p class="a321-service__item-description">Мы предлагаем бесплатные преимущества в отношении допустимой нормы провоза багажа в зависимости от класса и статуса участника клуба.<br>Приоритетные бирки, прикрепленные к багажу пассажиров бизнес-класса, позволят ускорить его выдачу.</p>
+
+								</div>
+							</div>
+							<div class="a321-service__item" id="business-service">
+								<h3 class="a321-service__item-heading">Обслуживание на борту</h3>
+								<div class="a321-service__item-slide">
+									<div class="a321-service__item-img"><img data-lazy="https://ozimg.flyasiana.com/editor/image/20190701/78ef68fe-8a5b-4fee-8fad-642258295c29.jpeg">
+									</div>
+									<div class="a321-service__item-img"><img data-lazy="https://ozimg.flyasiana.com/editor/image/20190701/03313961-7d8e-4416-b0b0-6f745e33455f.jpeg">
+									</div>
+									<div class="a321-service__item-img"><img data-lazy="https://ozimg.flyasiana.com/editor/image/20190701/4ea41d87-cc02-4b80-8ea0-6bb5d70436ef.jpeg">
+									</div>
+									<div class="a321-service__item-img"><img data-lazy="https://ozimg.flyasiana.com/editor/image/20190701/61a84599-0915-4a35-b83a-ce1bd130091d.jpeg">
+									</div>
+								</div>
+								<div class="a321-service__item-box">
+									<strong class="a321-service__item-title">Питание/напитки на борту для бизнес-класса</strong>
+									<p class="a321-service__item-description">Насладитесь вином, отобранным лучшими в мире сомелье, которое идеально сочетается с нашим питанием на борту и сертифицированным экологически чистым кофе от Rainforest Alliance (RA).</p>
+									<div class="a321-service__item-info">
+										<span class="a321-service__special">
+											<mark class="a321-service__special-mark">Особые услуги</mark><br>
+											<strong>В партнерстве с Институтом корейской королевской кухни и La Cucina, лучшей итальянской кухней в Корее, мы разработали изысканное меню питания на борту.
+										</span>
+									</div>
+								</div>
+							</div>
+
+
+						</div>
+					</div>
+				</div>
+
+
+				<div class="a321-service__box a321-service--class-economy">
+					<h2 class="a321-service__title"><span class='text-bold'>A321neo</span><br>Economy Class</h2>
+					<div class="a321-service__nav">
+						<a class="a321-service__nav-item a321-service__nav-item--is-active" href="#economy-seat">Места</a>
+						<a class="a321-service__nav-item" href="#economy-service">В самолете</a>
+					</div>
+					<div class="a321-service__contents">
+						<div class="a321-service__list">
+							<div class="a321-service__item a321-service__item--is-active" id="economy-seat">
+								<h3 class="a321-service__item-heading">Места</h3>
+								<div class="a321-service__item-slide">
+									<div class="a321-service__item-img"><img data-lazy="https://ozimg.flyasiana.com/editor/image/20190701/4b6be63d-7fe6-4e48-96af-08ad525347ed.jpeg">
+									</div>
+									<div class="a321-service__item-img"><img data-lazy="https://ozimg.flyasiana.com/editor/image/20190701/ca63122c-d5af-43cd-9533-c001ae1788a8.jpeg">
+									</div>
+									<div class="a321-service__item-img"><img data-lazy="https://ozimg.flyasiana.com/editor/image/20190701/d0a759a0-19ec-40c4-b6eb-c3deecb6da26.jpeg">
+									</div>
+									<div class="a321-service__item-img"><img data-lazy="https://ozimg.flyasiana.com/editor/image/20190701/87a49ab1-6c03-476e-b528-9824000b0661.jpeg">
+									</div>
+								</div>
+								<div class="a321-service__item-box">
+									<strong class="a321-service__item-title">Кресла эконом-класса</strong>
+									<p class="a321-service__item-description">Насладитесь дополнительным комфортом с нашими особыми креслами Slim Seat.</p>
+									<div class="a321-service__item-info">
+										<ul class="a321-bullet__list a321-bullet__list--type-square">
+											<li class="a321-bullet__item"><strong>Количество мест</strong> : 180 мест</li>
+											<li class="a321-bullet__item"><strong>Ширина кресла</strong> : 18 inch</li>
+											<li class="a321-bullet__item"><strong>Расстояние между креслами</strong> : 31 inch</li>
+											<li class="a321-bullet__item"><strong>Источники питания</strong> : 2 розетки на каждые 3 места</li>
+											<li class="a321-bullet__item"><strong>USB</strong> : Доступно для всех мест</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="a321-service__item" id="economy-service">
+								<h3 class="a321-service__item-heading">В самолете</h3>
+								<div class="a321-service__item-slide">
+									<div class="a321-service__item-img"><img data-lazy="https://ozimg.flyasiana.com/editor/image/20190701/1ac415fd-999f-4cd4-819e-94a2517c2d1b.jpeg">
+									</div>
+									<div class="a321-service__item-img"><img data-lazy="https://ozimg.flyasiana.com/editor/image/20190701/5b99c857-daf7-44af-9a08-36caf43f2eff.jpeg">
+									</div>
+								</div>
+								<div class="a321-service__item-box">
+									<p class="a321-service__item-description">Снижение уровня шума от двигателя на 12 дБ — более тихий салон по сравнению с другими самолетами Airbus таких же размеров.</p>
+									<div class="a321-service__item-info">
+										<ul class="a321-bullet__list a321-bullet__list--type-square">
+											<li class="a321-bullet__item"><strong>Развлечения по беспроводной сети</strong> : Вы можете подключить свое мобильное устройство к сети OZ Wifi, перейти на портал Asiana Portal и получить доступ к развлекательным программа по беспроводной сети.</li>
+										</ul>
+										<div class="a321-bullet__item-box"><small>※ Возьмите с собой наушники, чтобы часами наслаждатьсяразвлекательными программами.</small><small>※ Пожалуйста, заранее установите приложение &lsquo;Cabin Media Player&rsquo;при использовании устройства iOS (Apple).</small></div>
+									</div>
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+
+		<div id="a321-event" class="a321-contents">
+			<section class="a321-section a321-event"></section>
+		</div>
+	</main>
+</article>
+
+<div class="a321-layer" id="layer-wireless">
+	<div class="a321-layer__dim"></div>
+	<article class="a321-layer__wrap" style="width:870px; margin-left:-435px;">
+		<div class="a321-layer__contents">
+			<div class="a321-layer__body">
+				<div class="a321-wireless">
+					<section class="a321-wireless__ready">
+						<div class="a321-layer__header">
+							<h1 class="a321-layer__header-title">Как настроить доступ к развлекательным программам по беспроводной сети</h1>
+						</div>
+						<div class="a321-wireless__list">
+							<div class="a321-wireless__item">
+								<div class="a321-wireless__item-img"><img
+										src="https://ozimg.flyasiana.com/editor/image/20190722/a810d2f6-b70d-439e-8e40-1ea53c3b254e.jpeg">
+								</div>
+								<div class="a321-wireless__item-contents">
+									<strong class="a321-wireless__item-subtitle"><span class="a321-wireless__item-ready">Перед посадкой на борт</span><br>Возьмите с собой наушники</strong>
+									<p class="a321-wireless__item-text">Возьмите с собой наушники, чтобы часами наслаждаться развлекательными программами.</p>
+								</div>
+							</div>
+						</div>
+						<div class="a321-wireless__list a321-wireless__list--type-ios">
+							<div class="a321-wireless__item">
+								<div class="a321-wireless__item-img"><img
+										src="https://ozimg.flyasiana.com/editor/image/20190701/7e1b50f1-8064-4e57-b8b5-12fe90e3cead.jpeg">
+								</div>
+								<div class="a321-wireless__item-contents">
+									<strong class="a321-wireless__item-subtitle"><span class="a321-wireless__item-ready">Перед посадкой на борт</span><br>Установка ‘Cabin Media Player’ App — iOS (Apple)</strong>
+									<p class="a321-wireless__item-text">1. Загрузите бесплатное приложение Cabin Media Player из App Store.</p>
+									<p class="a321-wireless__item-text">2. Пользователям устройств под управлением Android и ноутбуков приложение Cabin Media Player не понадобится.</p>
+								</div>
+							</div>
+						</div>
+					</section>
+					<section class="a321-wireless__step">
+						<div class="a321-layer__header">
+							<h1 class="a321-layer__header-title">How to Access the a321-wireless Entertainment System</h1>
+						</div>
+						<div class="a321-wireless__list">
+							<div class="a321-wireless__item">
+								<div class="a321-wireless__item-img"><img
+										src="https://ozimg.flyasiana.com/editor/image/20190701/0bfdad6d-e34f-479d-a9bb-4ee8a4adf0be.jpeg">
+								</div>
+								<div class="a321-wireless__item-contents">
+									<p class="a321-wireless__item-text">Подключитесь с беспроводной сети OZ WiFi.</p>
+								</div>
+							</div>
+							<div class="a321-wireless__item">
+								<div class="a321-wireless__item-img"><img
+										src="https://ozimg.flyasiana.com/editor/image/20190701/c0e5de4d-5996-4734-9fa6-30323a6b86d8.jpeg">
+								</div>
+								<div class="a321-wireless__item-contents">
+									<p class="a321-wireless__item-text">Откройте браузер Chrome, Safari или Firefox.</p>
+								</div>
+							</div>
+							<div class="a321-wireless__item">
+								<div class="a321-wireless__item-img"><img
+										src="https://ozimg.flyasiana.com/editor/image/20190701/b1682749-660c-420e-9e17-051a087fc423.jpeg">
+								</div>
+								<div class="a321-wireless__item-contents">
+									<p class="a321-wireless__item-text">Вы будете автоматически перенаправлены на портал Asiana. Если страница не загружается, перейдите по адресу ozwifi.flyasiana.com.</p>
+								</div>
+							</div>
+						</div>
+					</section>
+					<footer class="a321-wireless__notice">
+						<h2 class="a321-wireless__notice-title">Notice</h2>
+						<div class="a321-wireless__notice-contents">
+							<div class="a321-bullet">
+								<ul class="a321-bullet__list a321-bullet__list--type-square">
+									<li class="a321-bullet__item">Система развлечений на борту оптимизирована для браузеров Chrome, Safari и Firefox. </li>
+									<li class="a321-bullet__item">Система развлечений на борту работает на устройствах под управлением Android 5.0 (или выше) и iOS 9 (или выше). </li>
+									<li class="a321-bullet__item">Во время пользования данной услугой рекомендуется надевать наушники, чтобы не нарушать тишину в салоне.  </li>
+									<li class="a321-bullet__item">Сеть Wi-Fi на борту может быть использована только для подключения к услуге развлечений по беспроводной сети, предоставляемой авиакомпанией Asiana Airlines. </li>
+									<li class="a321-bullet__item">Включите на всех своих устройствах режим полета и не отключайте его на протяжении всего рейса. </li>
+								</ul>
+							</div>
+						</div>
+					</footer>
+				</div>
+			</div>
+		</div>
+		<button type="button" class="a321-layer__btn-close">Закрыть</button>
+	</article>
+</div>
+
+
+<div class="a321-layer" id="layer-businessClass">
+	<div class="a321-layer__dim"></div>
+	<article class="a321-layer__wrap">
+		<div class="a321-layer__contents">
+			<div class="a321-seatmap__class">
+				<div class="a321-seatmap__class-visual">
+					<span class="a321-seatmap__class-img"><img data-lazy="https://ozimg.flyasiana.com/editor/image/20190701/cda7ae41-0198-4a6a-885d-e4a7713e5a4e.jpeg"
+							alt="BUSINESS CLASS"></span>
+					<span class="a321-seatmap__class-img"><img data-lazy="https://ozimg.flyasiana.com/editor/image/20190701/c62a1f0e-6396-4660-8284-f2f7bde0417d.jpeg"
+							alt="BUSINESS CLASS"></span>
+					<span class="a321-seatmap__class-img"><img data-lazy="https://ozimg.flyasiana.com/editor/image/20190701/7de8bf32-9c9e-4ed5-b35a-df4c14a5365d.jpeg"
+							alt="BUSINESS CLASS"></span>
+					<span class="a321-seatmap__class-img"><img data-lazy="https://ozimg.flyasiana.com/editor/image/20190701/067e3bb0-e299-4f5c-8143-5e4f1957a175.jpeg"
+							alt="BUSINESS CLASS"></span>
+					<span class="a321-seatmap__class-img"><img data-lazy="https://ozimg.flyasiana.com/editor/image/20190701/abedc9b4-63a6-474e-aeeb-39a3b3979c7d.jpeg"
+							alt="BUSINESS CLASS"></span>
+				</div>
+				<div class="a321-seatmap__class-box">
+					<h3 class="a321-seatmap__class-title">Бизнес-класс</h3>
+					<div class="a321-seatmap__class-info">
+						<table class="a321-seatmap__table">
+							<caption>Информация о местах бизнес-класса</caption>
+							<colgroup>
+								<col class="col01">
+								<col>
+							</colgroup>
+							<tbody>
+								<tr>
+									<th scope="row">Места</th>
+									<td>
+										<ul class="a321-bullet__list a321-bullet__list--type-dash">
+											<li class="a321-bullet__item">Расстояние между креслами : 42 inch</li>
+											<li class="a321-bullet__item">Ширина кресла (Width) : 21 inch</li>
+											<li class="a321-bullet__item">Угол наклона сиденья : 127º</li>
+										</ul>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">Развлечения<br>по беспроводной сети</th>
+									<td>
+										<ul class="a321-bullet__list a321-bullet__list--type-dash">
+											<li class="a321-bullet__item">Вы можете подключить свое мобильное устройство к сети OZ Wifi, перейти на портал Asiana Portal и получить доступ к развлекательным программа по беспроводной сети. <small>※ Возьмите с собой наушники, чтобы часами наслаждатьсяразвлекательными программами.</small><small>※ Пожалуйста, заранее установите приложение &lsquo;Cabin Media Player&rsquo;при использовании устройства iOS (Apple).</small></li>
+										</ul>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">Электророзетка</th>
+									<td>
+										<ul class="a321-bullet__list a321-bullet__list--type-dash">
+											<li class="a321-bullet__item">Доступно для всех мест</li>
+										</ul>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">USB-порты для зарядки устройств</th>
+									<td>
+										<ul class="a321-bullet__list a321-bullet__list--type-dash">
+											<li class="a321-bullet__item">Доступно для всех мест</li>
+										</ul>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+		<button type="button" class="a321-layer__btn-close">Закрыть</button>
+	</article>
+
+</div>
+
+
+<div class="a321-layer" id="layer-economyClass">
+	<div class="a321-layer__dim"></div>
+	<article class="a321-layer__wrap">
+		<div class="a321-layer__contents">
+			<div class="a321-seatmap__class">
+				<div class="a321-seatmap__class-visual">
+					<span class="a321-seatmap__class-img"><img data-lazy="https://ozimg.flyasiana.com/editor/image/20190701/00fa39f7-eb30-4905-9840-fc1e9856c09f.jpeg"
+							alt="ECONOMY CLASS"></span>
+					<span class="a321-seatmap__class-img"><img data-lazy="https://ozimg.flyasiana.com/editor/image/20190701/19a93172-851a-4dc8-8c6f-05efb4f8eff0.jpeg"
+							alt="ECONOMY CLASS"></span>
+					<span class="a321-seatmap__class-img"><img data-lazy="https://ozimg.flyasiana.com/editor/image/20190701/63ffe550-2c50-4ce9-a6ef-31e824ba1fe8.jpeg"
+							alt="ECONOMY CLASS"></span>
+					<span class="a321-seatmap__class-img"><img data-lazy="https://ozimg.flyasiana.com/editor/image/20190701/2ad9100d-3858-4b7c-86f5-c4383f38d1d3.jpeg"
+							alt="ECONOMY CLASS"></span>
+				</div>
+				<div class="a321-seatmap__class-box">
+					<h3 class="a321-seatmap__class-title">Эконом-класс</h3>
+					<div class="a321-seatmap__class-info">
+						<table class="a321-seatmap__table">
+							<caption>Информация о местах эконом-класса</caption>
+							<colgroup>
+								<col class="col01">
+								<col>
+							</colgroup>
+							<tbody>
+								<tr>
+									<th scope="row">Количество</th>
+									<td>
+										<ul class="a321-bullet__list a321-bullet__list--type-dash">
+											<li class="a321-bullet__item">Расстояние между креслами : 31 inch</li>
+											<li class="a321-bullet__item">Ширина кресла (Width) : 18 inch</li>
+											<li class="a321-bullet__item">Угол наклона сиденья : 116º</li>
+										</ul>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">Развлечения<br>по беспроводной сети</th>
+									<td>
+										<ul class="a321-bullet__list a321-bullet__list--type-dash">
+											<li class="a321-bullet__item">Вы можете подключить свое мобильное устройство к сети OZ Wifi, перейти на портал Asiana Portal и получить доступ к развлекательным программа по беспроводной сети. <small>※ Возьмите с собой наушники, чтобы часами наслаждатьсяразвлекательными программами.</small><small>※ Пожалуйста, заранее установите приложение &lsquo;Cabin Media Player&rsquo;при использовании устройства iOS (Apple).</small></li>
+										</ul>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">Электророзетка</th>
+									<td>
+										<ul class="a321-bullet__list a321-bullet__list--type-dash">
+											<li class="a321-bullet__item">2 розетки на каждые 3 места</li>
+										</ul>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">USB</th>
+									<td>
+										<ul class="a321-bullet__list a321-bullet__list--type-dash">
+											<li class="a321-bullet__item">Доступно для всех мест</li>
+										</ul>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+		<button type="button" class="a321-layer__btn-close">Закрыть</button>
+	</article>
+</div>
+
+<div class="a321-layer" id="layerVr">
+	<div class="a321-layer__vr">
+		<iframe class="a321-layer__vr-iframe"
+			data-src="//beajimilk.cafe24.com/vrtest/A321%20ex%20190527/A321.html"></iframe>
+		<button type="button" class="a321-layer__vr-close">Закрыть</button>
+	</div>
+</div>
+
+<script src="https://flyasiana.com/C/pc/js/slick.min.js"></script>
+<script src="https://flyasiana.com/C/pc/js/plugin/waypoint/jquery.waypoints.min.js"></script>
+<script src="https://flyasiana.com/C/pc/js/plugin/waypoint/shortcuts/sticky.min.js"></script>
+
+
+<script>;
+$(document).ready(function () {
+	;
+	(function () {
+		var a321Sticky = new Waypoint.Sticky({
+			element: $('.a321-nav')[0],
+			stuckClass: 'a321-nav--position-sticky',
+		})
+
+	})();
+	(function () {
+		var $article = $('.a321-article'),
+			$btn = $('.a321-header__btn'),
+			$btnReplay = $('#introReplay'),
+			className = 'intro--is-skip';
+
+		$btn.on('click', function () {
+			$article.addClass(className);
+		});
+		$btnReplay.on('click', function () {
+			$article.removeClass(className);
+		})
+	}());
+
+
+	(function () {
+		var $nav = $('.a321-nav__item'),
+			navClass = 'a321-nav__item--is-active',
+			contentClass = 'a321-contents--is-active';
+
+		$nav.on('click', function (e) {
+			//e.preventDefault();
+			var _this = $(this),
+				hash = $(this.hash),
+				$hash = $(hash);
+
+			if (_this.data('open') == false) {
+				//return;
+			} else {
+			_this.addClass(navClass).siblings().removeClass(navClass);
+			$hash.addClass(contentClass).siblings().removeClass(contentClass);
+			if (_this.index() == 2) {
+				$('.a321-service__item-slide').slick('setPosition');
+			}
+			$('html,body').animate({
+				'scrollTop': '491px'
+			})
+				return false;
+			}
+		});
+	})();
+
+
+	(function () {
+		var $tabBtn = $('.a321-neo__info-tabbtn'),
+			tabClass = 'a321-neo__info-tabitem--is-active',
+			contentClass = 'a321-neo__info-content--is-active';
+
+		$tabBtn.on('click', function (e) {
+			e.preventDefault();
+			var _this = $(this),
+				hash = $(this.hash),
+				$hash = $(hash);
+			_this.closest('.a321-neo__info-tabitem').addClass(tabClass).siblings().removeClass(tabClass);
+			$hash.addClass(contentClass).siblings().removeClass(contentClass);
+		});
+	})();
+
+
+	(function () {
+		//class slick;
+		var slickOption = {
+			lazyLoad: 'ondemand',
+			dots:true
+		}
+		$('.a321-seatmap__class-visual').slick(slickOption);
+	})();
+
+
+
+	(function () {
+		var $layerBtn = $('.a321-layer__btn');
+
+		$layerBtn.on('click', function (e) {
+			e.preventDefault();
+			var _this = $(this),
+				layer = _this.data('layer'),
+				$layer = $('#' + layer),
+				offsetY = _this.offset().top,
+				$layerWrap = $layer.find('.a321-layer__wrap'),
+				slickBool = $layer.find('.slick-initialized').length !== 0 ? true : false;
+
+
+			$layerWrap.css('top', (offsetY) + 'px');
+			$layer.addClass('a321-layer--is-active');
+			if (slickBool) {
+				$('.slick-initialized').slick('setPosition');
+			};
+		})
+
+	})();
+	(function () {
+		var $closeLayer = $('.a321-layer__btn-close');
+		$closeLayer.on('click', function () {
+			var _this = $(this)
+			_this.closest('.a321-layer').removeClass('a321-layer--is-active');
+		})
+	})();
+
+	(function () {
+		var $body = $('body'),
+			$btnVr = $('#btnVR'),
+			$layerVr = $('#layerVr'),
+			$iframe = $layerVr.find('.a321-layer__vr-iframe'),
+			vrSrc = $iframe.data('src'),
+			$closeVr = $('.a321-layer__vr-close');
+
+
+		$btnVr.on('click', function () {
+			$body.css('overflow', 'hidden');
+			$iframe.attr('src', vrSrc);
+			$layerVr.addClass('a321-layer--is-active')
+		});
+		$closeVr.on('click', function () {
+			$body.css('overflow', 'visible');
+			$layerVr.removeClass('a321-layer--is-active');
+		})
+	})();
+
+	(function () {
+		var slickOption = {
+			lazyLoad: 'ondemand',
+			infinite: false,
+			dots: true
+		}
+		$('.a321-wireless__list').slick(slickOption);
+
+	})();
+
+
+
+	(function () {
+		//class tab;
+		var $tabBtn = $('.a321-service__nav-item'),
+			tabClass = 'a321-service__nav-item--is-active',
+			contentClass = 'a321-service__item--is-active';
+
+		$tabBtn.on('click', function (e) {
+			e.preventDefault();
+			var _this = $(this),
+				hash = $(this.hash),
+				$hash = $(hash);
+			_this.closest('.a321-service__nav-item').addClass(tabClass).siblings().removeClass(tabClass);
+			$hash.addClass(contentClass).siblings().removeClass(contentClass);
+			$('.a321-service__item-slide').slick('setPosition');
+		});
+	})();
+
+	(function () {
+		//class slick;
+		var slickOption = {
+			arrows: true,
+			dots: true,
+			lazyLoad: 'ondemand'
+		}
+		$('.a321-service__item-slide').slick(slickOption);
+	})();
+
+})
+</script>

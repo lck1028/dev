@@ -1,0 +1,770 @@
+</div>
+</div>
+</div>
+<div class="btn_area inner mar_to25 pad_bo30">
+	<button type="button" class="btn_full" onclick="location.href='/C/KR/KO/event/index';">목록으로</button>
+</div>
+</div>
+
+
+
+
+
+
+
+
+</div>
+<div class="btn_area inner">
+	<button id="btnList" type="button" class="btn_full">목록 보기</button>
+</div>
+</div>
+</div>
+<!-- //container -->
+<script>
+	$(document).ready(function () {
+
+		// 공지 or new tag 달기
+		var markType = ''
+			, dispDate = '2018-09-10T00:00'
+			, fixedTopYn = 'N';
+		if (fixedTopYn == 'Y') {
+			markType = '<span class="txt_notice">공지</span>';
+			// 3일
+		} else if (moment(dispDate, 'YYYY-MM-DD') >= moment().add(-3, 'd') && moment(dispDate, 'YYYY-MM-DD') <= moment()) {
+			markType = '<span class="txt_new">NEW</span>';
+		}
+
+		$('.list_view_title').prepend(markType);
+
+		// 목록으로 이동
+		$('#btnList').off('click').on('click', function () {
+			goNoticeList();
+		});
+
+		// 20180917 퍼블요청
+		$('.common-table-1').each(function () {
+			var _this = $(this);
+			var txt = _this.attr('summary');
+			_this.removeAttr('summary');
+			_this.find('caption').append('<p>' + txt + '</p>');
+		});
+	});
+
+	// 목록 이동 처리
+	var goNoticeList = function (obj) {
+		$('#frmSearch')
+			.attr('method', 'post')
+			.attr('action', '/C/KR/KO/customer/notice/list')
+			.submit();
+	};
+</script>
+<!--// container -->
+
+<!-- footer -->
+
+<div class="quick_fixmenu">
+	<a href="javascript:sharpNothig();" class="share" data-layerid="layerSnsShare" style="display:none;"><span class="hidden">SNS
+			공유하기</span></a>
+	<a href="javascript:sharpNothig();" class="quick_scroll top"><span class="hidden">페이지 상단으로 이동</span></a>
+</div>
+
+<!-- SNS 공유하기 layer_wrap -->
+<div class=layer_wrap id=layerSnsShare>
+	<div class=dim_bg></div>
+	<div class=layer_container>
+		<div class="layer_basic layer_content">
+			<div class=title_wrap>
+				<h4 class=tit_h4>SNS 공유하기</h4>
+			</div>
+			<div class=cont_wrap>
+				<div class=sns_wrap><a class=facebook href=javascript:sharpNothig();><span class=logo></span> <span class=txt>Facebook</span>
+						<span class=arrow></span> </a><a class=twitter href=javascript:sharpNothig();><span class=logo></span> <span
+						 class=txt>Twitter</span> <span class=arrow></span> </a><a class=kakaotalk href=javascript:sharpNothig();><span
+						 class=logo></span> <span class=txt>KakaoTalk</span> <span class=arrow></span></a></div>
+			</div><a class=layer_close href=javascript:sharpNothig(); role=button><span class=hidden>닫기</span></a>
+		</div>
+	</div>
+</div>
+<!-- //SNS 공유하기 layer_wrap -->
+
+<!-- footer -->
+<div class=footer>
+	<div class=btn_footer_area><a href=javascript:sharpNothig(); onclick='action_logging_common("FOOTER_01"),cms.goToLink("/C/KR/KO/company/terms/terms?menuId=CM201802220000728524")'>이용약관</a>
+		<a href=javascript:sharpNothig(); data-terms=transportTerms>운송약관</a> <a href=javascript:sharpNothig(); onclick='action_logging_common("FOOTER_01"),cms.goToLink("/C/KR/KO/company/terms/personal/index?menuId=CM201803190000730203")'>개인정보처리방침</a></div>
+	<div class=sns_area><a href=https://www.facebook.com/flyasiana onclick='action_logging_common("FOOTER_02"),action_logging({catetype:"All_MW_MN",outlink:$(this).attr("href")})'
+		 class=icon_facebook rel="noopener noreferrer" role=button target=_blank title=새창><span class=hidden>페이스북</span></a>
+		<a href=https://plus.google.com/+asianaairlineskorea onclick='action_logging_common("FOOTER_02"),action_logging({catetype:"All_MW_MN",outlink:$(this).attr("href")})'
+		 class=icon_google rel="noopener noreferrer" role=button target=_blank title=새창><span class=hidden>구글</span></a> <a
+		 href=https://twitter.com/FlyAsiana onclick='action_logging_common("FOOTER_02"),action_logging({catetype:"All_MW_MN",outlink:$(this).attr("href")})'
+		 class=icon_twitter rel="noopener noreferrer" role=button target=_blank title=새창><span class=hidden>트위터</span></a> <a
+		 href=https://www.instagram.com/flyasiana/ onclick='action_logging_common("FOOTER_02"),action_logging({catetype:"All_MW_MN",outlink:$(this).attr("href")})'
+		 class=icon_instagram rel="noopener noreferrer" role=button target=_blank title=새창><span class=hidden>인스타그램</span></a>
+		<a href=https://story.kakao.com/ch/asianaairlines onclick='action_logging_common("FOOTER_02"),action_logging({catetype:"All_MW_MN",outlink:$(this).attr("href")})'
+		 class=icon_kakao rel="noopener noreferrer" role=button target=_blank><span class=hidden>카카오스토리</span></a></div>
+	<div class=copy_area>
+		<p class=copy_text>사업자등록번호 : 104-81-17480<p class=copy_text>통신판매업 신고 : 강서 제 16-2822<p class=copy_text>서버 위치 : 서울 강서구
+					오쇠동 아시아나IDT(주) 전산센터<p class=copy_text>ⓒ 2018 Asiana Airlines, Inc.
+	</div>
+	<div class=btn_version_area>
+		<div class=version_wrap><a href=javascript:sharpNothig(); onclick='action_logging_common("FOOTER_03"),cms.goToLink("/C/KR/KO/index?site_preference=normal")'>PC
+				버전</a> <a href=javascript:sharpNothig(); onclick='return action_logging_common("FOOTER_04"),appDownload(),!1'>앱
+				다운로드</a> <a href=javascript:sharpNothig(); onclick='action_logging_common("FOOTER_05"),cms.goToLink("/C/KR/KO/company/branch-contact/index")'>지점연락처</a></div>
+	</div>
+	<div class=layer_wrap id=impressum>
+		<div class="full_screen layer_container">
+			<div class="layer_content layer_full" tabindex=0>
+				<div class=title_wrap>
+					<h4 class=tit_full_layer>Impressum</h4><a href=javascript:sharpNothig(); class=layer_close role=button><span class=hidden>닫기</span></a>
+				</div>
+				<div class=cont_wrap>
+					<div class=inner>
+						<h5 class="fo_bol tit_h5">Kontaktadressen</h5>
+						<table class="mar_to10 row_type table_list">
+							<caption><strong>Kontaktadressen</strong>
+								<p>Anschrift,Telefon,E-Mail,Webseite로 구성된 표입니다.
+									<col style=width:87px>
+									<col style=width:auto>
+							<tr>
+								<th scope=row>Anschrift<td>Asiana Airlines, Inc.<br>443-83, Ojeong-ro, Gangseo-gu, Seoul, Korea (Republic of)<tr>
+								<th scope=row>Telefon<td>+49-69-92 10 190<tr>
+								<th scope=row>E-Mail<td><a href=mailto:reservationgermany@flyasiana.com>reservationgermany@flyasiana.com</a>
+							<tr>
+								<th scope=row>Webseite<td>flyasiana.com
+						</table>
+						<h5 class="fo_bol tit_h5">Registereintragung in Seoul Korea</h5>
+						<p>104-81-17480<h5 class="fo_bol tit_h5">Deutsche Umsatzsteuer-Ident-Nummer</h5>
+							<p>DE222907460<h5 class="fo_bol tit_h5">Vorstand in Korea</h5>
+								<p>Soo-Cheon Kim (President)<p class=mar_to15>vertretungsberechtigt in Deutschland:<p>Chul Kee
+											(Niederlassungsleiter)<h5 class="fo_bol tit_h5">Zuständige Aufsichtsbehörde in Deutschland</h5>
+											<p>Luftfahrt-Bundesamt<p>Hermann-Blenk-Straße 26<p>38108 Braunschweig
+					</div>
+				</div>
+				<div class=btn_bottom_area>
+					<div class="btn_area float_type03"><button class="layer_close btn_floating gray" type=button>Close</button></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- //footer -->
+
+
+<!-- 운송약관 layer_wrap -->
+<div id="transportTerms" class="layer_wrap">
+	<div class="transport_terms">
+		<div class="terms_cont" tabindex="0">
+			<div class="taL">
+				<h4 class="tit_h5">운송약관</h4>
+			</div>
+			<div class="btn_area mar_to20">
+				<button type="button" class="btn_full btn_S" onclick="action_logging_common('FOOTER_01'); trans('dom');">국내 운송약관</button>
+			</div>
+			<div class="btn_area mar_to7">
+				<button type="button" class="btn_full btn_S" onclick="action_logging_common('FOOTER_01'); trans('int');">국제 운송약관</button>
+			</div>
+
+			<a href="javascript:sharpNothig();" class="terms_close"><span class="hidden">운송약관 레이어 닫기</span></a>
+		</div>
+	</div>
+</div>
+<!-- //운송약관 layer_wrap -->
+
+
+<!--// footer -->
+
+</div>
+<!-- // wrap -->
+
+<script type="text/javascript" src="https://m.flyasiana.com/C/mobile/js/ui.js"></script>
+
+<!-- JavaScript area for CMS-->
+
+
+<script src="https://m.flyasiana.com/C/mobile/js/header.js"></script>
+<script type="text/javascript">
+	//alert($(".step_indi_wrap").html());
+	$(document).ready(function () {
+		/*
+				(function () {
+					var $historyBack = $('header.sub h2.sub_tit>a.btn_history_back');
+					$historyBack.off('click').on('click', function () {
+						history.back();
+					});
+				}());
+				*/
+		/*
+		var uri = document.location.href;
+		//alert(uri);
+		var uriElm = uri.split("/");
+		for (var i = 0; i < uriElm.length; i++) {
+			//alert(uriElm[i]);
+		}
+		//alert(uriElm.length);
+		//alert(uriElm[uriElm.length-1]);
+		*/
+
+		/**
+		 * 홈버튼 클릭
+		 * */
+		$('.btn_main_link._home').off('click.logging').on('click.logging', function () {
+			action_logging_common('GNB_08');
+		});
+
+		/* GNB 공지사항클릭 */
+		$('.btn_main_link._notice').off('click.logging').on('click.logging', function () {
+			action_logging_common('GNB_13');
+		});
+
+		/**
+		 * 뒤로가기 로깅
+		 * KEY: TOP_01
+		 * */
+		$('header.sub h2.sub_tit>a.btn_history_back').off('click.logging').on('click.logging', function () {
+			action_logging_common('TOP_01');
+		});
+
+		/**
+		 * 메뉴 로깅
+		 * KEY: TOP_02
+		 * */
+		$('header.sub div.header_cont>a.gnb_icon.menu').off('click.logging').on('click.logging', function () {
+			action_logging_common('TOP_02');
+		});
+
+		/**
+		 * 지역/언어 변경 로깅
+		 * */
+		$('.btn_text.type_lang').off('click.logging').on('click.logging', function () {
+			action_logging_common('GNB_03');
+		});
+		/**
+		 * Header 지역/언어 변경
+		 */
+		var
+			selNation = "KR".toUpperCase(),
+			selLang = "KO".toUpperCase();
+
+		$("#nation").val(selNation);
+
+		/* 통합검색 버튼 로깅*/
+		$(".search").off('click.logging').on('click.logging', function () {
+			action_logging_common('GNB_04');
+		});
+
+		/* Header 국가, 언어 선택 */
+		cms.setLang($("#nation"));
+
+		$("#lang").val(selLang);
+
+		/**
+		 * Header MyAsiana 알림함 조회
+		 */
+		//cms.getMyAsiana("123", "KO");
+
+
+		/**
+		 * Main 최저가 조회
+		 */
+		var lastSpcIdx = $('.special_slider').find('.swiper-slide').last().index();
+		var spcSlideLeng = $('.special_slider').find('.swiper-slide').length;
+		$('.spc_card').off('click').on('click', function () {
+			action_logging({ pagecode: '31_BEST_01' });
+
+			//alert("haha");
+			//$(".info_detail").html("");
+			var param = {
+				idx: $(this).data("idx"),
+				iNatCd: $(this).data("natCd"),
+				iDomIntType: $(this).data("domIntType"),
+				iLangCd: $(this).data("langCd"),
+				iMgtCd: $(this).data("mgtCd"),
+				iDepAirport: $(this).data("depAirport"),
+				iArrAirport: $(this).data("arrAirport"),
+				iCabinClass: $(this).data("cabinClass"),
+				iTripType: $(this).data("tripType")
+				//objThis : $(this)
+			};
+			//alert(data.iArrAirport);
+
+			$.ajax({
+				type: "POST", dataType: "text", async: false
+				, url: '/C/KR/KO/main/lkgLpDetail'
+				, data: param
+				, success: function (rst) {
+					var jsnRst = JSON.parse(rst);
+
+					var strHtml = '';
+					strHtml += '<form method="post" action="/I/KR/KO/LowerPriceSearchList.do?menuId=CM201803190000730188">';
+					strHtml += '	<input type="hidden" name="callerType" value="ADC_DestinationInfo" />';
+					strHtml += '	<input type="hidden" name="tripType" value="' + param.iTripType + '" />';
+					strHtml += '	<input type="hidden" name="departureArea" value="' + jsnRst.oDepArea + '" />';
+					strHtml += '	<input type="hidden" name="departureCity" value="' + jsnRst.oDepCity + '" />';
+					strHtml += '	<input type="hidden" name="departureAirport" value="' + jsnRst.iDepAirport + '" />';
+					strHtml += '	<input type="hidden" name="arrivalAirport" value="' + jsnRst.iArrAirport + '" />';
+					strHtml += '	<input type="hidden" name="period" value="' + jsnRst.oStayDay + '" />';
+					strHtml += '	<input type="hidden" name="cabinClass" value="' + param.iCabinClass + '" />';
+					strHtml += '	<input type="hidden" name="domIntType" value="' + param.iDomIntType + '" />';
+					strHtml += '</form>';
+
+					var objTarget = $("#swiper-slide-lowest-price-" + param.idx);
+					objTarget.html(objTarget.html() + strHtml);
+					objTarget.find("form").submit();
+
+				}, error: function (e) {
+					alert(e);
+				}
+			});
+		});
+
+		/**
+		 * MY ASIANA 하위 4뎁스 선택 관련 처리 추가 sj.jun
+		 */
+		; (function (global, $) {
+			$('.sub_tit.toggle .tit').on('click', function () {
+				if ($(this).hasClass('on')) {
+					$('.dep4_layer').hide();
+					$(this).removeClass('on').attr('title', '메뉴 펼치기');
+					$('body').css('overflow-y', 'auto');
+					//180615 접근성 수정 Aria태그 삭제
+					$('header [aria-hidden], .container, .footer').removeAttr('aria-hidden');
+				} else {
+					$('.dep4_layer').show();
+					$(this).addClass('on').attr('title', '메뉴 접기');
+					$('body').css('overflow-y', 'hidden');
+					//180615 접근성 수정 Aria태그 추가
+					$('.dep4_layer, header.sub .sub_tit .tit').attr('aria-hidden', 'false');
+					$('header .header_gnb .header_cont, header.sub .sub_tit .btn_history_back, .container, .footer').attr('aria-hidden', 'true');
+				}
+			});
+		})(window, jQuery);
+	});
+
+	var cms = {
+		initGnbStep: function (param) {
+			$(".step_indi_wrap").html(param);
+		},
+
+		dataNav: {
+			"": ""
+		},
+
+		initNav: function () {
+
+		},
+
+		/**
+		 * param1 : url
+		 * param2 : target
+		 */
+		goToLink: function () {
+			/*
+			for(var i=0; i<arguments.length; i++) {
+				alert(arguments[i]);
+			}
+			*/
+
+			if (arguments[0].substr(arguments[0].lastIndexOf("/")).indexOf("/logout.do") == 0) {
+				if (!confirm('로그아웃 하시겠습니까?')) {
+					return false;
+				}
+			}
+
+			if (arguments.length == 1 || (arguments.length == 2 && arguments[1] == "_self")) {
+				location.href = arguments[0];
+			} else if (arguments.length == 2 && arguments[1] == "_blank") {
+				var openNewWindow = window.open("about:blank");
+				openNewWindow.location.href = arguments[0];
+			} else if (arguments.length == 2 && arguments[1] == "_post") {
+				var $form = $('<form action="' + arguments[0] + '" method="POST"/>');
+
+				$form
+					.appendTo('body')
+					.submit();
+			} else {
+				return false;
+			}
+		},
+
+		/* PC 버전으로 보기 */
+		goToPC: function () {
+			$.cookie.setCookie("org.springframework.mobile.device.site.CookieSitePreferenceRepository.SITE_PREFERENCE", "NORMAL", 1);
+			window.location.reload();
+		},
+
+		/* Header 지역, 언어 선택 시 이동 */
+		setNatLng: function () {
+			var objFrm = $("form#frmRegLan");
+			var serverDiv = 'real';
+			var mobileDomainPrtc = 'https://m.flyasiana.com';
+
+			if (this.getCookieCms("LANG") != $("#lang").val()) {
+				objFrm.find("input").val("true");
+			} else {
+				objFrm.find("input").val("false");
+			}
+
+			objFrm.attr("method", "post");
+			if (serverDiv == "local") {
+				objFrm.attr("action", "/C/" + $("#nation").val() + "/" + $("#lang").val() + "/index");
+			} else {
+				objFrm.attr("action", mobileDomainPrtc + "/C/" + $("#nation").val() + "/" + $("#lang").val() + "/index");
+			}
+			objFrm.submit();
+		},
+
+		/* Header 국가, 언어 선택 */
+		setLang: function (obj) {
+			var objNatLng = {
+				"KR": { "KO": "한국어", "EN": "English" }
+				, "US": { "KO": "한국어", "EN": "English" }
+				, "JP": { "KO": "한국어", "EN": "English", "JA": "日本語" }
+				, "CN": { "KO": "한국어", "EN": "English", "CH": "中文(简体)" }
+				, "TW": { "KO": "한국어", "EN": "English", "ZH": "中文(繁體)" }
+				, "HK": { "KO": "한국어", "EN": "English", "ZH": "中文(繁體)" }
+				, "RU": { "KO": "한국어", "EN": "English", "RU": "Русский" }
+				, "UZ": { "KO": "한국어", "EN": "English", "RU": "Русский" }
+				, "KZ": { "KO": "한국어", "EN": "English", "RU": "Русский" }
+				, "DE": { "KO": "한국어", "EN": "English", "DE": "Deutsch" }
+				, "FR": { "KO": "한국어", "EN": "English", "FR": "Français" }
+				, "VN": { "KO": "한국어", "EN": "English" }
+				, "SG": { "KO": "한국어", "EN": "English" }
+				, "IN": { "KO": "한국어", "EN": "English" }
+				, "ID": { "KO": "한국어", "EN": "English" }
+				, "KH": { "KO": "한국어", "EN": "English" }
+				, "TH": { "KO": "한국어", "EN": "English" }
+				, "PH": { "KO": "한국어", "EN": "English" }
+				, "GB": { "KO": "한국어", "EN": "English" }
+				, "IT": { "KO": "한국어", "EN": "English" }
+				, "TR": { "KO": "한국어", "EN": "English" }
+				, "AU": { "KO": "한국어", "EN": "English" }
+				, "ES": { "KO": "한국어", "EN": "English" }
+			};
+
+			var objVal = $(obj).val(),
+				objData = objNatLng[objVal],
+				$lang = $("#lang").empty(),
+				$frag = $(document.createDocumentFragment()),
+				key = '';
+
+			for (key in objData) {
+				$frag.append("<option value='" + key + "'>" + objData[key] + "</option>");
+			}
+			$lang.append($frag);
+		},
+
+		/* Header MyAsiana 알림함 조회 */
+		getMyAsiana: function (acNo, lang) {
+			var param = {
+				iAcNo: acNo,
+				iLangCd: lang
+			};
+			$.ajax({
+				type: "POST", dataType: "text", async: true
+				, url: '/C/KR/KO/myAsiana/noticeBoard'
+				, data: param
+				, success: function (rst) {
+					var jsnRst = JSON.parse(rst);
+					//alert(jsnRst.oNotReadCnt);
+
+					$(".numberic_badge").html(jsnRst.oNotReadCnt);
+
+					var strHtml = '';
+					strHtml += '<div class="head">';
+					strHtml += '	<span class="tit">알림함</span>';
+					strHtml += '	<span class="noread">';
+					strHtml += '		안읽음<span class="num">(' + jsnRst.oNotReadCnt + ')</span>';
+					strHtml += '	</span>';
+					strHtml += '	<a class="ico_more" href="#none"><span class="hidden">알림함 전체보기</span></a>';
+					strHtml += '</div>';
+					strHtml += '<div class="alert_list">';
+					strHtml += '	<ul>';
+					$.each(jsnRst.noticeBoardResult, function (index, item) {
+						if (item.MASS_YN == 'Y') {
+							strHtml += '		<li class="mass' + (item.READ_YN == "Y" ? " read" : "") + '">';
+							strHtml += '			<a href="/I/KR/KO/' + item.PC_LINK_URL + '" class="noti_tit">';
+							strHtml += '				' + item.TITLE;
+						} else {
+							strHtml += '		<li class="' + (item.READ_YN == "Y" ? "read" : "") + '">';
+							strHtml += '			<a href="/I/KR/KO/' + item.PC_LINK_URL + '" class="noti_tit">';
+							strHtml += '				<span class="cate">' + item.TITLE;
+						}
+						strHtml += '			</a>';
+						if (item.AGO) {
+							strHtml += '			<p class="alt_time">' + item.AGO + '</p>';
+						}
+						if (item.READ_YN == "Y") {
+							strHtml += '			<span class="status">읽음</span>';
+						}
+					});
+					strHtml += '	</ul>';
+					strHtml += '</div>';
+
+					$(".alert_wrap").html(strHtml);
+				}, error: function (e) {
+					//alert(e.message);
+					console.log(e);
+				}
+			});
+		},
+
+		getCookieCms: function (cName) {
+			cName = cName + '=';
+			var cookieData = document.cookie;
+			var start = cookieData.indexOf(cName);
+			var cValue = '';
+			if (start != -1) {
+				start += cName.length;
+				var end = cookieData.indexOf(';', start);
+				if (end == -1) {
+					end = cookieData.length;
+				}
+				cValue = cookieData.substring(start, end);
+			}
+			return unescape(cValue);
+		},
+
+		objImgServer: {
+			"": "",
+		}
+	}
+
+	/* Main 예약조회 Background Image 변경(iBiz에서 호출 함.) */
+	function arrAirportRes(arrAirport) {
+		//alert(arrAirport.length);
+		if (arrAirport.length == 3) {
+			$(".section.section02").attr("style", "background-image:url('https://ozimg.flyasiana.com/image_fixed/destination/des_L_" + arrAirport + ".jpg');");
+			$.fn.fullpage.reBuild();
+		}
+	}
+
+	/* Main 체크인 Background Image 변경(iBiz에서 호출 함.) */
+	function arrAirportChk(arrAirport) {
+		//alert(arrAirport);
+		if (arrAirport.length == 3) {
+			$(".section.section03").attr("style", "background-image:url('https://ozimg.flyasiana.com/image_fixed/destination/des_L_" + arrAirport + ".jpg');");
+			$.fn.fullpage.reBuild();
+		}
+	}
+
+	/* 운송약관 다운로드 */
+	var trans = function (cate) {
+		var lang = "KO";
+		var nation = "KR";
+		var fname = "";
+
+		if (cate === "int") {
+			fname = lang === "KO" ? "int_trans_kr.pdf" : "int_trans_eng.pdf";
+		} else {
+			fname = lang === "KO" ? "dom_trans_kr.pdf" : "dom_trans_en.pdf";
+		}
+
+		location.href = "/C/" + nation + "/" + lang + "/common/file/download-static-file/trans/" + fname.split(".")[1] + "/" + fname.split(".")[0];
+	}
+
+	/* 앱 다운로드 */
+	var appDownload = function () {
+		if (isIOS()) {
+			action_logging({ catetype: "All_MW_MN", outlink: "https://itunes.apple.com/kr/app/id373932237?mt=8" });
+			window.open("https://itunes.apple.com/kr/app/id373932237?mt=8");
+		} else {
+			var store_url = "https://play.google.com/store/apps/details?id=com.ssm.asiana";
+			action_logging({ catetype: "All_MW_MN", outlink: store_url });
+			window.open(store_url);
+		}
+	};
+
+	var isIOS = function () {
+		return navigator.userAgent.match(/iPhone|iPad|iPod/i) == null ? false : true;
+	}
+
+	/**
+	 * GNB 로깅 처리
+	 * */
+	function action_logging_common_gnb(item) {
+		var mapper = {
+			'CM201803190000730197': 'GNB_02',		// 마이아시아나
+			'CM201803190000729949': 'GNB_09',   	// 예약
+			'CM201803190000729950': 'GNB_10',   	// 여행준비
+			'CM201803190000729951': 'GNB_11',   	// 여행
+			'CM201803190000729952': 'GNB_12'    	// 아시아나클럽
+		},
+			key,
+			param,
+			$item = $(item);
+
+		key = $item.data('id');
+		param = mapper[key];
+		try {
+			action_logging_common(param);
+		} catch (e) {
+			// 로깅처리 중 오류 발생 하더라도 다른 처리는 정상 진행
+		}
+
+		// 아웃링크 분기 처리
+		if ($item.data('metaId')) {
+			fnWriteMetaAccessLog($item.data('metaId'));
+		}
+	}
+	/*
+	 * WebLog 공통 영역(TOP, GNB, NAVIGATOR, FOOTER)
+	 */
+	function action_logging_common(param, isForce) {
+		isForce = isForce || false;
+
+		if (isForce) {
+			action_logging({ pagecode: param });
+		} else {
+			var prefix = getLogPrefix();
+			if (jQuery.type(prefix) != "undefined") {
+
+				var arrFilter = ['35', '37', '38', '40'];
+
+				if (arrFilter.indexOf(prefix) > -1 && param != 'TOP_02') {
+					return false;
+				}
+
+				var logParam = prefix + "_" + param;
+				action_logging({ pagecode: logParam });
+			}
+		}
+	}
+
+	/**
+	 * 로그 관련 prefix 조회
+	 * */
+	var getLogPrefix = function () {
+		var path = $(location).attr("pathname");
+		var arrPath = path.split("/");
+		if (arrPath.length > 4) {
+			var objUrl = {
+				"/index": "01"
+				, "/RevenueDomesticFlightsSelect.do": "02"
+				, "/RevenueInternationalFareDrivenFlightsSelect.do": "02"
+				, "/RevenueRegistTravel.do": "02"
+				, "/RedemptionRegistTravel.do": "02"
+				, "/ViewReservationDetail.do": "03"
+				, "/DreamFareList.do": "04"
+				, "/club/earn-mileage-mall": "05"
+				, "/club/use-mileage-mall": "06"
+				, "/booking/travel/main": "07"
+				, "/booking/travel/sub": "08"
+				, "/MyasianaDashboard.do": "09"
+				, "/travel/mbp/main": "10"
+
+				, "MB/index": "31"
+				, "MB/RevenueDomesticFlightsSelect.do": "32"
+				, "MB/RevenueInternationalFareDrivenFlightsSelect.do": "32"
+				, "MB/RevenueRegistTravel.do": "32"
+				, "MB/RedemptionRegistTravel.do": "32"
+				, "MB/ViewReservationDetail.do": "33"
+				, "MB/DreamFareList.do": "34"
+				, "MB/club/earn-mileage-mall": "35"
+				, "MB/booking/travel/main": "37"
+				, "MB/booking/travel/sub": "38"
+				, "MB/MyasianaDashboard.do": "39"
+				, "MB/travel/mbp/main": "40"
+			};
+			var urlPattern = "";
+			for (var i = 4, len = arrPath.length; i < len; i++) {
+				urlPattern += "/" + arrPath[i];
+			}
+			var device = 'MB'.toUpperCase();
+			urlPattern = device == "MB" ? device + "" + urlPattern : urlPattern;
+		}
+		return objUrl[urlPattern];
+	};
+
+	/*
+	* 챗봇 오픈
+	* */
+	var fnOpenChatbot = function (cateType) {
+		cateType = cateType || 'GNB_14';
+
+		var lang = $('meta').filter('[name="lang"]').attr('content'),
+			device = 'web',
+			name = 'chatbot',
+			url = 'https://aaron.bot-flyasiana.com/webchat.html';
+
+		lang = lang ? lang.toLowerCase() : 'ko';
+		url = url + '?lang=' + lang + '&device=' + device;
+		try {
+			var prefix = getLogPrefix();
+			if (prefix) {
+				action_logging({ catetype: prefix + '_' + cateType, outlink: url });
+			}
+			action_logging({ _n_m03: "chatplay" });
+		} catch (e) {
+			// 로깅 처리 중 오류 발생 시 정상처리를 위함
+		}
+		location.href = url;
+	};
+
+
+	/* 운송약관 레이어 */
+	; (function (global, $) {
+		'use strict'
+		var _scope = $('[data-terms="transportTerms"]');
+		var _focus, _layer, _close;
+		var scopeBot;
+		var termsLayer = {};
+
+		termsLayer.init = function () {
+			_layer = $('#' + _scope.attr("data-terms"));
+			if (_scope.length > 0) {
+				termsLayer.evtHeandler();
+			};
+		};
+		termsLayer.evtHeandler = function () {
+			_scope.on('click', function () {
+				_focus = $(this);
+				termsLayer.open();
+			});
+
+			_close = _layer.find('.terms_close');
+			_close.on('click', function () {
+				termsLayer.close();
+			});
+		};
+		termsLayer.open = function () {
+			scopeBot = _scope.offset().top + _scope.height();
+			_layer.css({
+				'display': 'block'
+			});
+			_layer.find('.transport_terms').attr('tabIndex', '0').css({
+				'top': scopeBot + 'px'
+			}).focus();
+		};
+		termsLayer.close = function () {
+			_close.parents('.layer_wrap').css({
+				'display': 'none'
+			});
+			_focus.focus();
+		};
+		termsLayer.init();
+	})(window, window.jQuery);
+				/* //운송약관 레이어 */
+</script>
+
+<!-- // JavaScript area for CMS -->
+
+<!-- JavaScript area for WebLog -->
+
+
+<script type="text/javascript">
+	_n_p01 = 'MB'.toUpperCase();
+	_n_p02 = 'KR'.toUpperCase();
+	_n_p03 = 'KO'.toUpperCase();
+				//_n_p04='';
+				//alert(_n_p01+":"+_n_p02+":"+_n_p03);
+</script>
+<script type="text/javascript" src="/C/mobile/wlo/wl6.js"></script>
+
+<!-- // JavaScript area for WebLog -->
+
+
+
+<div id="fb-root" class=" fb_reset">
+	<div style="position: absolute; top: -10000px; height: 0px; width: 0px;">
+		<div></div>
+	</div>
+</div>

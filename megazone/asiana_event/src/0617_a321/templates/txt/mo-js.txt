@@ -1,0 +1,3 @@
+<script>;
+@@include('assets/js/mo.js')
+</script>

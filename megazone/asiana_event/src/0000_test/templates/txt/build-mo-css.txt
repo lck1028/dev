@@ -1,0 +1,3 @@
+<style type="text/css">
+	@@include('assets/css/mo.css')
+</style>

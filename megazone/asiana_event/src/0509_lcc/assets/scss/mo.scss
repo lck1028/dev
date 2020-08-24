@@ -1,0 +1,378 @@
+.lcc-article{
+	img{
+		max-width:100%;
+	}
+}
+.lcc-nav{
+	//position:absolute;
+	display:table;
+	table-layout:fixed;
+	box-sizing:border-box;
+	width:100%;
+	padding:0 3px;
+	background-color:#96de56;
+	&__item{
+		display:table-cell;
+		padding:0 3px;
+		height:79px;
+	}
+	&__anchor{
+		display:block;
+		width:100%;
+		height:100%;
+		background : {
+			position:50% 50%;
+			repeat:no-repeat;
+			size:contain;
+		}
+		font:0/0 a;
+		.lcc-nav__item--nation-ch &{
+			background-image:url('https://ozimg.flyasiana.com/editor/image/20190517/d6212a33-8095-4fde-9b0a-2e4a1e19f2cb.png');
+
+		}
+		.lcc-nav__item--is-active.lcc-nav__item--nation-ch &{
+				background-image:url('https://ozimg.flyasiana.com/editor/image/20190517/12caac7d-3e43-44d8-9b97-efe38762a260.png');
+			}
+		.lcc-nav__item--nation-ja &{
+			background-image:url('https://ozimg.flyasiana.com/editor/image/20190517/70c456cf-6d51-4b51-b048-33033a27b145.png');
+
+		}
+		.lcc-nav__item--is-active.lcc-nav__item--nation-ja &{
+				background-image:url('https://ozimg.flyasiana.com/editor/image/20190517/9c12a9f1-4539-4119-b23c-0eb0a77b05b3.png');
+			}
+		.lcc-nav__item--nation-ea &{
+			background-image:url('https://ozimg.flyasiana.com/editor/image/20190517/7c9d9a92-5284-4f09-b9a6-d7b0ed9eb3f1.png');
+
+		}
+		.lcc-nav__item--nation-ea.lcc-nav__item--is-active &{
+				background-image:url('https://ozimg.flyasiana.com/editor/image/20190517/240f7562-ecae-497b-8097-9eb674448452.png');
+			}
+	}
+}
+
+
+
+.lcc-module{
+	position:relative;
+	margin-top:15px;
+	padding:30px 0 20px;
+	background-color:#f0f0f0;
+	&__title{
+		display:block;
+		padding:0 10px;
+		color:#010101;
+		font : {
+			size:15px;
+			weight:400;
+		}
+	}
+	&__quiz{
+		display:block;
+		box-sizing:border-box;
+		margin-top:0;
+		padding:0 10px;
+		text-align:center;
+		&::after{
+			content:'';
+			display:block;
+			clear:both;
+		}
+		&-item{
+			display:inline-block;
+			width:140px;
+			padding:120px 10px 0;
+			// &:nth-child(odd){
+			// 	float:left;
+			// 	clear:left;
+			// }
+			// &:nth-child(even){
+			// 	float:right;
+			// 	clear:right;
+			// }
+		}
+		&-label{
+			position:relative;
+			display:inline-block;
+			width:calc(100% - 25px);
+			box-sizing:border-box;
+			text-align:left;
+		}
+		&-img{
+			position:absolute;
+			left:-25px;
+			right:0;
+			top:-100px;
+			display:block;
+			height:100px;
+			img{
+				max-width:100%;
+			}
+		}
+		input[type='radio']{
+			&:checked{
+				&+.lcc-module__quiz-label{
+					color:red;
+					.lcc-module__quiz-img{
+						&::before{
+							content:'';
+							position:absolute;
+							left:0;
+							top:0;
+							display:block;
+							width:100%;
+							height:100%;
+							background : {
+								color:rgba(0,0,0,0.7);
+								image:url('https://flyasiana.com/C/pc/image/sub/icon_vote_check.png');
+								position:50% 50%;
+								repeat:no-repeat;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	&__login{
+		position:absolute;
+		left:0;
+		top:0;
+		width:100%;
+		height:100%;
+		background : {
+			image:url('https://ozimg.flyasiana.com/editor/image/20190515/de20ec32-ab84-4965-8056-5ff04ddff960.png');
+			position:0 0;
+			repeat:repeat;
+		}
+	}
+}
+
+.lcc-ch__section{
+	&-01{
+		position:relative;
+		height:640px;
+		padding-top:50px;
+		background : {
+			image:url('https://ozimg.flyasiana.com/editor/image/20190517/0b1377a8-a1a3-422c-833d-fe4f150d3f03.jpeg');
+			position:50% 0%;
+			repeat:no-repeat;
+			size:cover;
+		}
+
+	}
+	&-02{
+		position:relative;
+		height:500px;
+		padding-top:50px;
+		padding-bottom:30px;
+		background : {
+			image:url('https://ozimg.flyasiana.com/editor/image/20190517/138f3f96-aa34-4a13-9c51-b64a2fd41959.jpeg');
+			position:50% 0%;
+			repeat:no-repeat;
+			size:cover;
+		}
+	}
+}
+.lcc-ch__slider01{
+	position:absolute !important;
+	left:0;
+	bottom:30px;
+	box-sizing:border-box;
+	width:100%;
+	&-item{
+		box-sizing:border-box;
+		height:340px;
+		margin:0 30px;
+		padding:170px 13px 20px;
+		border-radius:8px;
+		background : {
+			color : #000000;
+			position:50% 0;
+			repeat: no-repeat;
+			size:cover;
+		}
+		display:none;
+		&:first-child{
+			display:block;
+		}
+		.slick-initialized &{
+			display:block;
+		}
+	}
+	&-code{
+		display:block;
+		color:#ffffff;
+		font : {
+			size:12px;
+			weight:300;
+		}
+	}
+	&-title{
+		display:block;
+		color:#ffffff;
+		font : {
+			size:20px;
+			weight:700;
+		}
+	}
+	&-anchorbox{
+		box-sizing:border-box;
+		display:table;
+		table-layout:fixed;
+		width:100%;
+		padding:0 ;
+		margin-top:15px;
+
+	}
+	&-cell{
+		display:table-cell;
+		padding:0 3px;
+		vertical-align:top;
+	}
+	&-anchor{
+		position:relative;
+		width:100%;
+		padding-bottom:100%;
+		border-radius:50%;
+		text-align:center;
+		&-inner{
+			position:absolute;
+			left:50%;
+			top:50%;
+			transform:translateX(-50%) translateY(-50%);
+		}
+		color:#000000;
+		background-color:rgba(255,255,255,0.8);
+		font : {
+			size:12px;
+			weight:700;
+		}
+		.lcc-ch__slider01-cell:nth-child(3) &{
+			color:#ffffff;
+			background-color:#e67510;
+		}
+	}
+	.slick-arrow{
+		position:absolute;
+		top:0;
+		width:30px;
+		height:100%;
+		background : {
+			position:50% 50%;
+			repeat:no-repeat;
+			size:14px auto;
+		}
+		font:0/0 a;
+		z-index:10;
+	}
+	.slick-prev{
+		left:0;
+		background-image:url('https://ozimg.flyasiana.com/editor/image/20190517/5af97c67-90ac-457f-bed1-c6fd14127676.png')
+	}
+	.slick-next{
+		right:0;
+		background-image:url('https://ozimg.flyasiana.com/editor/image/20190517/1a82dea9-766b-4f7c-ac13-5b75afc8e5a2.png')
+	}
+}
+
+.lcc-ch__slider02{
+	position:absolute !important;
+	left:0;
+	bottom:30px;
+	box-sizing:border-box;
+	width:100%;
+	padding-top:50px;
+
+
+	&-item{
+		padding:0 10px;
+	}
+	.slick-dots{
+		position:absolute;
+		left:0;
+		top:0;
+		width:100%;
+		display:block;
+		text-align:center;
+		>li{
+			display:inline-block;
+			padding:0 5px;
+			&.slick-active{
+				button{
+					background-color:#ffffff;
+					&[data-icon="type01"]{
+						background-image:url('https://ozimg.flyasiana.com/editor/image/20190517/e4edd87e-e0e1-440f-83e3-f790897a24d3.png');
+					}
+					&[data-icon="type02"]{
+						background-image:url('https://ozimg.flyasiana.com/editor/image/20190517/cd867437-5e2a-41de-a793-c66df98719eb.png')
+					}
+					&[data-icon="type03"]{
+						background-image:url('https://ozimg.flyasiana.com/editor/image/20190517/2a365e68-b36f-4641-b984-f2cb9176965a.png')
+					}
+					&[data-icon="type04"]{
+						background-image:url('https://ozimg.flyasiana.com/editor/image/20190517/a47dc7c2-5ba1-4b51-9bd8-06845adf8591.png')
+					}
+					&[data-icon="type05"]{
+						background-image:url('https://ozimg.flyasiana.com/editor/image/20190517/6ee1db3c-4199-4d7b-a028-bc14209ea7d5.png')
+					}
+					&[data-icon="type06"]{
+						background-image:url('https://ozimg.flyasiana.com/editor/image/20190517/a63ec7e1-0158-416a-b5d3-900b6362b7f0.png')
+					}
+				}
+			}
+		}
+		button{
+			width:36px;
+			height:36px;
+			border:2px solid #ffffff;
+			border-radius:50%;
+			background : {
+				position:50% 50%;
+				repeat:no-repeat;
+				size:cover;
+			}
+			font:0/0 a;
+			&[data-icon="type01"]{
+				background-image:url('https://ozimg.flyasiana.com/editor/image/20190517/78869a8d-4cb0-4154-9d4c-b952a12a419f.png');
+			}
+			&[data-icon="type02"]{
+				background-image:url('https://ozimg.flyasiana.com/editor/image/20190517/2e40eac7-fc87-4660-bc1a-d20124c1996f.png')
+			}
+			&[data-icon="type03"]{
+				background-image:url('https://ozimg.flyasiana.com/editor/image/20190517/ef23bb87-131e-4b43-a20e-e5517309c449.png')
+			}
+			&[data-icon="type04"]{
+				background-image:url('https://ozimg.flyasiana.com/editor/image/20190517/126c916c-18ed-41cd-8666-e8542a01b7d5.png')
+			}
+			&[data-icon="type05"]{
+				background-image:url('https://ozimg.flyasiana.com/editor/image/20190517/c02159d2-0b24-45bb-ad49-c116bbb97b63.png')
+			}
+			&[data-icon="type06"]{
+				background-image:url('https://ozimg.flyasiana.com/editor/image/20190517/2ad2d793-b2ea-495b-aa45-82cd8427caf5.png')
+			}
+		}
+	}
+}
+
+.event_box{
+	position:relative;
+	&::after{
+		content:'';
+		position:absolute;
+		left:0;
+		top:0;
+		display:block;
+		width:100%;
+		height:100%;
+		background : {
+			image:url('https://ozimg.flyasiana.com/editor/image/20190515/de20ec32-ab84-4965-8056-5ff04ddff960.png');
+			position:0 0;
+			repeat:repeat;
+		}
+	}
+	&--ok{
+		&::after{
+			display:none;
+		}
+	}
+}

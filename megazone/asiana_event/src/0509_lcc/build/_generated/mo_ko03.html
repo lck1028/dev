@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	@@include('./01_00_mo_meta.html')
+</head>
+
+<body>
+	@@include('./01_01_mo_header.html')
+
+
+
+	<!-- source-start -->
+<style type="text/css">
+	.lcc-article img { max-width: 100%; }
+
+.lcc-nav { display: table; table-layout: fixed; box-sizing: border-box; width: 100%; padding: 0 3px; background-color: #96de56; }
+
+.lcc-nav__item { display: table-cell; padding: 0 3px; height: 79px; }
+
+.lcc-nav__anchor { display: block; width: 100%; height: 100%; background-position: 50% 50%; background-repeat: no-repeat; background-size: contain; font: 0/0 a; }
+
+.lcc-nav__item--nation-ch .lcc-nav__anchor { background-image: url("https://ozimg.flyasiana.com/editor/image/20190517/d6212a33-8095-4fde-9b0a-2e4a1e19f2cb.png"); }
+
+.lcc-nav__item--is-active.lcc-nav__item--nation-ch .lcc-nav__anchor { background-image: url("https://ozimg.flyasiana.com/editor/image/20190517/12caac7d-3e43-44d8-9b97-efe38762a260.png"); }
+
+.lcc-nav__item--nation-ja .lcc-nav__anchor { background-image: url("https://ozimg.flyasiana.com/editor/image/20190517/70c456cf-6d51-4b51-b048-33033a27b145.png"); }
+
+.lcc-nav__item--is-active.lcc-nav__item--nation-ja .lcc-nav__anchor { background-image: url("https://ozimg.flyasiana.com/editor/image/20190517/9c12a9f1-4539-4119-b23c-0eb0a77b05b3.png"); }
+
+.lcc-nav__item--nation-ea .lcc-nav__anchor { background-image: url("https://ozimg.flyasiana.com/editor/image/20190517/7c9d9a92-5284-4f09-b9a6-d7b0ed9eb3f1.png"); }
+
+.lcc-nav__item--nation-ea.lcc-nav__item--is-active .lcc-nav__anchor { background-image: url("https://ozimg.flyasiana.com/editor/image/20190517/240f7562-ecae-497b-8097-9eb674448452.png"); }
+
+.lcc-module { position: relative; margin-top: 15px; padding: 30px 0 20px; background-color: #f0f0f0; }
+
+.lcc-module__title { display: block; padding: 0 10px; color: #010101; font-size: 15px; font-weight: 400; }
+
+.lcc-module__quiz { display: block; box-sizing: border-box; margin-top: 0; padding: 0 10px; text-align: center; }
+
+.lcc-module__quiz::after { content: ''; display: block; clear: both; }
+
+.lcc-module__quiz-item { display: inline-block; width: 140px; padding: 120px 10px 0; }
+
+.lcc-module__quiz-label { position: relative; display: inline-block; width: calc(100% - 25px); box-sizing: border-box; text-align: left; }
+
+.lcc-module__quiz-img { position: absolute; left: -25px; right: 0; top: -100px; display: block; height: 100px; }
+
+.lcc-module__quiz-img img { max-width: 100%; }
+
+.lcc-module__quiz input[type='radio']:checked + .lcc-module__quiz-label { color: red; }
+
+.lcc-module__quiz input[type='radio']:checked + .lcc-module__quiz-label .lcc-module__quiz-img::before { content: ''; position: absolute; left: 0; top: 0; display: block; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.7); background-image: url("https://flyasiana.com/C/pc/image/sub/icon_vote_check.png"); background-position: 50% 50%; background-repeat: no-repeat; }
+
+.lcc-module__login { position: absolute; left: 0; top: 0; width: 100%; height: 100%; background-image: url("https://ozimg.flyasiana.com/editor/image/20190515/de20ec32-ab84-4965-8056-5ff04ddff960.png"); background-position: 0 0; background-repeat: repeat; }
+
+.lcc-ch__section-01 { position: relative; height: 640px; padding-top: 50px; background-image: url("https://ozimg.flyasiana.com/editor/image/20190517/0b1377a8-a1a3-422c-833d-fe4f150d3f03.jpeg"); background-position: 50% 0%; background-repeat: no-repeat; background-size: cover; }
+
+.lcc-ch__section-02 { position: relative; height: 500px; padding-top: 50px; padding-bottom: 30px; background-image: url("https://ozimg.flyasiana.com/editor/image/20190517/138f3f96-aa34-4a13-9c51-b64a2fd41959.jpeg"); background-position: 50% 0%; background-repeat: no-repeat; background-size: cover; }
+
+.lcc-ch__slider01 { position: absolute !important; left: 0; bottom: 30px; box-sizing: border-box; width: 100%; }
+
+.lcc-ch__slider01-item { box-sizing: border-box; height: 340px; margin: 0 30px; padding: 170px 13px 20px; border-radius: 8px; background-color: #000000; background-position: 50% 0; background-repeat: no-repeat; background-size: cover; display: none; }
+
+.lcc-ch__slider01-item:first-child { display: block; }
+
+.slick-initialized .lcc-ch__slider01-item { display: block; }
+
+.lcc-ch__slider01-code { display: block; color: #ffffff; font-size: 12px; font-weight: 300; }
+
+.lcc-ch__slider01-title { display: block; color: #ffffff; font-size: 20px; font-weight: 700; }
+
+.lcc-ch__slider01-anchorbox { box-sizing: border-box; display: table; table-layout: fixed; width: 100%; padding: 0; margin-top: 15px; }
+
+.lcc-ch__slider01-cell { display: table-cell; padding: 0 3px; vertical-align: top; }
+
+.lcc-ch__slider01-anchor { position: relative; width: 100%; padding-bottom: 100%; border-radius: 50%; text-align: center; color: #000000; background-color: rgba(255, 255, 255, 0.8); font-size: 12px; font-weight: 700; }
+
+.lcc-ch__slider01-anchor-inner { position: absolute; left: 50%; top: 50%; transform: translateX(-50%) translateY(-50%); }
+
+.lcc-ch__slider01-cell:nth-child(3) .lcc-ch__slider01-anchor { color: #ffffff; background-color: #e67510; }
+
+.lcc-ch__slider01 .slick-arrow { position: absolute; top: 0; width: 30px; height: 100%; background-position: 50% 50%; background-repeat: no-repeat; background-size: 14px auto; font: 0/0 a; z-index: 10; }
+
+.lcc-ch__slider01 .slick-prev { left: 0; background-image: url("https://ozimg.flyasiana.com/editor/image/20190517/5af97c67-90ac-457f-bed1-c6fd14127676.png"); }
+
+.lcc-ch__slider01 .slick-next { right: 0; background-image: url("https://ozimg.flyasiana.com/editor/image/20190517/1a82dea9-766b-4f7c-ac13-5b75afc8e5a2.png"); }
+
+.lcc-ch__slider02 { position: absolute !important; left: 0; bottom: 30px; box-sizing: border-box; width: 100%; padding-top: 50px; }
+
+.lcc-ch__slider02-item { padding: 0 10px; }
+
+.lcc-ch__slider02 .slick-dots { position: absolute; left: 0; top: 0; width: 100%; display: block; text-align: center; }
+
+.lcc-ch__slider02 .slick-dots > li { display: inline-block; padding: 0 5px; }
+
+.lcc-ch__slider02 .slick-dots > li.slick-active button { background-color: #ffffff; }
+
+.lcc-ch__slider02 .slick-dots > li.slick-active button[data-icon="type01"] { background-image: url("https://ozimg.flyasiana.com/editor/image/20190517/e4edd87e-e0e1-440f-83e3-f790897a24d3.png"); }
+
+.lcc-ch__slider02 .slick-dots > li.slick-active button[data-icon="type02"] { background-image: url("https://ozimg.flyasiana.com/editor/image/20190517/cd867437-5e2a-41de-a793-c66df98719eb.png"); }
+
+.lcc-ch__slider02 .slick-dots > li.slick-active button[data-icon="type03"] { background-image: url("https://ozimg.flyasiana.com/editor/image/20190517/2a365e68-b36f-4641-b984-f2cb9176965a.png"); }
+
+.lcc-ch__slider02 .slick-dots > li.slick-active button[data-icon="type04"] { background-image: url("https://ozimg.flyasiana.com/editor/image/20190517/a47dc7c2-5ba1-4b51-9bd8-06845adf8591.png"); }
+
+.lcc-ch__slider02 .slick-dots > li.slick-active button[data-icon="type05"] { background-image: url("https://ozimg.flyasiana.com/editor/image/20190517/6ee1db3c-4199-4d7b-a028-bc14209ea7d5.png"); }
+
+.lcc-ch__slider02 .slick-dots > li.slick-active button[data-icon="type06"] { background-image: url("https://ozimg.flyasiana.com/editor/image/20190517/a63ec7e1-0158-416a-b5d3-900b6362b7f0.png"); }
+
+.lcc-ch__slider02 .slick-dots button { width: 36px; height: 36px; border: 2px solid #ffffff; border-radius: 50%; background-position: 50% 50%; background-repeat: no-repeat; background-size: cover; font: 0/0 a; }
+
+.lcc-ch__slider02 .slick-dots button[data-icon="type01"] { background-image: url("https://ozimg.flyasiana.com/editor/image/20190517/78869a8d-4cb0-4154-9d4c-b952a12a419f.png"); }
+
+.lcc-ch__slider02 .slick-dots button[data-icon="type02"] { background-image: url("https://ozimg.flyasiana.com/editor/image/20190517/2e40eac7-fc87-4660-bc1a-d20124c1996f.png"); }
+
+.lcc-ch__slider02 .slick-dots button[data-icon="type03"] { background-image: url("https://ozimg.flyasiana.com/editor/image/20190517/ef23bb87-131e-4b43-a20e-e5517309c449.png"); }
+
+.lcc-ch__slider02 .slick-dots button[data-icon="type04"] { background-image: url("https://ozimg.flyasiana.com/editor/image/20190517/126c916c-18ed-41cd-8666-e8542a01b7d5.png"); }
+
+.lcc-ch__slider02 .slick-dots button[data-icon="type05"] { background-image: url("https://ozimg.flyasiana.com/editor/image/20190517/c02159d2-0b24-45bb-ad49-c116bbb97b63.png"); }
+
+.lcc-ch__slider02 .slick-dots button[data-icon="type06"] { background-image: url("https://ozimg.flyasiana.com/editor/image/20190517/2ad2d793-b2ea-495b-aa45-82cd8427caf5.png"); }
+
+.event_box { position: relative; }
+
+.event_box::after { content: ''; position: absolute; left: 0; top: 0; display: block; width: 100%; height: 100%; background-image: url("https://ozimg.flyasiana.com/editor/image/20190515/de20ec32-ab84-4965-8056-5ff04ddff960.png"); background-position: 0 0; background-repeat: repeat; }
+
+.event_box--ok::after { display: none; }
+
+</style>
+
+<link type="text/css" rel="stylesheet" href="https://m.flyasiana.com/C/mobile/css/slick.css">
+<link type="text/css" rel="stylesheet" href="https://m.flyasiana.com/C/mobile/css/static.css">
+
+<div class="lcc-article">
+	<div class="lcc-header">
+		<img src="https://ozimg.flyasiana.com/editor/image/20190517/c4e43118-e76a-48a3-88b3-615d8f2bc179.jpeg" alt="아시아는 아무거나?아시아도아시아나!">
+	</div>
+	<nav class="lcc-nav">
+		<span class="lcc-nav__item lcc-nav__item--nation-ch ">
+			<a class="lcc-nav__anchor" href="#">중국</a>
+		</span>
+		<span class="lcc-nav__item lcc-nav__item--nation-ja ">
+			<a class="lcc-nav__anchor" href="#">일본</a>
+		</span>
+		<span class="lcc-nav__item lcc-nav__item--nation-ea lcc-nav__item--is-active">
+			<a class="lcc-nav__anchor" href="#">동남아</a>
+		</span>
+	</nav>
+	<div class="lcc-ea__section lcc-ea__section-01">
+		<img src="https://ozimg.flyasiana.com/editor/image/20190517/f31e36a6-d5b4-4ddf-b5c5-184305a36dd5.jpeg" alt="동남아 SOUTHEAST ASIA 비행을 편안하게, 동남아도 아시아나!!인천부터 방콕까지 6시간 6시간이 얼마나 긴 시간인지  아볼까요?축구를 연속으로3경기2시간 축구 경기를 3번 할 수 있는 시간영화 어벤x스를2번 관람3시간 상영시간 영화를 2번 연속으로 관람KTX 서울 ↔ 부산 KTX를 타고 서울 부산 왕복해도 1시간이 남아요!이렇게 긴 6시간 아시아나와 함께 편안하게! 맛있는 기내식이     공짜! 편안한 좌석으로    꿀잠예약 시간 가는줄 모르는 기내엔터테인먼트">
+	</div>
+	<a target="_blank" href="https://m.flyasiana.com/I/KR/KO/RevenueRegistTravel.do"><img src="https://ozimg.flyasiana.com/editor/image/20190517/2e3ddf7e-eb7a-46be-80ec-e5911d76b99d.jpeg"
+			alt="방콕은 A380, 싱가포르와 하노이는 A350 다낭과 호찌민도 편하게! 동남아 비행은 아시아나와 함께 하세요!지금 바로 동남아 가기! Click"></a>
+	<div class="lcc-ea__section lcc-ea__section-02">
+		<img src="https://ozimg.flyasiana.com/editor/image/20190517/bdf7c197-6290-41fd-ab5e-f629c86136dd.jpeg" alt="QUIZ 퀴즈 풀고 동남아가자! 편안한 비행이 가능한 방콕노선 관련 하단 퀴즈 이벤트에 참여 해보세요 추첨을 통해 동남아 왕복 항공권 등 푸짐한 상품을 드립니다! 구매기간 2019. 05. 20. (월) ~ 2019. 06. 30. (일) 대 상 로그인 회원  당첨자발표 2019. 07. 19. (금) 1등 동남아노선 왕복 항공권 2매 (1명) 2등 애플 에어팟 1세대 (2명) 3등 스타벅스 카페 아메리카노 Tall  (100명)">
+	</div>
+	<div class="gray_box" style="margin-top:0;">
+		<h5>유의사항</h5>
+		<ul class="list_type2">
+			<li>로그인 후 이벤트 응모가 가능합니다.</li>
+			<li>모든 경품 배송은 아시아나클럽 회원 기준 정보에 등록된 주소 및 연락처로 배송되오니 최신 주소 및 연락처로 변경 및 유지 부탁드립니다.</li>
+			<li>본 이벤트는 아시아나클럽 회원만 응모 가능합니다.</li>
+			<li>경품 추첨은 퀴즈에 응모하신 회원 대상으로 진행됩니다.</li>
+			<li>경품 배송은 국내 지역만 가능하며 추후 재배송은 불가합니다.</li>
+			<li>모든 경품은 명의 변경, 교환 및 환불이 불가합니다.</li>
+			<li>당첨자에 한하여 경품발송을 위해 발송업체로 개인정보(성함/주소/연락처)가 제공됩니다.</li>
+			<li>본 이벤트는 사정에 따라 변동될 수 있습니다.</li>
+			<li>항공권 사용 안내
+				<ul>
+					<li class="nobul">① 당첨자 본인 명의 및 응모하신 동반자 명의로 교환권 증서가 발급됩니다. (명의 변경 불가)</li>
+					<li class="nobul">② 아시아나항공이 취항하는 노선(국제선일 경우 이코노미 클래스에 한함) 중 선택하여 이용하실 수 있으며, 항공권 예약 시 좌석 상황은 실시간으로
+						변경되기 때문에
+						반드시 사전 예약 가능 여부와 안내 사항(유효기간,예약 방법, 발권 방법 등)을 반드시 확인하시기 바랍니다.</li>
+					<li class="nobul">③ 예약 후 항공권 발급 시 교환권 증서를 지참 하셔야 하며, 유류할증료, 공항이용료 등은 본인 부담입니다.</li>
+					<li class="nobul">④ 유효기간 연장 및 항공권 발급 후 변경이 불가합니다.</li>
+
+				</ul>
+			</li>
+
+		</ul>
+	</div>
+</div>
+<div class="lcc-module" data-alert="힌트 : “하늘을 나는 호텔로 불리는 항공기“">
+	<strong class="lcc-module__title">Q. 다음 중 편안한 비행이 가능한 방콕을 취항하는 항공기 기종은?</strong>
+	<div class="lcc-module__quiz">
+		<div class="lcc-module__quiz-item" data-true="true">
+			<input type="radio" name="lcc_ea" id="lcc_ea01">
+			<label class="lcc-module__quiz-label" for="lcc_ea01">
+				<span class="lcc-module__quiz-img"><img
+						src="https://ozimg.flyasiana.com/editor/image/20190515/f41240d1-08cc-4df4-bb13-25938c3e637b.jpeg"></span>
+				<span>A380</span>
+			</label>
+		</div>
+		<div class="lcc-module__quiz-item">
+			<input type="radio" name="lcc_ea" id="lcc_ea02">
+			<label class="lcc-module__quiz-label" for="lcc_ea02">
+				<span class="lcc-module__quiz-img"><img
+						src="https://ozimg.flyasiana.com/editor/image/20190515/2f8bf756-a074-4588-b03a-7e92093cdfc6.jpeg"></span>
+				<span>제트기</span>
+			</label>
+		</div>
+		<div class="lcc-module__quiz-item">
+			<input type="radio" name="lcc_ea" id="lcc_ea03">
+			<label class="lcc-module__quiz-label" for="lcc_ea03">
+				<span class="lcc-module__quiz-img"><img
+						src="https://ozimg.flyasiana.com/editor/image/20190515/e58d33a2-c722-49f7-83b4-2aa861dae184.jpeg"></span>
+				<span>전투기</span>
+			</label>
+		</div>
+		<div class="lcc-module__quiz-item">
+			<input type="radio" name="lcc_ea" id="lcc_ea04">
+			<label class="lcc-module__quiz-label" for="lcc_ea04">
+				<span class="lcc-module__quiz-img"><img
+						src="https://ozimg.flyasiana.com/editor/image/20190515/d289af9d-6389-492f-97e0-482a89bd6c82.jpeg"></span>
+				<span>헬기</span>
+			</label>
+		</div>
+	</div>
+	<div class="lcc-module__login" onclick="loginConfirm('/C/KR/KO/event/detail/CM201905100001138486');"></div>
+</div>
+
+
+<script src="https://m.flyasiana.com/C/mobile/js/slick.min.js"></script>
+
+
+<script>;
+;
+
+'use strict';
+$(document).ready(function () {
+
+	(function () {
+		var slickOption = {
+			accessibility: false,
+			dots: false,
+			slidesToShow: 1,
+		}
+		$('.lcc-ch__slider01').slick(slickOption);
+	})();
+
+
+	(function () {
+		var slickOption = {
+			accessibility: false,
+			centerMode: true,
+			arrows:false,
+			dots: true,
+			centerPadding: '20px',
+			customPaging: function (slider, i) {
+				return $('<button type="button" data-icon="' + $(slider.$slides[i]).data('item') + '" >'+(i+1)+'</button>');
+			},
+		}
+		$('.lcc-ch__slider02').slick(slickOption);
+	})();
+
+
+	(function () {
+		var loginBool = false;
+		(function () {
+			var cookieData = document.cookie.indexOf('UID');
+			if (cookieData == -1) {
+				loginBool = false;
+			} else {
+				loginBool = true;
+			};
+		})();
+		var $quizLayer = $('.lcc-module__login'),
+			$submitWrap = $('.event_box'),
+			$submit = $('.event_box').find('._btn-save'),
+			$radio = $('.lcc-module').find('input[type="radio"]'),
+			quizBool = false,
+			quizAlert = '';
+
+		if (loginBool) {
+			$quizLayer.hide();
+		}
+
+		$radio.on('change', function () {
+			var _this = $(this),
+				quizOK = _this.closest('.lcc-module__quiz-item').data('true');
+			if (quizOK) {
+				$submitWrap.addClass('event_box--ok');
+				quizBool = true;
+			} else {
+				$submitWrap.removeClass('event_box--ok');
+				quizBool = false;
+			}
+
+		});
+
+		if ($submit.length == 0) {
+			$submitWrap.addClass('event_box--ok');
+		} else {
+
+			$submitWrap.on('click', function () {
+
+				if (!quizBool) {
+					alert('정답 항목을 다시 한번 고민해 보세요\n' + $('.lcc-module').data('alert'));
+				} else {
+
+				}
+			});
+		}
+	})()
+
+
+});
+</script>
+
+
+
+
+	@@include('./01_02_mo_footer.html')
+
+</body>
+
+</html>
+
+
+
+
