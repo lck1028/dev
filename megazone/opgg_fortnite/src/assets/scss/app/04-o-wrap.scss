@@ -1,0 +1,135 @@
+.fn-article{
+	min-width:1112px;
+	position:relative;
+	background-image: map-get($themeBgimage , $theme );
+	background-position:50% 0;
+	background-repeat:no-repeat;
+	@include media-breakpoint-up(xxl) {
+
+		background-image: map-get($themeBgimage2x , $theme );
+		background-size :contain;
+	}
+	@include media-breakpoint-down(sm) {
+		min-width:auto;
+	}
+
+
+}
+.fn-body{
+
+}
+.fn-chat{
+	$chatWidth : 340px;
+	$headerHeight : 131px;
+	position:fixed;
+	right:0;
+	top:$headerHeight;
+	bottom:0;
+	width:$chatWidth;
+	transform:translateX(100%);
+	&__btn{
+		position:absolute;
+		left:-54px;
+		top:36px;
+		width:48px;
+		height:48px;
+		border-radius:2px;
+		//background-color:#ffffff80;
+		background-color : rgba(map-get( $themeBg, $theme ), 0.5);
+		color:map-get( $themeColor, $theme );
+		font-size:24px;
+		.c-svg--icon-chatopen{
+			display:block;
+		}
+		.c-svg--icon-chatclose{
+			display:none;
+		}
+	}
+	@at-root .doc--innerscroll-active{
+		overflow:hidden;
+		height: 100%;
+		body{ overflow:hidden;}
+		body,
+		.fn-article,
+		.fn-body,
+		.fn-main{
+			height:100%;
+		}
+		.fn-article{
+			min-width:auto;
+			background-image:none;
+		}
+		.fn-body{
+			margin-right:$chatWidth;
+			transition:margin-right 0.1s ease-out 0s;
+			height:calc( 100vh - #{$headerHeight});
+			overflow:auto;
+		}
+		.fn-main{
+			position:relative;
+			&::before{
+				// scroll 생성시 BG fixed로 인해 생성함
+				@include pseudo;
+				position:absolute;
+				left:0;
+				top:0;
+				display:block;
+				width:100%;
+				height:1080px;
+				background-image: map-get($themeBgimage , $theme );
+				background-position:50% 0;
+				background-repeat:no-repeat;
+			}
+
+
+		}
+		.fn-chat{
+			transform:translateX(0%);
+			transition:transform 0.1s ease-out 0s;
+			&__btn{
+				.c-svg--icon-chatopen{
+					display:none;
+				}
+				.c-svg--icon-chatclose{
+					display:block;
+				}
+			}
+		}
+	}
+	@include media-breakpoint-down(md) {
+		$chatWidth :170px;
+		width:$chatWidth;
+		transition:width 0.1s ease-out 0s;
+		@at-root .doc--innerscroll-active{
+			.fn-body{
+				margin-right:$chatWidth;
+				transition:margin-right 0.1s ease-out 0s;
+			}
+			.fn-main{
+				//height:calc( 100vh - 150px);
+			}
+		}
+	}
+	@include media-breakpoint-down(sm) {
+		@at-root .doc--innerscroll-active{
+			overflow:visible;
+			height: auto;
+			body{ overflow:visible;}
+			body,
+			.fn-article,
+			.fn-body,
+			.fn-main{ height:auto;}
+			.fn-body{ margin-right:0;}
+			.fn-chat{
+				transform:translateX(100%);
+			}
+		}
+		&__btn{
+			display:none;
+		}
+	}
+
+}
+.doc--innerscroll-active{
+
+}

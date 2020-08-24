@@ -1,0 +1,65 @@
+$gameTheme : (
+	_lol : transparent,//미정
+	_pubg : transparent,//미정
+	_ov : transparent,//미정
+	_cr : transparent,//미정
+	_fn : #5a5ed2,
+	_opgaming : transparent,//미정
+	_bestgg : transparent//미정
+);
+
+$noticeCode : (
+	_yellow : #ffc844,
+	_red : #ff0000
+);
+
+
+.opgg-footer{
+	position:relative;
+	margin-top:40px;
+	color:#ffffff;
+	background-color:#1c1c1f;
+	&__inner{
+		position:relative;
+		max-width:1112px;
+		margin:0 auto;
+		padding:80px 16px 60px;
+	}
+	&__nav{
+		&-item{
+			display:inline-block;
+			margin-left:10px;
+			padding:5px;
+			font-size:12px;
+			vertical-align:top;
+			&:first-child{
+				margin-left:0;
+				padding-left:0;
+			}
+		}
+	}
+	&__social{
+		position:absolute;
+		right:16px;
+		bottom:55px;
+		&-item{
+			display:inline-block;
+			margin-left:5px;
+			padding:5px;
+			vertical-align:top;
+			font-size:16px;
+			line-height:0;
+		}
+	}
+	&__copyright{
+		display:block;
+		margin-top:5px;
+		padding-right:150px;
+		font-family:Arial;
+		font-size:12px;
+		font-weight:700;
+	}
+
+}
+
+

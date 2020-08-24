@@ -1,0 +1,11 @@
+// float clear
+// 예)
+// ul{
+// 		@include clear;
+// }
+// li{ float : left;}
+
+
+@mixin clear{
+	&::after{ content: ''; display: block; clear: both;}
+}

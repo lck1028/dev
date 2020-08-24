@@ -1,0 +1,51 @@
+//
+//
+//영상 및 이미지 비율
+//
+//
+
+$ratio-config: (
+	'4x3': percentage(3 / 4),
+    '8x3': percentage(3 / 8),
+    '16x9': percentage(9 / 16),
+);
+
+
+.o-ratio{
+	position: relative;
+	overflow: hidden;
+	width:100%;
+	&::before{
+		content: '';
+		display: block;
+		width: 100%;
+		padding-bottom:100%;
+	}
+	& img,
+    & canvas,
+    & iframe,
+    & embed,
+    & video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: auto;
+        margin: 0;
+    }
+    & canvas,
+    & iframe,
+    & embed,
+    & video {
+        height: 100%;
+    }
+}
+
+@each $prop, $value in $ratio-config {
+    .o-ratio--#{$prop} {
+        &::before {
+            padding-bottom: $value;
+        }
+    }
+}
+

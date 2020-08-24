@@ -1,0 +1,13 @@
+input,
+textarea,
+select,
+button{
+	@at-root :lang(ko){
+		font-family: $font-malgun;
+	}
+	@at-root :lang(en){
+		font-family: $font-openSans;
+	}
+
+
+}

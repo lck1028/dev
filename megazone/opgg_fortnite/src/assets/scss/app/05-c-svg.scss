@@ -1,0 +1,341 @@
+@font-face {
+	font-family: "svgFontfortnite";
+	src: url('../fonts/svgFontfortnite.eot');
+	src: url('../fonts/svgFontfortnite.eot?#iefix') format('eot'),
+		url('../fonts/svgFontfortnite.woff') format('woff'),
+		url('../fonts/svgFontfortnite.ttf') format('truetype');
+}
+
+@mixin c-svg--styles {
+	font-family: "svgFontfortnite";
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	text-decoration: none;
+	text-transform: none;
+	display:inline-block;
+	line-height:1;
+}
+
+%c-svg- {
+	@include c-svg--styles;
+}
+
+@function c-svg--char($filename) {
+	$char: "";
+
+	@if $filename == 00-icon-gg {
+		$char: "\E001";
+	}
+	@if $filename == 01-icon-platform-ps-4 {
+		$char: "\E002";
+	}
+	@if $filename == 01-icon-platform-twitch {
+		$char: "\E003";
+	}
+	@if $filename == 01-icon-platform-windows {
+		$char: "\E004";
+	}
+	@if $filename == 01-icon-platform-xbox {
+		$char: "\E005";
+	}
+	@if $filename == 02-icon-facebook {
+		$char: "\E006";
+	}
+	@if $filename == 02-icon-twiter {
+		$char: "\E007";
+	}
+	@if $filename == icon-add {
+		$char: "\E008";
+	}
+	@if $filename == icon-avgviewers {
+		$char: "\E009";
+	}
+	@if $filename == icon-bookmark {
+		$char: "\E00A";
+	}
+	@if $filename == icon-chatclose {
+		$char: "\E00B";
+	}
+	@if $filename == icon-chatopen {
+		$char: "\E00C";
+	}
+	@if $filename == icon-close-off {
+		$char: "\E00D";
+	}
+	@if $filename == icon-close {
+		$char: "\E00E";
+	}
+	@if $filename == icon-followers {
+		$char: "\E00F";
+	}
+	@if $filename == icon-instargram {
+		$char: "\E010";
+	}
+	@if $filename == icon-main-livestream-bg {
+		$char: "\E011";
+	}
+	@if $filename == icon-main-livestream-text {
+		$char: "\E012";
+	}
+	@if $filename == icon-maxviewers {
+		$char: "\E013";
+	}
+	@if $filename == icon-movie-play-l {
+		$char: "\E014";
+	}
+	@if $filename == icon-noti {
+		$char: "\E015";
+	}
+	@if $filename == icon-reload {
+		$char: "\E016";
+	}
+	@if $filename == icon-share {
+		$char: "\E017";
+	}
+	@if $filename == icon-tier-bg {
+		$char: "\E018";
+	}
+	@if $filename == icon-tier {
+		$char: "\E019";
+	}
+	@if $filename == icon-tooltip {
+		$char: "\E01A";
+	}
+	@if $filename == icon-view {
+		$char: "\E01B";
+	}
+	@if $filename == icon-winrate {
+		$char: "\E01C";
+	}
+	@if $filename == icon-wins-l {
+		$char: "\E01D";
+	}
+	@if $filename == img-num-1 {
+		$char: "\E01E";
+	}
+	@if $filename == img-num-10 {
+		$char: "\E01F";
+	}
+	@if $filename == img-num-11 {
+		$char: "\E020";
+	}
+	@if $filename == img-num-12 {
+		$char: "\E021";
+	}
+	@if $filename == img-num-13 {
+		$char: "\E022";
+	}
+	@if $filename == img-num-14 {
+		$char: "\E023";
+	}
+	@if $filename == img-num-15 {
+		$char: "\E024";
+	}
+	@if $filename == img-num-2 {
+		$char: "\E025";
+	}
+	@if $filename == img-num-3 {
+		$char: "\E026";
+	}
+	@if $filename == img-num-4 {
+		$char: "\E027";
+	}
+	@if $filename == img-num-5 {
+		$char: "\E028";
+	}
+	@if $filename == img-num-6 {
+		$char: "\E029";
+	}
+	@if $filename == img-num-7 {
+		$char: "\E02A";
+	}
+	@if $filename == img-num-8 {
+		$char: "\E02B";
+	}
+	@if $filename == img-num-9 {
+		$char: "\E02C";
+	}
+	@if $filename == text-oops {
+		$char: "\E02D";
+	}
+	@if $filename == text-winrate {
+		$char: "\E02E";
+	}
+	@if $filename == text-wins-l-number {
+		$char: "\E02F";
+	}
+
+	@return $char;
+}
+
+@mixin c-svg-($filename, $insert: before, $extend: true) {
+	display:inline-block;
+	line-height:0;
+	&:#{$insert} {
+		@if $extend {
+			@extend %c-svg-;
+		} @else {
+			@include c-svg--styles;
+		}
+		content: c-svg--char($filename);
+
+	}
+}
+
+@mixin c-num-($filename, $insert: before, $extend: true) {
+	display:block;
+	&:#{$insert} {
+		@if $extend {
+			@extend %c-svg-;
+		} @else {
+			@include c-svg--styles;
+		}
+		content: c-svg--char($filename);
+
+	}
+}
+
+.c-svg--00-icon-gg {
+	@include c-svg-(00-icon-gg);
+}
+.c-svg--01-icon-platform-ps-4 {
+	@include c-svg-(01-icon-platform-ps-4);
+}
+.c-svg--01-icon-platform-twitch {
+	@include c-svg-(01-icon-platform-twitch);
+}
+.c-svg--01-icon-platform-windows {
+	@include c-svg-(01-icon-platform-windows);
+}
+.c-svg--01-icon-platform-xbox {
+	@include c-svg-(01-icon-platform-xbox);
+}
+.c-svg--02-icon-facebook {
+	@include c-svg-(02-icon-facebook);
+}
+.c-svg--02-icon-twiter {
+	@include c-svg-(02-icon-twiter);
+}
+.c-svg--icon-add {
+	@include c-svg-(icon-add);
+}
+.c-svg--icon-avgviewers {
+	@include c-svg-(icon-avgviewers);
+}
+.c-svg--icon-bookmark {
+	@include c-svg-(icon-bookmark);
+}
+.c-svg--icon-chatclose {
+	@include c-svg-(icon-chatclose);
+}
+.c-svg--icon-chatopen {
+	@include c-svg-(icon-chatopen);
+}
+.c-svg--icon-close-off {
+	@include c-svg-(icon-close-off);
+}
+.c-svg--icon-close {
+	@include c-svg-(icon-close);
+}
+.c-svg--icon-followers {
+	@include c-svg-(icon-followers);
+}
+.c-svg--icon-instargram {
+	@include c-svg-(icon-instargram);
+}
+.c-svg--icon-main-livestream-bg {
+	@include c-svg-(icon-main-livestream-bg);
+}
+.c-svg--icon-main-livestream-text {
+	@include c-svg-(icon-main-livestream-text);
+}
+.c-svg--icon-maxviewers {
+	@include c-svg-(icon-maxviewers);
+}
+.c-svg--icon-movie-play-l {
+	@include c-svg-(icon-movie-play-l);
+}
+.c-svg--icon-noti {
+	@include c-svg-(icon-noti);
+}
+.c-svg--icon-reload {
+	@include c-svg-(icon-reload);
+}
+.c-svg--icon-share {
+	@include c-svg-(icon-share);
+}
+.c-svg--icon-tier-bg {
+	@include c-svg-(icon-tier-bg);
+}
+.c-svg--icon-tier {
+	@include c-svg-(icon-tier);
+}
+.c-svg--icon-tooltip {
+	@include c-svg-(icon-tooltip);
+}
+.c-svg--icon-view {
+	@include c-svg-(icon-view);
+}
+.c-svg--icon-winrate {
+	@include c-svg-(icon-winrate);
+}
+.c-svg--icon-wins-l {
+	@include c-svg-(icon-wins-l);
+}
+.c-svg--img-num-1 {
+	@include c-svg-(img-num-1);
+}
+.c-svg--img-num-10 {
+	@include c-svg-(img-num-10);
+}
+.c-svg--img-num-11 {
+	@include c-svg-(img-num-11);
+}
+.c-svg--img-num-12 {
+	@include c-svg-(img-num-12);
+}
+.c-svg--img-num-13 {
+	@include c-svg-(img-num-13);
+}
+.c-svg--img-num-14 {
+	@include c-svg-(img-num-14);
+}
+.c-svg--img-num-15 {
+	@include c-svg-(img-num-15);
+}
+.c-svg--img-num-2 {
+	@include c-svg-(img-num-2);
+}
+.c-svg--img-num-3 {
+	@include c-svg-(img-num-3);
+}
+.c-svg--img-num-4 {
+	@include c-svg-(img-num-4);
+}
+.c-svg--img-num-5 {
+	@include c-svg-(img-num-5);
+}
+.c-svg--img-num-6 {
+	@include c-svg-(img-num-6);
+}
+.c-svg--img-num-7 {
+	@include c-svg-(img-num-7);
+}
+.c-svg--img-num-8 {
+	@include c-svg-(img-num-8);
+}
+.c-svg--img-num-9 {
+	@include c-svg-(img-num-9);
+}
+.c-svg--text-oops {
+	@include c-svg-(text-oops);
+}
+.c-svg--text-winrate {
+	@include c-svg-(text-winrate);
+}
+.c-svg--text-wins-l-number {
+	@include c-svg-(text-wins-l-number);
+}

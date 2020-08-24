@@ -1,0 +1,21 @@
+.c-cells{
+	display:table;
+	table-layout:fixed;
+	width:100%;
+	border-collapse: collapse;
+	border-spacing: 0;
+	&__header{
+		display:table-header-group;
+	}
+	&__body{
+		display:table-row-group;
+	}
+	&__row{
+		display:table-row;
+	}
+	&__cell{
+		display:table-cell;
+		vertical-align:middle;
+		word-break:break-word;
+	}
+}

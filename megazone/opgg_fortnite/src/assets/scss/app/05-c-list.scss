@@ -1,0 +1,70 @@
+.c-leaderboard{
+	position:relative;
+	&__header{
+		font-size:rem(13);
+		font-weight:700;
+		@include media-breakpoint-down(sm) {
+			font-size:rem(12);
+		}
+
+		&-item{
+			padding:25px 0;
+			border-top-color:map-get($themeLeaderboardListTopColor, $theme );
+			color:map-get($themeCommon, color);
+			@include media-breakpoint-down(sm) {
+				padding:12px 0;
+				.c-btn__sort{
+					display:none;
+				}
+			}
+		}
+	}
+	&__list{
+		color: map-get($themeColor, $theme );
+		font-size:rem(15);
+		@include media-breakpoint-down(sm) {
+			font-size:rem(12)
+		}
+	}
+	&__item{
+		min-height:50px;
+		margin-top:2px;
+		border-radius: 4px;
+		@include media-breakpoint-down(sm) {
+			min-height:41px;
+		}
+		&:first-child{
+			margin-top:0;
+		}
+		&:nth-child(1),
+		&:nth-child(2),
+		&:nth-child(3){
+			background-color:map-get($themeLeaderboardListTopBg, $theme );
+			color:map-get($themeLeaderboardListTopColor, $theme );
+			font-weight:700;
+		}
+	}
+	&__sort{
+		position:absolute;
+		right:0;
+		top:0;
+		display:none;
+		box-sizing:border-box;
+		width:25%;// 기본값 25%로 세팅 width 값이 변경되야 될경우 override 하여 사용
+		@include media-breakpoint-down(sm) {
+			display:block;
+		}
+		&-select{
+			min-width:100%;
+			>select{
+				width:100%;
+				padding:10px 0;
+				border:none;
+				background-color:transparent;
+				color:#777777;
+				font-size:rem(12);
+				font-weight:700;
+			}
+		}
+	}
+}

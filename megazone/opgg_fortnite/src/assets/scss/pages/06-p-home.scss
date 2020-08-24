@@ -1,0 +1,462 @@
+.p-home{}
+
+
+.p-home-article{}
+
+.p-home-header{
+	&__inner{
+		@include layout--inner-width(100%);
+		padding-top:136px;
+		@include media-breakpoint-down(sm) {
+			padding-top:36px;
+		}
+	}
+}
+
+.p-home-section__box{
+	@include clear;
+	position:relative;
+	margin-top:80px;
+	@include media-breakpoint-down(sm) {
+		display:none;
+	}
+}
+.p-home-section{
+	&__inner{
+		@include layout--inner-width;
+	}
+
+}
+
+.p-home-livevisual{
+	margin-top:130px;
+	@include media-breakpoint-down(sm) {
+		margin-top:40px;
+		padding:0 16px;
+	}
+	&__title{
+		display:none;
+		font-size:rem(14);
+		@include media-breakpoint-down(sm) {
+			display:block;
+		}
+	}
+	&__infolist{
+
+	}
+	&__infoitem{
+		@include margin--auto;
+		position:relative;
+		max-width:768px;
+	}
+	&__anchor{
+		position:relative;
+		display:block;
+	}
+	&__header{
+		@include media-breakpoint-down(sm) {
+			position:absolute;
+			left:0;
+			top:0;
+			box-sizing:border-box;
+			width:100%;
+			padding:0 16px;
+			z-index:1;
+		}
+		&-lang{
+			display:inline-block;
+			padding:3px 10px;
+			border-radius:2px;
+			background-color:map-get( $themeCommon, _black);
+			color:map-get($themeCommon, _white );
+			font-size:rem(11);
+			@include media-breakpoint-down(sm) {
+				position:absolute;
+				top:16px;
+				left:70px;
+				padding:2px 10px;
+			}
+
+		}
+		&-title{
+			@include ellipsis;
+			margin-top:11px;
+			color:map-get($themeColor, $theme );
+			font-size:rem(20px);
+			font-weight:700;
+			@include media-breakpoint-down(sm) {
+				margin-top:46px;
+				color:map-get($themeCommon, _white );
+				font-size:14px;
+				white-space: normal;
+				overflow: visible;
+				text-overflow: clip;
+			}
+		}
+		&-streamer{
+			display:block;
+			margin-top:10px;
+			color:map-get($themeColorDark, $theme );
+			font-size:rem(11px);
+			@include media-breakpoint-down(sm) {
+				display:none;
+			}
+		}
+		&-platform{
+			display:inline-block;
+			margin-right:8px;
+			color:map-get($themeColor, $theme );
+			font-size:rem(18px);
+			vertical-align:middle;
+			line-height:0;
+		}
+	}
+	&__media{
+		margin-top:18px;
+		box-shadow:0 60px 60px 0 rgba(32, 24, 54, 0.72);
+		@include media-breakpoint-down(sm) {
+			@include shadow--roundBox;
+			padding-bottom:93px;
+		}
+	}
+	&__info{
+		position:absolute;
+		left:0;
+		top:0;
+		box-sizing:border-box;
+		width:100%;
+		height:100%;
+		padding:24px 24px 36px;
+		background-color:rgba(19,19,19,0.8);
+		opacity:0;
+		//trigger로 변경
+		&:hover{
+			opacity:1;
+		}
+		@include media-breakpoint-down(sm) {
+			bottom:93px;
+			height:auto;
+		}
+		&-box{
+			color:map-get($themeCommon, _white );
+			font-size:rem(20);
+			@include media-breakpoint-down(sm) {
+				@include clear;
+				position:absolute;
+				top:100%;
+				left:0;
+				box-sizing:border-box;
+				width:100%;
+				padding:14px 16px ;
+				color:map-get($themeColor, $theme );
+				font-size:rem(14);
+			}
+		}
+		&-icon{
+			position:absolute;
+			left:24px;
+			top:24px;
+			@include media-breakpoint-down(sm) {
+				left:16px;
+				top:16px;
+			}
+		}
+		&-rank{
+			position:absolute;
+			right:24px;
+			top:24px;
+			color:#ffffff;
+			font-size:rem(34);
+			line-height:0;
+			@include media-breakpoint-down(sm) {
+				right:16px;
+				top:16px;
+				font-size:rem(18);
+			}
+		}
+		&-streamer{
+			display:block;
+			margin-top:56px;
+			//color:map-get( $themeCommon, _white );
+			font-size:rem(34);
+			font-weight:700;
+			@include media-breakpoint-down(sm) {
+				margin-top:0;
+				font-size:rem(14);
+			}
+		}
+		&-platform{
+			display:inline-block;
+			margin-left:12px;
+			font-size:rem(21);
+			vertical-align:middle;
+			@include media-breakpoint-down(sm) {
+				margin-left:9px;
+				font-size:rem(12);
+			}
+		}
+		&-tierbox{
+			position:relative;
+			display:block;
+			box-sizing:border-box;
+			padding-left:46px;
+			@include media-breakpoint-down(sm) {
+				float:left;
+				width:40%;
+				padding-top:9px;
+			}
+			@include media-breakpoint-down(xs) {
+				padding-left:30px;
+			}
+
+		}
+		&-tierlogo{
+			position:absolute;
+			left:0;
+			top:12px;
+			display:block;
+			width:36px;
+			height:36px;
+			> img{
+				position:static;
+				width:auto;
+				height:auto;
+			}
+			@include media-breakpoint-down(sm) {
+				top:8px;
+			}
+			@include media-breakpoint-down(xs) {
+				top:14px;
+				width:26px;
+				height:26px;
+			}
+		}
+		&-tierratio{
+
+		}
+		&-tier{
+			display:block;
+			font-size:rem(18);
+			font-family: $font-roboto;
+			@include media-breakpoint-down(sm) {
+				font-size:rem(12);
+			}
+		}
+		&-datalist{
+			position:relative;
+			display:table;
+			table-layout:fixed;
+			box-sizing:border-box;
+			margin-top:43px;
+			padding-top:14px;
+			@include media-breakpoint-down(sm) {
+				float:left;
+				width:60%;
+				margin-top:0;
+				padding-top:9px
+			}
+			&::before{
+				@include pseudo;
+				position:absolute;
+				left:0;
+				top:0;
+				width:60px;
+				height:2px;
+				background-color:map-get($themeCommon, _white );
+				@include media-breakpoint-down(sm) {
+					display:none;
+				}
+
+			}
+		}
+		&-dataitem{
+			display:table-cell;
+			padding:0 20px;
+			@include media-breakpoint-down(sm) {
+				padding:0 10px;
+			}
+			&:first-child{
+				padding-left:0;
+				@include media-breakpoint-down(sm) {
+					padding-left:20px;
+				}
+			}
+		}
+		&-data{
+			display:block;
+			font-family: $font-roboto;
+		}
+
+		&-view{
+			position:absolute;
+			left:24px;
+			bottom:0;
+			display:block;
+			color:map-get($themeCommon, _white );
+			@include media-breakpoint-down(sm) {
+				left:10px;
+			}
+		}
+		&-viewicon{
+			display:inline-block;
+			padding-right:10px;
+			font-size:rem(16);
+			vertical-align: middle;
+			@include media-breakpoint-down(sm) {
+				padding-right:6px;
+			}
+		}
+		&-viewdata{
+			display:inline-block;
+			padding-left:10px;
+			border-left-width:1px;
+			border-left-style:solid;
+			border-left-color:#565656;
+			font-size:rem(14);
+			line-height:37px;
+			@include media-breakpoint-down(sm) {
+				line-height: 31px;
+			}
+		}
+		&-play{
+			position:absolute;
+			right:50%;
+			bottom:50%;
+			transform:translateX(50%) translateY(50%);
+			@include media-breakpoint-down(sm) {
+				right:20px;
+				bottom:20px;
+				transform:translateX(0%) translateY(0%);
+			}
+		}
+
+	}
+
+}
+
+
+.p-home-livestream{
+	margin-top:36px;
+	@include media-breakpoint-down(sm) {
+		margin-top:24px;
+	}
+	&__box{
+		@include shadow--roundBox;
+		padding:31px 24px 14px;
+		@include media-breakpoint-down(sm) {
+			padding:25px 16px 14px;
+		}
+	}
+	&__header{
+		position:relative;
+		&-option{
+			position:absolute;
+			right:0;
+			top:-7px;
+			@include media-breakpoint-down(sm) {
+				position:relative;
+				top:0;
+				padding-top:24px;
+			}
+		}
+		&-tab{
+			display:inline-block;
+			@include media-breakpoint-down(sm) {
+				display:block;
+				border-width:1px;
+				border-style:solid;
+				border-color:map-get($themeBtnRadiusBg, $theme);
+				border-radius:3px;
+				font-size:0;
+				line-height:0;
+				.c-tab__text-item{
+					box-sizing:border-box;
+					width:50%;
+					height:auto;
+					padding:15px 0;
+					font-size:rem(14);
+					font-weight:700;
+					&--is-active{
+						background-color:map-get($themeElementBg, $theme);
+					}
+				}
+			}
+		}
+		&-select{
+			display:inline-block;
+			margin-left:20px;
+			border-width:1px;
+			border-style:solid;
+			border-color:map-get($themeSelectBorder, $theme );
+			@include media-breakpoint-down(sm) {
+				position:absolute;
+				right:0;
+				top:-28px;
+				margin-left:0;
+				height:36px;
+
+			}
+			.c-select__custom-btn{
+				border-top-color:map-get($themeColor, $theme );
+			}
+		}
+	}
+	&__list{
+		@include clear();
+		margin:15px -12px 0;
+		@include media-breakpoint-down(sm) {
+			margin:8px 0 0;
+		}
+	}
+	&__item{
+		float:left;
+		position:relative;
+		box-sizing:border-box;
+		width:25%;
+		padding:18px 12px;
+		@include media-breakpoint-down(sm) {
+			float:none;
+			width:100%;
+			padding:8px 0;
+		}
+		&:nth-child(4n+1){
+			clear:left;
+			@include media-breakpoint-down(sm) {
+				clear: none;
+			}
+		}
+
+		.c-media::after{
+			position:absolute;
+			right:10px;
+			top:10px;
+			color:map-get($themeCommon, _white );
+			font-size:rem(16);
+			z-index:1;
+			@include media-breakpoint-down(sm) {
+				right:auto;
+				left:120px;
+				font-size:rem(12);
+			}
+		}
+		.c-media__frame::before{
+			@include media-breakpoint-down(sm) {
+				position:relative;
+				background-color:rgba(0,0,0,0.45);
+				z-index: 1;
+			}
+		}
+		@for $i from 1 through 12 {
+			&:nth-child(#{$i}){
+				.c-media{
+					@include c-num-(img-num-#{$i+3}, after);
+				}
+
+			}
+		}
+	}
+	&__anchor{
+		display:block;
+	}
+
+}

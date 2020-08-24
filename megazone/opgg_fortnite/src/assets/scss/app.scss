@@ -1,0 +1,74 @@
+// setting , &mixin
+//
+@import 'var/01-s-var'; // 전역변수
+@import 'var/01-s-themes'; // theme 변수
+@import 'var/02-m-media-queries'; //mediaquery seitting
+@import 'var/01-x-breakpoints'; // mediaquery mixin(from bootstrap)
+@import 'var/01-x-mixins'; // 공통 mixins
+// SCSS module
+@import 'var/02-m-rem'; // px > rem 변환
+@import 'var/02-m-clear'; // clearfix
+// elements
+@import 'global/01-g-defaults';
+@import 'global/01-g-commons';
+@import 'global/02-g-doc';
+@import 'global/02-g-font';
+@import 'global/02-g-headings';
+@import 'global/02-g-anchor';
+@import 'global/02-g-images';
+@import 'global/02-g-table';
+@import 'global/02-g-form';
+
+// Objects
+@import 'app/04-o-wrap';
+@import 'app/04-o-ratio'; //특정비율
+
+//opgg header & footer
+@import 'opgg/00-opgg-header'; //opgg-header
+@import 'opgg/00-opgg-footer'; //opgg-footer
+@import 'opgg/99-opgg-svg'; //opgg-svgfont
+
+// 프로젝트 요소및 템플릿 추가
+// Components
+@import 'app/05-c-wrap';// wrap 공통
+@import 'app/05-c-title';// title 공통
+@import 'app/05-c-fonts'; //font
+@import 'app/05-c-buttons'; //버튼
+@import 'app/05-c-tabs'; // tab
+@import 'app/05-c-select'; //select
+@import 'app/05-c-cells'; //table style custom
+@import 'app/05-c-list'; //list
+@import 'app/05-c-table'; //table
+@import 'app/05-c-media'; //media
+@import 'app/05-c-svg'; //svg
+@import 'app/05-c-icons'; //icons
+@import 'app/05-c-chart'; //chart
+@import 'app/05-c-notice'; //공지 및 알림
+@import 'app/05-c-playersearch.scss';//player 검색
+@import 'app/05-c-rank.scss';//순위 테이블
+@import 'app/05-c-layer.scss';//레이어팝업
+@import 'app/05-c-form.scss';//form 요소
+@import 'app/05-c-share.scss';//share
+@import 'app/05-c-tooltip.scss';//tooltip
+
+
+
+
+//page
+@import 'pages/06-p-home'; //home
+@import 'pages/06-p-profile'; //profile
+@import 'pages/06-p-leaderboard'; //leaderboard
+@import 'pages/06-p-result'; //검색결과
+@import 'pages/06-p-oops'; //에러페이지(400,500...)
+
+
+// util
+@import 'app/07-u-etc'; //기타 추가
+
+
+
+
+
+
+
+

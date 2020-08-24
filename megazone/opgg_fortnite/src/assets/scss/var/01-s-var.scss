@@ -1,0 +1,62 @@
+// font
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700|Roboto:400,700);
+//맑은고딕 초기화
+@font-face {
+    font-family: "맑은 고딕";
+	src: local("AppleSDGothic"),
+	local("Apple SD Gothic Neo"),
+	local("AppleGothic"),
+    local("맑은 고딕");
+}
+@font-face {
+    font-family: "Malgun Gothic";
+	src: local("AppleSDGothic"),
+	local("Apple SD Gothic Neo"),
+	local("AppleGothic"),
+    local("Malgun Gothic");
+}
+@font-face {
+    font-family: "Malgun Gothic";
+	src: local("AppleSDGothic"),
+	local("Apple SD Gothic Neo"),
+	local("AppleGothic"),
+    local("Malgun Gothic");
+}
+@font-face {
+    font-family: "돋움";
+	src: local("AppleSDGothic"),
+	local("Apple SD Gothic Neo"),
+	local("AppleGothic"),
+    local("돋움");
+}
+@font-face {
+    font-family: "Dotum";
+	src: local("AppleSDGothic"),
+	local("Apple SD Gothic Neo"),
+	local("AppleGothic"),
+    local("Dotum");
+}
+
+
+
+$font-malgun : "맑은 고딕", "Malgun Gothic", "돋움", "Dotum", sans-serif;
+$font-openSans: "Open Sans", "맑은 고딕", "Malgun Gothic", sans-serif;
+$font-roboto: "Roboto", sans-serif;
+
+
+
+
+$base-color : #000000;
+$base-font-size : 13px;
+$base-line-height : 1.45;
+$base-letter-spacing : 0px;
+
+$layout--max-width : 1080px;
+
+
+$imgPath : "../img/";
+
+
+
+
+

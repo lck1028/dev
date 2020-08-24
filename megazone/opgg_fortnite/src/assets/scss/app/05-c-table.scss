@@ -1,0 +1,70 @@
+//table
+.c-table{
+	width:100%;
+	table-layout:fixed;
+	&__thead{
+
+	}
+	&__tbody{
+
+
+	}
+	&__tr{
+		.c-table__tbody &{
+			&:nth-child(1),
+			&:nth-child(2),
+			&:nth-child(3){
+				>td{
+					font-weight:700;
+					.c-table--type-ratio:not(:first-child) &{
+						font-weight:400;
+					}
+				}
+
+			}
+		}
+	}
+	&__th{
+		padding:12px 5px;
+		color : map-get($themeCommon, color );
+		font-size:rem(13px);
+	}
+	&__td{
+		padding:8px 5px;
+		color : map-get($themeTableColor , $theme);
+		font-size:rem(13px);
+	}
+
+
+
+	//wraper 내에 c-table length 에 마춰 비율조절
+	//addClass .c-table--type-ratio
+	// 4 columns 까지만 만들어둠
+	&--type-ratio{
+		float:left;
+		// 2 columns
+		&:first-child:nth-last-child(2),
+		&:nth-child(2):last-child {
+			width: calc(50% - 20px);
+			&:first-child:nth-last-child(2){
+				margin-right:20px;
+			}
+			&:nth-child(2):last-child{
+				margin-left:20px;
+			}
+		}
+		// 3 columns
+		&:first-child:nth-last-child(3),
+		&:nth-child(2):nth-last-child(2),
+		&:nth-child(3):last-child {
+			width: 33.3333%;
+		}
+		// 4 columns
+		&:first-child:nth-last-child(4),
+		&:nth-child(2):nth-last-child(3),
+		&:nth-child(3):nth-last-child(2),
+		&:nth-child(4):last-child {
+			width: 25%;
+		}
+	}
+}

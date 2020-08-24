@@ -1,0 +1,65 @@
+.c-rank{
+	@include clear;
+	&__section{
+		@include shadow--roundBox;
+
+		box-sizing:border-box;
+		padding:31px 24px 14px;
+		&--type-leaderboard{
+			float:left;
+			width:66.1111%;
+		}
+		&--type-livestreamer{
+			float:right;
+			width:32.2222%;
+		}
+	}
+	&__header{
+		position:relative;
+	}
+	&__nav{
+		position:absolute;
+		right:0;
+		top:-7px;
+	}
+	&__table{
+		@include clear;
+		margin-top:10px;
+		&--col-rank{
+			width:10%;
+		}
+		&--col-player{
+			width:60%;
+		}
+		&--col-wins{
+			width:30%;
+		}
+		&--data-rank{
+			text-align:center;
+		}
+		&--data-player{
+			@include ellipsis;
+			padding-left:10px;
+		}
+		&--data-wins{
+			text-align:right;
+			padding-right:0;
+		}
+		td > a{
+			@include ellipsis;
+			display:block;
+		}
+		[class^="c-svg"]{
+			vertical-align:middle;
+			margin-left:10px;
+			& + [class^="c-svg--icon"]{
+				margin-left:5px;
+			}
+
+		}
+		.c-svg--01-icon-platform-twitch{
+			color:map-get($themeTwitchColor, $theme );
+		}
+	}
+
+}

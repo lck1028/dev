@@ -1,0 +1,176 @@
+.c-playersearch{
+	@include margin--auto;
+	position:relative;
+	display:block;
+	width:100%;
+	max-width:768px;
+	@include media-breakpoint-down(sm) {
+
+	}
+	&__box{
+		position:relative;
+
+		border:4px solid rgba(255, 255, 255, 0.18);
+		border-radius:4px;
+	}
+	&__input-box{
+		position:relative;
+		display:block;
+		padding-right:90px;
+		background-color:map-get( $themeCommon, _white);
+	}
+	&__input-text{
+		border-radius:4px;
+		height:50px;
+
+		color:map-get( $themeCommon, color);
+		font-size:15px;
+		&[type="text"]{
+			padding:0 20px;
+		}
+		@include input-placeholder{
+			color:#868686;
+			font-family:"svgFontfortnite", $font-openSans;
+		}
+
+	}
+	&__btn{
+		position:absolute;
+		right:0;
+		top:0;
+		height:100%;
+		padding:5px 20px;
+		color:map-get( $themeCommon, _purple );
+		font-size:rem(20px);
+		line-height:0;
+	}
+
+
+
+}
+
+.c-playerresult{
+	position:absolute;
+	left:24px;
+	right:24px;
+	display:none;
+	max-width:512px;
+	margin-top:-12px;
+	border-radius: 4px;
+	border:1px solid #e2e2e2;
+	box-shadow:0 2px 2px 0 rgba(0, 0, 0, 0.19);
+	background-color:#ffffff;
+	overflow:hidden;
+	z-index:10;
+	@include media-breakpoint-down(sm) {
+		margin-top:24px;
+		left:0;
+		right:0;
+	}
+	&--is-expend{
+		display:block;
+	}
+	&__tab{}
+	&__contents{
+		background-color:map-get( $themeCommon, _white);
+	}
+	&__list{
+		@include clear;
+		padding:12px 5px 15px 11px;
+	}
+	&__item{
+		float:left;
+		position:relative;
+		box-sizing:border-box;
+		width:50%;
+		padding:6px 70px 6px 19px;
+		&:nth-child(odd){
+			clear:left;
+		}
+		&:nth-child(even){
+			clear:right;
+		}
+	}
+	&__name{
+		@include ellipsis;
+		display:block;
+		color:map-get( $themeCommon, _black );
+		font-size:rem(12);
+		font-weight:700;
+	}
+	&__bookmark,
+	&__remove{
+		position:absolute;
+		right:0;
+		top:50%;
+		font-size:rem(16);
+		line-height:0;
+		transform:translateY(-50%);
+	}
+	&__bookmark{
+		right:46px;
+	}
+	&__remove{
+		right:20px;
+		color:#e4e4e4;
+	}
+	&__nodata{
+		@include text--flexCenter;
+		min-height:144px;
+		color:map-get( $themeCommon, color );
+		font-size:rem(13);
+	}
+}
+
+.c-playerpopular{
+	display:table;
+	margin-top:15px;
+	@include media-breakpoint-down(sm) {
+		display:none;
+	}
+	&__title{
+		display:table-cell;
+		padding:0 10px 0 4px;
+		color:map-get( $themeColor, $theme);
+	}
+	&__box{
+		position:relative;
+		display:table-cell;
+		max-width:582px;
+		padding-left:27px;
+	}
+	&__logo{
+		position:absolute;
+		left:0;
+		top:0;
+		color:map-get( $themeTwitchColor, $theme);
+		font-size:rem(16);
+		line-height:0;
+	 }
+	&__list{
+		@include ellipsis;
+		color:map-get( $themeColor, $theme);
+	}
+	&__item{
+		display:inline-block;
+		padding:0 8px;
+	}
+	&__anchor{
+		color:map-get( $themeColor, $theme);
+		font-size:rem(13);
+	}
+}
+
+.c-playernoresult{
+	padding-bottom:80px;
+	color:map-get($themeCommon, $theme );
+	font-size:rem(24);
+	text-align:center;
+	line-height:1.6;
+	@include media-breakpoint-down(sm) {
+		padding-bottom:30px;
+		font-size:rem(12px);
+		line-height:1.8;
+	}
+
+}

@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Document</title>
+<link rel="stylesheet" type="text/css" href="/src/assets/css/app.css">
+<script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
+
+</head>
+<body>
+<article class="fn-article">
+<header class="opgg-header opgg-header--gamg-fn">
+	<div class="opgg-header__gnb">
+		<h1 class="opgg-header__logo"><a class="opgg-header__logo-anchor" href="#"><span class="opgg--00-opgglogo"></span><span class="hidden">OP.GG</span></a></h1>
+		<nav class="opgg-header__navi">
+			<button class="opgg-header__navi-open" type="button"><span class="opgg-header__navi-thumb"><img src="../src/opgg/img/navi/icon-navi-fn.png" alt="Fortnite"></span>Fortnite</button>
+			<div class="opgg-header__navi-box">
+				<div class="opgg-header__navi-list opgg-header__navi-list--type-game">
+					<strong class="opgg-header__navi-title">GAME STATS</strong>
+					<a class="opgg-header__navi-item" href="#"><span class="opgg-header__navi-poster opgg-header__navi-poster--game-lol"></span><span class="opgg-header__navi-name">League of Legends</span></a>
+					<a class="opgg-header__navi-item" href="#"><span class="opgg-header__navi-poster opgg-header__navi-poster--game-pubg"></span><span class="opgg-header__navi-name">PUBG</span></a>
+					<a class="opgg-header__navi-item" href="#"><span class="opgg-header__navi-poster opgg-header__navi-poster--game-ow"></span><span class="opgg-header__navi-name">Overwatch</span></a>
+					<a class="opgg-header__navi-item" href="#"><span class="opgg-header__navi-poster opgg-header__navi-poster--game-cr"></span><span class="opgg-header__navi-name">Clash Royale</span></a>
+					<a class="opgg-header__navi-item" href="#"><span class="opgg-header__navi-poster opgg-header__navi-poster--game-fn"></span><span class="opgg-header__navi-name">Fortnite</span></a>
+				</div>
+				<div class="opgg-header__navi-list opgg-header__navi-list--type-esports">
+					<strong class="opgg-header__navi-title">ESPORTS</strong>
+					<a class="opgg-header__navi-item" href="#"><span class="opgg-header__navi-poster opgg-header__navi-poster--esports-opgaming"></span><span class="opgg-header__navi-name">OP Gaming</span></a>
+					<a class="opgg-header__navi-item" href="#"><span class="opgg-header__navi-poster opgg-header__navi-poster--esports-bestgg"></span><span class="opgg-header__navi-name">BEST.GG</span></a>
+				</div>
+				<button class="opgg-header__navi-close" type="button"><span class="opgg--02-close-off"></span><span class="hidden">닫기</span></button>
+			</div>
+			<div class="layer-dim"></div>
+		</nav>
+
+		<div class="opgg-header__alert">
+			<aside class="opgg-app">
+				<div class="opgg-app__inner">
+					<span class="opgg-app__icon"><span class="opgg--02-alerts"></span></span>
+					<p class="opgg-app__text">OP.GG 통합앱이 바뀌었습니다! 다운 받고 경품도 받아가세요!</p>
+					<a class="opgg-app__download" href="#">다운받기</a>
+					<button class="opgg-app__close" type="button"><span class="opgg--02-close-off"></span></button>
+				</div>
+			</aside>
+		</div>
+
+		<div class="opgg-header__util">
+			<button class="opgg-header__util-open" type="button"><span class="opgg--02-setting"></span><span class="hidden">UTIL OPEN</span></button>
+			<div class="opgg-header__util-box">
+				<span class="opgg-header__info" href="#"><span class="opgg--00-opgglogo"></span></span>
+				<!-- <div class="opgg-header__util-item  opgg-header__util-item--type-login"><div class="opgg-login" ></div></div> -->
+				<div class="opgg-header__util-item opgg-header__util-item--type-language">
+					<div class="opgg-language">
+						<button class="opgg-language__open" type="button"><span class="opgg-language__open-icon"><span class="opgg--02-language"></span></span><span class="opgg-language__open-title">Language</span><span class="opgg-language__open-short">KR</span></button>
+						<div class="opgg-language__box">
+							<strong class="opgg-language__box-title">Language</strong>
+							<div class="opgg-language__list">
+								<a class="opgg-language__item opgg-language__item--is-active" href="#">한국어</a>
+								<a class="opgg-language__item" href="#">English</a>
+							</div>
+							<button class="opgg-language__close" type="button"><span class="opgg--02-close-off"></span><span class="hidden">닫기</span></button>
+						</div>
+						<div class="layer-dim"></div>
+					</div>
+				</div>
+				<div class="opgg-header__util-item  opgg-header__util-item--type-theme">
+					<div class="opgg-toggle">
+						<input class="opgg-toggle__btn" id="opggToggle" type="checkbox" role="button" >
+						<label class="opgg-toggle__label" for="opggToggle"><span class="opgg-toggle__check"></span>Dark Mode</label>
+					</div>
+				</div>
+				<button class="opgg-header__util-close" type="button">닫기</button>
+			</div>
+		</div>
+
+
+
+
+
+	</div>
+	<div class="opgg-header__snb">
+		<div class="opgg-header__snb-inner">
+			<div class="opgg-header__snb-list">
+				<a class="opgg-header__snb-item opgg-header__snb-item--is-active" href="#">Home</a>
+				<a class="opgg-header__snb-item" href="#">Live Stream</a>
+				<a class="opgg-header__snb-item" href="#">Leaderboards</a>
+				<a class="opgg-header__snb-item" href="#">Weapons</a>
+				<a class="opgg-header__snb-item" href="#">Map</a>
+			</div>
+		</div>
+		<div class="opgg-header__snb-option">
+			<div class="c-playersearch">
+				<div class="c-playersearch__box">
+					<span class="c-playersearch__input-box"><input class="c-playersearch__input-text" placeholder="Enter your EPIC name" type="text"><button class="c-playersearch__btn" type="submit"><span class="c-svg--00-icon-gg"></span></button>
+					</span>
+				</div>
+				<div class="c-playerresult"><!-- c-playerresult--is-expend -->
+					<nav class="c-tab__separator">
+						<button class="c-tab__separator-item c-tab__separator-item--is-active" type="button">Recent
+							Searchs</button>
+						<button class="c-tab__separator-item" type="button">Favorite</button>
+						<button class="c-tab__separator-item" type="button">Popular</button>
+					</nav>
+
+					<div class="c-playerresult__contents">
+						<ul class="c-playerresult__list">
+							<li class="c-playerresult__item">
+								<a class="c-playerresult__name" href="#">OvеlonUwatakashi</a>
+								<button class="c-playerresult__bookmark c-icons__bookmark c-icons__bookmark--is-save" type="button"><span class="c-svg--icon-bookmark"></span><span
+									 class="hidden">Favorites</span></button>
+								<button class="c-playerresult__remove" type="button"><span class="c-svg--icon-close-off"></span><span class="hidden">close</span>
+								</button>
+							</li>
+
+							<li class="c-playerresult__item">
+								<a class="c-playerresult__name" href="#">Ovеl i글자가 길어 지면 어떻게 되나보자 블라블라 블라</a>
+								<button class="c-playerresult__bookmark c-icons__bookmark c-icons__bookmark--is-save" type="button"><span class="c-svg--icon-bookmark"></span><span
+									 class="hidden">Favorites</span></button>
+								<button class="c-playerresult__remove" type="button"><span class="c-svg--icon-close-off"></span><span class="hidden">close</span>
+								</button>
+							</li>
+							<li class="c-playerresult__item">
+								<a class="c-playerresult__name" href="#">OvеlonUwatakashi</a>
+								<button class="c-playerresult__bookmark c-icons__bookmark c-icons__bookmark--is-save" type="button"><span class="c-svg--icon-bookmark"></span><span
+									 class="hidden">Favorites</span></button>
+								<button class="c-playerresult__remove" type="button"><span class="c-svg--icon-close-off"></span><span class="hidden">close</span>
+								</button>
+							</li>
+							<li class="c-playerresult__item">
+								<a class="c-playerresult__name" href="#">OvеlonUwatakashi</a>
+								<button class="c-playerresult__bookmark c-icons__bookmark c-icons__bookmark--is-save" type="button"><span class="c-svg--icon-bookmark"></span><span
+									 class="hidden">Favorites</span></button>
+								<button class="c-playerresult__remove" type="button"><span class="c-svg--icon-close-off"></span><span class="hidden">close</span>
+								</button>
+							</li>
+							<li class="c-playerresult__item">
+								<a class="c-playerresult__name" href="#">OvеlonUwatakashi</a>
+								<button class="c-playerresult__bookmark c-icons__bookmark " type="button"><span class="c-svg--icon-bookmark"></span><span
+									 class="hidden">Favorites</span></button>
+								<button class="c-playerresult__remove" type="button"><span class="c-svg--icon-close-off"></span><span class="hidden">close</span>
+								</button>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="opgg-header__notice"><!-- opgg-header__notice--code-red -->
+		이 공간에는 각 서비스에 대한 공지사항이 들어갑니다. 색상은 우선 옐로우가 기본이고, 서버 장애 및 긴급 상황이 있을 때는 레드색상을 사용하면 좋을 것 같아요.
+	</div>
+
+</header>
+
+
+
+
+
+<script>
+;$(document).ready( function(){
+	(function(){
+		var $opggNav = $('.opgg-header__navi-box'),
+			$btnNaviOpen = $('.opgg-header__navi-open'),
+			$btnNaviClose = $('.opgg-header__navi-close'),
+			openClass = 'opgg-header__navi-box--is-open';
+
+		$btnNaviOpen.on('click', function(){
+			$opggNav.toggleClass(openClass);
+		})
+		$btnNaviClose.on('click', function () {
+			$opggNav.removeClass(openClass);
+		})
+	})();
+
+	(function () {
+		var $opggUtil = $('.opgg-header__util-box'),
+			$btnUtilOpen = $('.opgg-header__util-open'),
+			$btnUtilClose = $('.opgg-header__util-close'),
+			openClass = 'opgg-header__util-box--is-open';
+
+		$btnUtilOpen.on('click', function () {
+			$opggUtil.toggleClass(openClass);
+		})
+		$btnUtilClose.on('click', function () {
+			$opggUtil.removeClass(openClass);
+		})
+	})();
+
+	(function () {
+		var $opggLang = $('.opgg-language__box'),
+			$btnLangOpen = $('.opgg-language__open'),
+			$btnLangClose = $('.opgg-language__close'),
+			openClass = 'opgg-language__box--is-open';
+
+		$btnLangOpen.on('click', function () {
+			$opggLang.toggleClass(openClass);
+			//mobile 예외처리
+			$('.opgg-header__util-box').removeClass('opgg-header__util-box--is-open');
+
+		})
+		$btnLangClose.on('click', function () {
+			$opggLang.removeClass(openClass);
+		})
+	})();
+
+
+});
+</script>
+	<div class="fn-body">
+		<main class="fn-main">
+			<div class="p-home">
+				<article class="p-home-article">
+					<header class="p-home-header">
+						<h2 class="hidden">home</h2>
+						<div class="p-home-header__inner">
+							<div class="c-playersearch">
+								<div class="c-playersearch__box">
+									<span class="c-playersearch__input-box"><input class="c-playersearch__input-text" placeholder="Enter your EPIC name &nbsp;&nbsp; &#xE004 &nbsp; &#xE005 &nbsp; &#xE002" type="text" />
+									</span>
+									<button class="c-playersearch__btn" type="submit"><span class="c-svg--00-icon-gg"></span></button>
+								</div>
+								<div class="c-playerresult">
+									<nav class="c-tab__separator">
+										<button class="c-tab__separator-item c-tab__separator-item--is-active" type="button">Recent
+											Searchs</button>
+										<button class="c-tab__separator-item" type="button">Favorite</button>
+										<button class="c-tab__separator-item" type="button">Popular</button>
+									</nav>
+
+									<div class="c-playerresult__contents">
+										<ul class="c-playerresult__list">
+											<li class="c-playerresult__item">
+												<a class="c-playerresult__name" href="#">OvеlonUwatakashi</a>
+												<button class="c-playerresult__bookmark c-icons__bookmark c-icons__bookmark--is-save" type="button"><span class="c-svg--icon-bookmark"></span><span class="hidden">Favorites</span></button>
+												<button class="c-playerresult__remove" type="button"><span class="c-svg--icon-close-off"></span><span class="hidden">close</span>
+												</button>
+											</li>
+
+											<li class="c-playerresult__item">
+												<a class="c-playerresult__name" href="#">Ovеl i글자가 길어 지면 어떻게 되나보자 블라블라 블라</a>
+												<button class="c-playerresult__bookmark c-icons__bookmark" type="button"><span class="c-svg--icon-bookmark"></span><span class="hidden">Favorites</span></button>
+												<button class="c-playerresult__remove" type="button"><span class="c-svg--icon-close-off"></span><span class="hidden">close</span>
+												</button>
+											</li>
+											<li class="c-playerresult__item">
+												<a class="c-playerresult__name" href="#">OvеlonUwatakashi</a>
+												<button class="c-playerresult__bookmark c-icons__bookmark" type="button"><span class="c-svg--icon-bookmark"></span><span class="hidden">Favorites</span></button>
+												<button class="c-playerresult__remove" type="button"><span class="c-svg--icon-close-off"></span><span class="hidden">close</span>
+												</button>
+											</li>
+											<li class="c-playerresult__item">
+												<a class="c-playerresult__name" href="#">OvеlonUwatakashi</a>
+												<button class="c-playerresult__bookmark c-icons__bookmark" type="button"><span class="c-svg--icon-bookmark"></span><span class="hidden">Favorites</span></button>
+												<button class="c-playerresult__remove" type="button"><span class="c-svg--icon-close-off"></span><span class="hidden">close</span>
+												</button>
+											</li>
+											<li class="c-playerresult__item">
+												<a class="c-playerresult__name" href="#">OvеlonUwatakashi</a>
+												<button class="c-playerresult__bookmark c-icons__bookmark" type="button"><span class="c-svg--icon-bookmark"></span><span class="hidden">Favorites</span></button>
+												<button class="c-playerresult__remove" type="button"><span class="c-svg--icon-close-off"></span><span class="hidden">close</span>
+												</button>
+											</li>
+										</ul>
+										<!-- data 없을떄-->
+										<p style="display:none" class="c-playerresult__nodata">There is no recent search history.</p>
+									</div>
+								</div>
+
+								<div class="c-playerpopular">
+									<h3 class="c-titlesub c-playerpopular__title">POPULAR STREAMERS</h3>
+									<div class="c-playerpopular__box">
+										<span class="c-playerpopular__logo"><span class="c-svg--01-icon-platform-twitch"></span></span>
+										<ul class="c-playerpopular__list">
+											<li class="c-playerpopular__item"><a class="c-playerpopular__anchor" href="#">Daniel_Kang</a></li>
+											<li class="c-playerpopular__item"><a class="c-playerpopular__anchor" href="#">Uwatakashi_</a></li>
+											<li class="c-playerpopular__item"><a class="c-playerpopular__anchor" href="#">Ninja</a></li>
+											<li class="c-playerpopular__item"><a class="c-playerpopular__anchor" href="#">Ninja 글자가 길어 지면 어떻게 되나보자</a></li>
+											<li class="c-playerpopular__item"><a class="c-playerpopular__anchor" href="#">COOLER eXzacT</a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+
+						</div>
+					</header>
+					<section class="p-home-section p-home-livevisual">
+						<h2 class="p-home-livevisual__title">Popular Stream Players</h2>
+						<div class="p-home-livevisual__infolist">
+							<div class="p-home-livevisual__infoitem">
+								<a class="p-home-livevisual__anchor" href="#">
+									<div class="p-home-section p-home-livevisual__header">
+										<span class="p-home-livevisual__header-lang">English</span>
+										<h2 class="p-home-livevisual__header-title">Fortnite - Season 6 Week 2 Challenges (Subject to Change) 글자가 길어지면 어떻게 되나
+											보자블라블라</h2>
+										<span class="p-home-livevisual__header-streamer">
+											<span class="p-home-livevisual__header-platform">
+												<span class="c-svg--01-icon-platform-twitch"></span>
+											</span>
+											Daniel_Kang
+										</span>
+									</div>
+									<div class="o-ratio o-ratio--16x9 p-home-livevisual__media">
+										<img src="../src/assets/img/temp/@temp_video.jpg" alt="">
+
+										<div class="p-home-livevisual__info">
+											<span class="p-home-livevisual__info-icon"><span class="c-icons__live">LIVE</span></span>
+											<span class="p-home-livevisual__info-rank"><span class="c-svg--img-num-1"></span><span class="hidden">#1</span></span>
+											<div class="p-home-livevisual__info-box">
+												<strong class="p-home-livevisual__info-streamer">
+													Daniel_Kang
+													<span class="p-home-livevisual__info-platform"><span class="c-svg--01-icon-platform-windows"></span></span>
+												</strong>
+												<span class="p-home-livevisual__info-tierbox">
+													<span class="p-home-livevisual__info-tierlogo"><img src="../src/assets/img/temp/badge.png" alt="티어"></span>
+													<strong class="c-titlesub p-home-livevisual__info-tierratio">TOP 3.23%</strong>
+													<strong class="p-home-livevisual__info-tier">Diamond</strong>
+												</span>
+												<ul class="p-home-livevisual__info-datalist">
+													<li class="p-home-livevisual__info-dataitem">
+														<span class="c-titlesub">Wins</span>
+														<strong class="p-home-livevisual__info-data">196</strong>
+													</li>
+													<li class="p-home-livevisual__info-dataitem">
+														<span class="c-titlesub">kills</span>
+														<strong class="p-home-livevisual__info-data">33,377</strong>
+													</li>
+													<li class="p-home-livevisual__info-dataitem">
+														<span class="c-titlesub">K/D</span>
+														<strong class="p-home-livevisual__info-data">9.69</strong>
+													</li>
+												</ul>
+											</div>
+											<div class="p-home-livevisual__info-view">
+												<span class="p-home-livevisual__info-viewicon"><span class="c-svg--icon-view"></span></span>
+												<span class="p-home-livevisual__info-viewdata">999,999,999</span>
+											</div>
+											<span class="p-home-livevisual__info-play"><span class="c-icons__play"><span class="c-svg--icon-movie-play-l"></span></span></span>
+										</div>
+									</div>
+								</a>
+							</div>
+						</div>
+
+					</section>
+					<div class="p-home-section__box c-rank">
+						<div class="p-home-section__inner">
+							<section class="c-rank__section c-rank__section--type-leaderboard p-home-section ">
+								<div class="c-rank__header">
+									<h2 class="c-title">Leader boards</h2>
+									<nav class="c-rank__nav">
+										<div class="c-tab__sub">
+											<button class="c-tab__sub-item tab__sub-item--type-platform c-tab__sub-item--is-active" type="button">All</button>
+											<button class="c-tab__sub-item tab__sub-item--type-platform" type="button">
+												<span class="c-svg--01-icon-platform-windows"></span>
+											</button>
+											<button class="c-tab__sub-item tab__sub-item--type-platform" type="button">
+												<span class="c-svg--01-icon-platform-xbox"></span>
+											</button>
+											<button class="c-tab__sub-item tab__sub-item--type-platform" type="button">
+												<span class="c-svg--01-icon-platform-ps-4"></span>
+											</button>
+										</div>
+									</nav>
+								</div>
+								<div class="c-rank__table">
+									<table class="c-table c-table--type-ratio">
+										<caption>Leader boards</caption>
+										<colgroup>
+											<col class="c-rank__table--col-rank">
+											<col class="c-rank__table--col-player">
+											<col class="c-rank__table--col-wins">
+										</colgroup>
+										<thead class="c-table__head">
+										<tr class="c-table__tr">
+											<th scope="col" class="c-table__th c-rank__table--data-rank">#</th>
+											<th scope="col" class="c-table__th c-rank__table--data-player">Player</th>
+											<th scope="col" class="c-table__th c-rank__table--data-wins">OP Tier</th>
+										</tr>
+										</thead>
+										<tbody class="c-table__tbody">
+										<tr class="c-table__tr">
+											<td class="c-table__td c-rank__table--data-rank">1</td>
+											<td class="c-table__td c-rank__table--data-player">
+												<a href="#">
+													Uwatakashi_
+													<span class="c-svg--01-icon-platform-ps-4"></span><span class="c-svg--01-icon-platform-twitch"></span>
+												</a>
+											</td>
+											<td class="c-table__td c-rank__table--data-wins">4,689</td>
+										</tr>
+										<tr class="c-table__tr">
+											<td class="c-table__td c-rank__table--data-rank">2</td>
+											<td class="c-table__td c-rank__table--data-player">
+												<a href="#">
+													Uwatakashi_
+													<span class="c-svg--01-icon-platform-windows"></span>
+												</a>
+											</td>
+											<td class="c-table__td c-rank__table--data-wins">4,689</td>
+										</tr>
+										<tr class="c-table__tr">
+											<td class="c-table__td c-rank__table--data-rank">3</td>
+											<td class="c-table__td c-rank__table--data-player">
+												<a href="">
+													Uwatakashi_Uwatakashi_ 글자가 길어 지면 어떻게 되나보자 블라블라블라글자가 길어 지면 어떻게 되나보자 블라블라블라글자가 길어 지면 어떻게 되나보자블라블라블라
+													<span class="c-svg--01-icon-platform-windows"></span>
+												</a>
+											</td>
+											<td class="c-table__td c-rank__table--data-wins">4,689</td>
+										</tr>
+										<tr class="c-table__tr">
+											<td class="c-table__td c-rank__table--data-rank">4</td>
+											<td class="c-table__td c-rank__table--data-player">
+												<a href="#">
+													Uwatakashi_
+													<span class="c-svg--01-icon-platform-windows"></span>
+												</a>
+											</td>
+											<td class="c-table__td c-rank__table--data-wins">4,689</td>
+										</tr>
+										<tr class="c-table__tr">
+											<td class="c-table__td c-rank__table--data-rank">5</td>
+											<td class="c-table__td c-rank__table--data-player">
+												<a href="#">
+													Uwatakashi_
+													<span class="c-svg--01-icon-platform-windows"></span>
+												</a>
+											</td>
+											<td class="c-table__td c-rank__table--data-wins">4,689</td>
+										</tr>
+										</tbody>
+									</table>
+									<table class="c-table c-table--type-ratio">
+										<caption>Leader boards</caption>
+										<colgroup>
+											<col class="c-rank__table--col-rank">
+											<col class="c-rank__table--col-player">
+											<col class="c-rank__table--col-wins">
+										</colgroup>
+										<thead class="c-table__head">
+										<tr class="c-table__tr">
+											<th scope="col" class="c-table__th c-rank__table--data-rank">#</th>
+											<th scope="col" class="c-table__th c-rank__table--data-player">Player</th>
+											<th scope="col" class="c-table__th c-rank__table--data-wins">OP Tier</th>
+										</tr>
+										</thead>
+										<tbody class="c-table__tbody">
+											<tr class="c-table__tr">
+												<td class="c-table__td c-rank__table--data-rank">6</td>
+												<td class="c-table__td c-rank__table--data-player">
+													<a href="#">
+														Uwatakashi_
+														<span class="c-svg--01-icon-platform-ps-4"></span>
+														<span class="c-svg--01-icon-platform-twitch"></span>
+													</a>
+												</td>
+												<td class="c-table__td c-rank__table--data-wins">4,689</td>
+											</tr>
+											<tr class="c-table__tr">
+												<td class="c-table__td c-rank__table--data-rank">7</td>
+												<td class="c-table__td c-rank__table--data-player">
+													<a href="#">
+														Uwatakashi_
+														<span class="c-svg--01-icon-platform-windows"></span>
+													</a>
+												</td>
+												<td class="c-table__td c-rank__table--data-wins">4,689</td>
+											</tr>
+											<tr class="c-table__tr">
+												<td class="c-table__td c-rank__table--data-rank">8</td>
+												<td class="c-table__td c-rank__table--data-player">
+													<a href="">
+														Uwatakashi_Uwatakashi_ 글자가 길어 지면 어떻게 되나보자 블라블라블라글자가 길어 지면 어떻게 되나보자 블라블라블라글자가 길어 지면 어떻게 되나보자블라블라블라
+														<span class="c-svg--01-icon-platform-windows"></span>
+													</a>
+												</td>
+												<td class="c-table__td c-rank__table--data-wins">4,689</td>
+											</tr>
+											<tr class="c-table__tr">
+												<td class="c-table__td c-rank__table--data-rank">9</td>
+												<td class="c-table__td c-rank__table--data-player">
+													<a href="#">
+														Uwatakashi_
+														<span class="c-svg--01-icon-platform-windows"></span>
+													</a>
+												</td>
+												<td class="c-table__td c-rank__table--data-wins">4,689</td>
+											</tr>
+											<tr class="c-table__tr">
+												<td class="c-table__td c-rank__table--data-rank">10</td>
+												<td class="c-table__td c-rank__table--data-player">
+													<a href="#">
+														Uwatakashi_
+														<span class="c-svg--01-icon-platform-windows"></span>
+													</a>
+												</td>
+												<td class="c-table__td c-rank__table--data-wins">4,689</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</section>
+							<section class="c-rank__section c-rank__section--type-livestreamer p-home-section ">
+								<div class="c-rank__header">
+									<h2 class="c-title">Live Streamer</h2>
+								</div>
+								<div class="c-rank__table">
+									<table class="c-table c-table--type-ratio">
+										<caption>Live Streamer</caption>
+										<colgroup>
+											<col class="c-rank__table--col-rank">
+											<col class="c-rank__table--col-player">
+											<col class="c-rank__table--col-wins">
+										</colgroup>
+										<thead class="c-table__head">
+										<tr class="c-table__tr">
+											<th scope="col" class="c-table__th c-rank__table--data-rank">#</th>
+											<th scope="col" class="c-table__th c-rank__table--data-player">Steamer</th>
+											<th scope="col" class="c-table__th c-rank__table--data-wins">Viewers</th>
+										</tr>
+										</thead>
+										<tbody class="c-table__tbody">
+											<tr class="c-table__tr">
+												<td class="c-table__td c-rank__table--data-rank">1</td>
+												<td class="c-table__td c-rank__table--data-player">
+													<a href="#">
+														Uwatakashi_
+														<span class="c-svg--01-icon-platform-ps-4"></span>
+														<span class="c-svg--01-icon-platform-twitch"></span>
+													</a>
+												</td>
+												<td class="c-table__td c-rank__table--data-wins">4,689</td>
+											</tr>
+											<tr class="c-table__tr">
+												<td class="c-table__td c-rank__table--data-rank">2</td>
+												<td class="c-table__td c-rank__table--data-player">
+													<a href="#">
+														Uwatakashi_
+														<span class="c-svg--01-icon-platform-windows"></span>
+														<span class="c-svg--01-icon-platform-twitch"></span>
+													</a>
+												</td>
+												<td class="c-table__td c-rank__table--data-wins">4,689</td>
+											</tr>
+											<tr class="c-table__tr">
+												<td class="c-table__td c-rank__table--data-rank">3</td>
+												<td class="c-table__td c-rank__table--data-player">
+													<a href="">
+														Uwatakashi_Uwatakashi_ 글자가 길어 지면 어떻게 되나보자 블라블라블라글자가 길어 지면 어떻게 되나보자 블라블라블라글자가 길어 지면 어떻게 되나보자블라블라블라
+														<span class="c-svg--01-icon-platform-windows"></span>
+														<span class="c-svg--01-icon-platform-twitch"></span>
+													</a>
+												</td>
+												<td class="c-table__td c-rank__table--data-wins">4,689</td>
+											</tr>
+											<tr class="c-table__tr">
+												<td class="c-table__td c-rank__table--data-rank">4</td>
+												<td class="c-table__td c-rank__table--data-player">
+													<a href="#">
+														Uwatakashi_
+														<span class="c-svg--01-icon-platform-windows"></span>
+														<span class="c-svg--01-icon-platform-twitch"></span>
+													</a>
+												</td>
+												<td class="c-table__td c-rank__table--data-wins">4,689</td>
+											</tr>
+											<tr class="c-table__tr">
+												<td class="c-table__td c-rank__table--data-rank">5</td>
+												<td class="c-table__td c-rank__table--data-player">
+													<a href="#">
+														Uwatakashi_
+														<span class="c-svg--01-icon-platform-windows"></span>
+														<span class="c-svg--01-icon-platform-twitch"></span>
+													</a>
+												</td>
+												<td class="c-table__td c-rank__table--data-wins">4,689</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</section>
+						</div>
+					</div>
+					<section class="p-home-section p-home-livestream">
+						<div class="p-home-section__inner">
+							<div class="p-home-livestream__box">
+								<div class="p-home-livestream__header">
+									<h2 class="c-title">Live Stream</h2>
+									<div class="p-home-livestream__header-option">
+										<div class="c-tab__text p-home-livestream__header-tab">
+											<button class="c-tab__text-item c-tab__text-item--is-active" type="button">Viewers</button>
+											<button class="c-tab__text-item" type="button">Total view count</button>
+										</div>
+										<span class="c-select c-select__custom p-home-livestream__header-select">
+											<button class="c-select__custom-btn" type="button">Language</button>
+											<div class="c-select__custom-list">
+												<a class="c-select__custom-item" href="#">Korean</a>
+												<a class="c-select__custom-item" href="#">English</a>
+											</div>
+										</span>
+									</div>
+								</div>
+								<ol class="p-home-livestream__list">
+									<li class="p-home-livestream__item">
+										<a class="p-home-livestream__anchor" href="#">
+											<div class="c-media">
+												<div class="c-media__frame o-ratio o-ratio--16x9">
+													<img src="../src/assets/img/temp/@temp_video.jpg" alt="">
+													<span class="c-media__live c-icons__live">LIVE</span>
+													<span class="c-media__view">
+														<span class="c-media__view-icon">
+															<span class="c-media__view-svg c-svg--icon-view"></span>
+														</span>
+														<span class="c-media__view-count">999,999,999</span>
+													</span>
+													<span class="c-media__platform">
+														<span class="c-svg--01-icon-platform-twitch"></span>
+													</span>
+												</div>
+												<div class="c-media__contents">
+													<strong class="c-media__title">Fresh Dew | Pon Pon merch Live! Teamninja.com | @Ninja 글자가길어지면 어떻게 되나보자 블라블라 글자가 길어지면
+														어떻게 되나보자 블라블라</strong>
+													<div class="c-media__user-info">
+														<span class="c-media__user-mark"><img src="../src/assets/img/temp/badge.png" alt=""></span>
+														<span class="c-media__user-name">Daniel_Kang 글자가 길어지면 어떻게 되나보자 블라블라</span>
+														<span class="c-media__user-tier">Diamond</span>
+													</div>
+												</div>
+												<span class="c-media__language">English</span>
+											</div>
+										</a>
+									</li>
+
+									<li class="p-home-livestream__item">
+										<a class="p-home-livestream__anchor" href="#">
+											<div class="c-media">
+												<div class="c-media__frame o-ratio o-ratio--16x9">
+													<img src="../src/assets/img/temp/@temp_video.jpg" alt="">
+													<span class="c-media__live c-icons__live">LIVE</span>
+													<span class="c-media__view">
+														<span class="c-media__view-icon">
+															<span class="c-media__view-svg c-svg--icon-view"></span>
+														</span>
+														<span class="c-media__view-count">999,999,999</span>
+													</span>
+													<span class="c-media__platform">
+														<span class="c-svg--01-icon-platform-twitch"></span>
+													</span>
+												</div>
+												<div class="c-media__contents">
+													<strong class="c-media__title">Fresh Dew | Pon Pon merch Live! Teamninja.com | @Ninja 글자가길어지면 어떻게 되나보자 블라블라 글자가
+														길어지면
+														어떻게 되나보자 블라블라</strong>
+													<div class="c-media__user-info">
+														<span class="c-media__user-mark"><img src="../src/assets/img/temp/badge.png" alt=""></span>
+														<span class="c-media__user-name">Daniel_Kang 글자가 길어지면 어떻게 되나보자 블라블라</span>
+														<span class="c-media__user-tier">Diamond</span>
+													</div>
+												</div>
+												<span class="c-media__language">English</span>
+											</div>
+										</a>
+									</li>
+									<li class="p-home-livestream__item">
+										<a class="p-home-livestream__anchor" href="#">
+											<div class="c-media">
+												<div class="c-media__frame o-ratio o-ratio--16x9">
+													<img src="../src/assets/img/temp/@temp_video.jpg" alt="">
+													<span class="c-media__live c-icons__live">LIVE</span>
+													<span class="c-media__view">
+														<span class="c-media__view-icon">
+															<span class="c-media__view-svg c-svg--icon-view"></span>
+														</span>
+														<span class="c-media__view-count">999,999,999</span>
+													</span>
+													<span class="c-media__platform">
+														<span class="c-svg--01-icon-platform-twitch"></span>
+													</span>
+												</div>
+												<div class="c-media__contents">
+													<strong class="c-media__title">Fresh Dew | Pon Pon merch Live! Teamninja.com | @Ninja 글자가길어지면 어떻게 되나보자 블라블라 글자가
+														길어지면
+														어떻게 되나보자 블라블라</strong>
+													<div class="c-media__user-info">
+														<span class="c-media__user-mark"><img src="../src/assets/img/temp/badge.png" alt=""></span>
+														<span class="c-media__user-name">Daniel_Kang 글자가 길어지면 어떻게 되나보자 블라블라</span>
+														<span class="c-media__user-tier">Diamond</span>
+													</div>
+												</div>
+												<span class="c-media__language">English</span>
+											</div>
+										</a>
+									</li>
+									<li class="p-home-livestream__item">
+										<a class="p-home-livestream__anchor" href="#">
+											<div class="c-media">
+												<div class="c-media__frame o-ratio o-ratio--16x9">
+													<img src="../src/assets/img/temp/@temp_video.jpg" alt="">
+													<span class="c-media__live c-icons__live">LIVE</span>
+													<span class="c-media__view">
+														<span class="c-media__view-icon">
+															<span class="c-media__view-svg c-svg--icon-view"></span>
+														</span>
+														<span class="c-media__view-count">999,999,999</span>
+													</span>
+													<span class="c-media__platform">
+														<span class="c-svg--01-icon-platform-twitch"></span>
+													</span>
+												</div>
+												<div class="c-media__contents">
+													<strong class="c-media__title">Fresh Dew | Pon Pon merch Live! Teamninja.com | @Ninja 글자가길어지면 어떻게 되나보자 블라블라 글자가
+														길어지면
+														어떻게 되나보자 블라블라</strong>
+													<div class="c-media__user-info">
+														<span class="c-media__user-mark"><img src="../src/assets/img/temp/badge.png" alt=""></span>
+														<span class="c-media__user-name">Daniel_Kang 글자가 길어지면 어떻게 되나보자 블라블라</span>
+														<span class="c-media__user-tier">Diamond</span>
+													</div>
+												</div>
+												<span class="c-media__language">English</span>
+											</div>
+										</a>
+									</li>
+									<li class="p-home-livestream__item">
+										<a class="p-home-livestream__anchor" href="#">
+											<div class="c-media">
+												<div class="c-media__frame o-ratio o-ratio--16x9">
+													<img src="../src/assets/img/temp/@temp_video.jpg" alt="">
+													<span class="c-media__live c-icons__live">LIVE</span>
+													<span class="c-media__view">
+														<span class="c-media__view-icon">
+															<span class="c-media__view-svg c-svg--icon-view"></span>
+														</span>
+														<span class="c-media__view-count">999,999,999</span>
+													</span>
+													<span class="c-media__platform">
+														<span class="c-svg--01-icon-platform-twitch"></span>
+													</span>
+												</div>
+												<div class="c-media__contents">
+													<strong class="c-media__title">Fresh Dew | Pon Pon merch Live! Teamninja.com | @Ninja 글자가길어지면 어떻게 되나보자 블라블라 글자가
+														길어지면
+														어떻게 되나보자 블라블라</strong>
+													<div class="c-media__user-info">
+														<span class="c-media__user-mark"><img src="../src/assets/img/temp/badge.png" alt=""></span>
+														<span class="c-media__user-name">Daniel_Kang 글자가 길어지면 어떻게 되나보자 블라블라</span>
+														<span class="c-media__user-tier">Diamond</span>
+													</div>
+												</div>
+												<span class="c-media__language">English</span>
+											</div>
+										</a>
+									</li>
+									<li class="p-home-livestream__item">
+										<a class="p-home-livestream__anchor" href="#">
+											<div class="c-media">
+												<div class="c-media__frame o-ratio o-ratio--16x9">
+													<img src="../src/assets/img/temp/@temp_video.jpg" alt="">
+													<span class="c-media__live c-icons__live">LIVE</span>
+													<span class="c-media__view">
+														<span class="c-media__view-icon">
+															<span class="c-media__view-svg c-svg--icon-view"></span>
+														</span>
+														<span class="c-media__view-count">999,999,999</span>
+													</span>
+													<span class="c-media__platform">
+														<span class="c-svg--01-icon-platform-twitch"></span>
+													</span>
+												</div>
+												<div class="c-media__contents">
+													<strong class="c-media__title">Fresh Dew | Pon Pon merch Live! Teamninja.com | @Ninja 글자가길어지면 어떻게 되나보자 블라블라 글자가
+														길어지면
+														어떻게 되나보자 블라블라</strong>
+													<div class="c-media__user-info">
+														<span class="c-media__user-mark"><img src="../src/assets/img/temp/badge.png" alt=""></span>
+														<span class="c-media__user-name">Daniel_Kang 글자가 길어지면 어떻게 되나보자 블라블라</span>
+														<span class="c-media__user-tier">Diamond</span>
+													</div>
+												</div>
+												<span class="c-media__language">English</span>
+											</div>
+										</a>
+									</li>
+									<li class="p-home-livestream__item">
+										<a class="p-home-livestream__anchor" href="#">
+											<div class="c-media">
+												<div class="c-media__frame o-ratio o-ratio--16x9">
+													<img src="../src/assets/img/temp/@temp_video.jpg" alt="">
+													<span class="c-media__live c-icons__live">LIVE</span>
+													<span class="c-media__view">
+														<span class="c-media__view-icon">
+															<span class="c-media__view-svg c-svg--icon-view"></span>
+														</span>
+														<span class="c-media__view-count">999,999,999</span>
+													</span>
+													<span class="c-media__platform">
+														<span class="c-svg--01-icon-platform-twitch"></span>
+													</span>
+												</div>
+												<div class="c-media__contents">
+													<strong class="c-media__title">Fresh Dew | Pon Pon merch Live! Teamninja.com | @Ninja 글자가길어지면 어떻게 되나보자 블라블라 글자가
+														길어지면
+														어떻게 되나보자 블라블라</strong>
+													<div class="c-media__user-info">
+														<span class="c-media__user-mark"><img src="../src/assets/img/temp/badge.png" alt=""></span>
+														<span class="c-media__user-name">Daniel_Kang 글자가 길어지면 어떻게 되나보자 블라블라</span>
+														<span class="c-media__user-tier">Diamond</span>
+													</div>
+												</div>
+												<span class="c-media__language">English</span>
+											</div>
+										</a>
+									</li>
+									<li class="p-home-livestream__item">
+										<a class="p-home-livestream__anchor" href="#">
+											<div class="c-media">
+												<div class="c-media__frame o-ratio o-ratio--16x9">
+													<img src="../src/assets/img/temp/@temp_video.jpg" alt="">
+													<span class="c-media__live c-icons__live">LIVE</span>
+													<span class="c-media__view">
+														<span class="c-media__view-icon">
+															<span class="c-media__view-svg c-svg--icon-view"></span>
+														</span>
+														<span class="c-media__view-count">999,999,999</span>
+													</span>
+													<span class="c-media__platform">
+														<span class="c-svg--01-icon-platform-twitch"></span>
+													</span>
+												</div>
+												<div class="c-media__contents">
+													<strong class="c-media__title">Fresh Dew | Pon Pon merch Live! Teamninja.com | @Ninja 글자가길어지면 어떻게 되나보자 블라블라 글자가
+														길어지면
+														어떻게 되나보자 블라블라</strong>
+													<div class="c-media__user-info">
+														<span class="c-media__user-mark"><img src="../src/assets/img/temp/badge.png" alt=""></span>
+														<span class="c-media__user-name">Daniel_Kang 글자가 길어지면 어떻게 되나보자 블라블라</span>
+														<span class="c-media__user-tier">Diamond</span>
+													</div>
+												</div>
+												<span class="c-media__language">English</span>
+											</div>
+										</a>
+									</li>
+									<li class="p-home-livestream__item">
+										<a class="p-home-livestream__anchor" href="#">
+											<div class="c-media">
+												<div class="c-media__frame o-ratio o-ratio--16x9">
+													<img src="../src/assets/img/temp/@temp_video.jpg" alt="">
+													<span class="c-media__live c-icons__live">LIVE</span>
+													<span class="c-media__view">
+														<span class="c-media__view-icon">
+															<span class="c-media__view-svg c-svg--icon-view"></span>
+														</span>
+														<span class="c-media__view-count">999,999,999</span>
+													</span>
+													<span class="c-media__platform">
+														<span class="c-svg--01-icon-platform-twitch"></span>
+													</span>
+												</div>
+												<div class="c-media__contents">
+													<strong class="c-media__title">Fresh Dew | Pon Pon merch Live! Teamninja.com | @Ninja 글자가길어지면 어떻게 되나보자 블라블라 글자가
+														길어지면
+														어떻게 되나보자 블라블라</strong>
+													<div class="c-media__user-info">
+														<span class="c-media__user-mark"><img src="../src/assets/img/temp/badge.png" alt=""></span>
+														<span class="c-media__user-name">Daniel_Kang 글자가 길어지면 어떻게 되나보자 블라블라</span>
+														<span class="c-media__user-tier">Diamond</span>
+													</div>
+												</div>
+												<span class="c-media__language">English</span>
+											</div>
+										</a>
+									</li>
+									<li class="p-home-livestream__item">
+										<a class="p-home-livestream__anchor" href="#">
+											<div class="c-media">
+												<div class="c-media__frame o-ratio o-ratio--16x9">
+													<img src="../src/assets/img/temp/@temp_video.jpg" alt="">
+													<span class="c-media__live c-icons__live">LIVE</span>
+													<span class="c-media__view">
+														<span class="c-media__view-icon">
+															<span class="c-media__view-svg c-svg--icon-view"></span>
+														</span>
+														<span class="c-media__view-count">999,999,999</span>
+													</span>
+													<span class="c-media__platform">
+														<span class="c-svg--01-icon-platform-twitch"></span>
+													</span>
+												</div>
+												<div class="c-media__contents">
+													<strong class="c-media__title">Fresh Dew | Pon Pon merch Live! Teamninja.com | @Ninja 글자가길어지면 어떻게 되나보자 블라블라 글자가
+														길어지면
+														어떻게 되나보자 블라블라</strong>
+													<div class="c-media__user-info">
+														<span class="c-media__user-mark"><img src="../src/assets/img/temp/badge.png" alt=""></span>
+														<span class="c-media__user-name">Daniel_Kang 글자가 길어지면 어떻게 되나보자 블라블라</span>
+														<span class="c-media__user-tier">Diamond</span>
+													</div>
+												</div>
+												<span class="c-media__language">English</span>
+											</div>
+										</a>
+									</li>
+									<li class="p-home-livestream__item">
+										<a class="p-home-livestream__anchor" href="#">
+											<div class="c-media">
+												<div class="c-media__frame o-ratio o-ratio--16x9">
+													<img src="../src/assets/img/temp/@temp_video.jpg" alt="">
+													<span class="c-media__live c-icons__live">LIVE</span>
+													<span class="c-media__view">
+														<span class="c-media__view-icon">
+															<span class="c-media__view-svg c-svg--icon-view"></span>
+														</span>
+														<span class="c-media__view-count">999,999,999</span>
+													</span>
+													<span class="c-media__platform">
+														<span class="c-svg--01-icon-platform-twitch"></span>
+													</span>
+												</div>
+												<div class="c-media__contents">
+													<strong class="c-media__title">Fresh Dew | Pon Pon merch Live! Teamninja.com | @Ninja 글자가길어지면 어떻게 되나보자 블라블라 글자가
+														길어지면
+														어떻게 되나보자 블라블라</strong>
+													<div class="c-media__user-info">
+														<span class="c-media__user-mark"><img src="../src/assets/img/temp/badge.png" alt=""></span>
+														<span class="c-media__user-name">Daniel_Kang 글자가 길어지면 어떻게 되나보자 블라블라</span>
+														<span class="c-media__user-tier">Diamond</span>
+													</div>
+												</div>
+												<span class="c-media__language">English</span>
+											</div>
+										</a>
+									</li>
+									<li class="p-home-livestream__item">
+										<a class="p-home-livestream__anchor" href="#">
+											<div class="c-media">
+												<div class="c-media__frame o-ratio o-ratio--16x9">
+													<img src="../src/assets/img/temp/@temp_video.jpg" alt="">
+													<span class="c-media__live c-icons__live">LIVE</span>
+													<span class="c-media__view">
+														<span class="c-media__view-icon">
+															<span class="c-media__view-svg c-svg--icon-view"></span>
+														</span>
+														<span class="c-media__view-count">999,999,999</span>
+													</span>
+													<span class="c-media__platform">
+														<span class="c-svg--01-icon-platform-twitch"></span>
+													</span>
+												</div>
+												<div class="c-media__contents">
+													<strong class="c-media__title">Fresh Dew | Pon Pon merch Live! Teamninja.com | @Ninja 글자가길어지면 어떻게 되나보자 블라블라 글자가
+														길어지면
+														어떻게 되나보자 블라블라</strong>
+													<div class="c-media__user-info">
+														<span class="c-media__user-mark"><img src="../src/assets/img/temp/badge.png" alt=""></span>
+														<span class="c-media__user-name">Daniel_Kang 글자가 길어지면 어떻게 되나보자 블라블라</span>
+														<span class="c-media__user-tier">Diamond</span>
+													</div>
+												</div>
+												<span class="c-media__language">English</span>
+											</div>
+										</a>
+									</li>
+									<li class="p-home-livestream__item">
+										<a class="p-home-livestream__anchor" href="#">
+											<div class="c-media">
+												<div class="c-media__frame o-ratio o-ratio--16x9">
+													<img src="../src/assets/img/temp/@temp_video.jpg" alt="">
+													<span class="c-media__live c-icons__live">LIVE</span>
+													<span class="c-media__view">
+														<span class="c-media__view-icon">
+															<span class="c-media__view-svg c-svg--icon-view"></span>
+														</span>
+														<span class="c-media__view-count">999,999,999</span>
+													</span>
+													<span class="c-media__platform">
+														<span class="c-svg--01-icon-platform-twitch"></span>
+													</span>
+												</div>
+												<div class="c-media__contents">
+													<strong class="c-media__title">Fresh Dew | Pon Pon merch Live! Teamninja.com | @Ninja 글자가길어지면 어떻게 되나보자 블라블라 글자가
+														길어지면
+														어떻게 되나보자 블라블라</strong>
+													<div class="c-media__user-info">
+														<span class="c-media__user-mark"><img src="../src/assets/img/temp/badge.png" alt=""></span>
+														<span class="c-media__user-name">Daniel_Kang 글자가 길어지면 어떻게 되나보자 블라블라</span>
+														<span class="c-media__user-tier">Diamond</span>
+													</div>
+												</div>
+												<span class="c-media__language">English</span>
+											</div>
+										</a>
+									</li>
+									<li class="p-home-livestream__item">
+										<a class="p-home-livestream__anchor" href="#">
+											<div class="c-media">
+												<div class="c-media__frame o-ratio o-ratio--16x9">
+													<img src="../src/assets/img/temp/@temp_video.jpg" alt="">
+													<span class="c-media__live c-icons__live">LIVE</span>
+													<span class="c-media__view">
+														<span class="c-media__view-icon">
+															<span class="c-media__view-svg c-svg--icon-view"></span>
+														</span>
+														<span class="c-media__view-count">999,999,999</span>
+													</span>
+													<span class="c-media__platform">
+														<span class="c-svg--01-icon-platform-twitch"></span>
+													</span>
+												</div>
+												<div class="c-media__contents">
+													<strong class="c-media__title">Fresh Dew | Pon Pon merch Live! Teamninja.com | @Ninja 글자가길어지면 어떻게 되나보자 블라블라 글자가
+														길어지면
+														어떻게 되나보자 블라블라</strong>
+													<div class="c-media__user-info">
+														<span class="c-media__user-mark"><img src="../src/assets/img/temp/badge.png" alt=""></span>
+														<span class="c-media__user-name">Daniel_Kang 글자가 길어지면 어떻게 되나보자 블라블라</span>
+														<span class="c-media__user-tier">Diamond</span>
+													</div>
+												</div>
+												<span class="c-media__language">English</span>
+											</div>
+										</a>
+									</li>
+
+								</ol>
+							</div>
+						</div>
+					</section>
+
+				</article>
+
+			</div>
+			
+<footer class="opgg-footer">
+	<div class="opgg-footer__inner">
+		<nav class="opgg-footer__nav">
+			<a class="opgg-footer__nav-item" href="#">ABOUT OP.GG</a>
+			<a class="opgg-footer__nav-item" href="#">Business</a>
+			<a class="opgg-footer__nav-item" href="#">Feedback</a>
+		</nav>
+		<nav class="opgg-footer__social">
+			<a class="opgg-footer__social-item" href="#"><span class="opgg--01-twiter"></span><span class="hidden">twiter</span></a>
+			<a class="opgg-footer__social-item" href="#"><span class="opgg--01-instargram"></span><span class="hidden">instargram</span></a>
+			<a class="opgg-footer__social-item" href="#"><span class="opgg--01-facebook"></span><span class="hidden">facebook</span></a>
+			<a class="opgg-footer__social-item" href="#"><span class="opgg--01-weibo"></span><span class="hidden">weibo</span></a>
+		</nav>
+		<small class="opgg-footer__copyright">&copy; 2012-2017 OP.GG. Data based on Fortnites Korea.</small>
+	</div>
+</footer>
+
+
+<script src="../src/assets/js/test.js"></script>
+		</main>
+
+
+
+    </div>
+
+</article>
+
+<script>
+
+</script>
+
+</body>
+</html>

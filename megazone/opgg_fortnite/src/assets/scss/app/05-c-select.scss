@@ -1,0 +1,146 @@
+//<span class="c-select__box">
+//	<select class="c-select">
+//		<option>option01</option>
+//		<option>option02</option>
+//		<option>option01</option>
+//	</select>
+//</span>
+
+
+.c-select{
+	position:relative;
+	display:inline-block;
+	min-width:140px;
+	height:34px;
+	border-radius : 2px;
+	background-color:map-get( $themeBg, $theme);
+	color: map-get( $themeColor, $theme);
+	&::after{
+		@include pseudo;
+		position:absolute;
+		right:19px;
+		top:50%;
+		border-top:5px solid;
+		border-top-color:map-get( $themeColor, $theme);
+		border-right:4px solid transparent;
+		border-left:4px solid transparent;
+		transform:translateY(-50%);
+	}
+	> select{
+		-webkit-appearance:none;
+		appearance:none;
+		&::-ms-expand { display:none; }
+		width:100%;
+		height:100%;
+		padding:0 30px 0px 16px;
+		border-radius:inherit;
+		border-width:1px;
+		border-style:solid;
+		border-color:map-get( $themeSelectBorder, $theme );
+		color: inherit;
+		font-size:rem(13px);
+		background-color:inherit;
+		> option{
+			padding-left:16px;
+			background-color:inherit;
+		}
+	}
+
+
+	// custom
+	// <span class="c-select c-select__custom "> --open : c-select__custom--is-open
+	// 	<button class="c-select__custom-btn" type="button">Language</button>
+	// 	<div class="c-select__custom-list">
+	// 		<a class="c-select__custom-item" href="#">Korean</a>
+	// 		<a class="c-select__custom-item" href="#">English</a>
+	// 	</div>
+	// </span>
+	&__custom{
+		$_padding : 9px 35px 11px 16px;
+		box-sizing:border-box;
+		height: auto;
+		&:after{
+			display:none;
+		}
+		&-btn{
+			width:100%;
+			height:100%;
+			padding: $_padding;
+			border-radius: inherit;
+			background-color:inherit;
+			color: inherit;
+			border-top-color:inherit;;
+			text-align:left;
+			&:after{
+				@include pseudo;
+				position:absolute;
+				right:19px;
+				top:50%;
+				border-top:5px solid;
+				border-top-color: inherit;
+				border-right:4px solid transparent;
+				border-left:4px solid transparent;
+				transform:translateY(-50%);
+				.c-select__custom--is-open &{
+					transform:translateY(-50%) rotate(-180deg);
+				}
+			}
+		}
+		&-list{
+			position:absolute;
+			left:0;
+			top:100%;
+			min-width:100%;
+			margin-top:8px;
+			border-radius:4px;
+			box-shadow: 0 2px 2px 0 rgba(0,0,0,0.19);
+			overflow:hidden;
+			z-index:10;
+
+			height:0;
+			opacity:0;
+			transform: translateY(-20%);
+			.c-select__custom--is-open &{
+				height:auto;
+				opacity:1;
+				transform: translateY(0);
+				transition:height 0s ease-out 0s, transform 0.3s ease-out 0s, opacity 0.2s ease-out 0.1s ;
+			}
+		}
+		&-item{
+			display:block;
+			box-sizing:border-box;
+			padding-right:16px;
+			width:100%;
+			padding: $_padding;
+			color:#333333;
+			font-size:rem(13px);
+			font-weight:700;
+			&:nth-child(odd){
+				background-color:#ffffff
+			}
+			&:nth-child(even){
+				background-color:#e4e4e4;
+			}
+		}
+
+		&--is-open{
+
+		}
+
+	}
+
+	&--theme-purple{
+		min-width:206px;
+		height:38px;
+		border-radius:4px;
+		border-top-color: map-get($themeCommon,_white);
+		background-color: map-get($themeCommon,_purple);
+		color: map-get($themeCommon,_white);
+		select{
+			border:none
+		}
+	}
+
+
+}

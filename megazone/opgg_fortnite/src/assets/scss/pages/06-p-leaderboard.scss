@@ -1,0 +1,190 @@
+.p-readerborder{
+
+
+
+}
+
+.p-readerborder-article{
+	padding-top:83px;
+	@include media-breakpoint-down(sm) {
+		padding-top:40px;
+	}
+}
+
+.p-readerborder-header{
+	padding-bottom:65px;
+	&__inner{
+		@include layout--inner-width;
+	}
+	&__search{
+		@include margin--auto;
+		max-width:440px;
+		@include media-breakpoint-down(sm) {
+			max-width:100%;
+		}
+	}
+}
+
+.p-readerborder-nav{
+	&__inner{
+		@include layout--inner-width;
+		@include media-breakpoint-down(sm) {
+			margin-top:22px;
+		}
+	}
+}
+.p-readerborder-section{
+	&__inner{
+		@include layout--inner-width;
+		@include media-breakpoint-down(sm) {
+		}
+	}
+}
+
+.p-readerborder-play{
+
+}
+.p-readerborder-category{
+	@include clear;
+	margin-top:24px;
+	margin-left:-18px;
+	@include media-breakpoint-down(sm) {
+		margin:24px -11px 0;
+	}
+	&__item{
+		float:left;
+		box-sizing:border-box;
+		padding:0 18px;
+		@include media-breakpoint-down(sm) {
+			width:50%;
+			padding:0 11px;
+		}
+	}
+	&__title{
+		display:block;
+	}
+	&__select{
+		margin-top:16px;
+		@include media-breakpoint-down(sm) {
+			min-width:100%;
+		}
+	}
+
+
+}
+.p-readerborder-rating{
+	margin-top:40px;
+	@include media-breakpoint-down(sm) {
+		margin-top:24px;
+	}
+	&__box{
+		padding:24px 24px 0;
+		background-color:map-get( $themeBg, $theme );
+		@include media-breakpoint-down(sm) {
+			padding:21px 20px 0;
+		}
+	}
+	&__title{
+
+	}
+	&__chart{
+		height:150px;
+	}
+}
+
+.p-readerborder-table{
+	margin-top:50px;
+	@include media-breakpoint-down(sm) {
+		margin-top:24px;
+	}
+	&__data{
+
+	}
+	&__cell{
+
+		&--type-wins,
+		&--type-rate,
+		&--type-kills,
+		&--type-kd,
+		&--type-matches{
+			//padding:0 15px;
+			text-align:right;
+		}
+		&-club{
+			width:32px;
+			height:32px;
+		}
+		&--type-rank{
+			width:54px;
+			padding-left:24px;
+		}
+		&--type-name{
+			padding-left:10px;
+			padding-right:5px;
+			white-space:nowrap;
+			overflow:hidden;
+			text-overflow:ellipsis;
+		}
+		&--type-club{
+			width:40px;
+			text-align:center;
+		}
+		&--type-tier{
+			width:100px;
+			padding-left:35px;
+		}
+		&--type-wins{
+			width:98px;
+		}
+		&--type-rate{
+			width:102px;
+		}
+		&--type-kills{
+			width:130px;
+		}
+		&--type-kd{
+			width:90px;
+		}
+		&--type-matches{
+			width:120px;
+			padding-left:10px;
+			padding-right:24px;
+		}
+		@include media-breakpoint-down(sm) {
+
+			&--type-rank{
+				width:18%;
+				padding-left:20px;
+			}
+			&--type-name{
+				width:45%;
+			}
+			&--type-club,
+			//&--type-tier,
+			&--type-wins,
+			&--type-rate,
+			&--type-kills,
+			&--type-kd,
+			&--type-matches{
+				display:none;
+			}
+			&--type-tier,
+			&--type-wins,
+			&--type-rate,
+			&--type-kills,
+			&--type-kd,
+			&--type-matches{
+				width:auto;
+				padding-right:20px;
+				text-align:right;
+			}
+			&--is-active{
+				display:table-cell;
+			}
+			&--is-inactive{
+				display:none;
+			}
+		}
+	}
+
+}

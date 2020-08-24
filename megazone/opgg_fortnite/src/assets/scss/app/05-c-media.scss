@@ -1,0 +1,147 @@
+
+.c-media{
+	position:relative;
+	display:block;
+	@include media-breakpoint-down(sm) {
+		padding-left:153px;
+	}
+	&__frame{
+		position:relative;
+		@include media-breakpoint-down(sm) {
+			position:absolute;
+			left:0;
+			top:0;
+			max-width:141px;
+			border-radius:4px;
+		}
+	}
+	&__live{
+		position:absolute;
+		left:10px;
+		top:10px;
+		z-index:1;
+	}
+	&__view{
+		position:absolute;
+		left:8px;
+		bottom:8px;
+		color:map-get($themeCommon, _white );
+		font-size:rem(13);
+		@include media-breakpoint-down(sm) {
+			font-size:rem(11);
+		}
+		&-icon{
+			display:inline-block;
+			font-size:rem(14);
+			vertical-align: -2px;
+			line-height:0;
+			@include media-breakpoint-down(sm) {
+				font-size:rem(12);
+			}
+		}
+		&-count{
+		}
+		z-index:1;
+	}
+	&__platform{
+		position:absolute;
+		right:12px;
+		bottom:10px;
+		color:map-get($themeCommon, _white );
+		font-size:rem(16);
+		line-height:0;
+		@include media-breakpoint-down(sm) {
+			font-size:rem(11);
+		}
+	}
+	&__contents{
+		padding-top:10px;
+		@include media-breakpoint-down(sm) {
+			padding-top:0;
+		}
+	}
+	&__title{
+		position:relative;
+		display:block;
+		height: ($base-line-height * 2)+em;
+		max-height: ($base-line-height * 2)+em;
+		color:map-get( $themeColor, $theme);
+		font-weight:700;
+		text-overflow: ellipsis;
+		display: -webkit-box;
+		-webkit-line-clamp: 2;
+		-webkit-box-orient: vertical;
+		overflow: hidden;
+	}
+	&__user-info{
+		@include clear;
+		position:relative;
+		padding-top:10px;
+		@include media-breakpoint-down(sm) {
+			padding-top:7px;
+		}
+	}
+	&__user-mark{
+		float:left;
+		display:block;
+		width:25px;
+		height:25px;
+		margin-right:8px;
+		@include media-breakpoint-down(sm) {
+			width:24px;
+			height:24px;
+		}
+
+	}
+	&__user-name{
+		display:block;
+		padding-right:80px;
+		color:map-get( $themeColor, $theme);
+		white-space:nowrap;
+		text-overflow:ellipsis;
+		overflow:hidden;
+		@include media-breakpoint-down(sm) {
+			padding-right:0;
+		}
+	}
+	&__user-platfrom{
+		display:inline-block;
+		margin-left:8px;
+		font-size:16px;
+		line-height:0;
+		vertical-align:-4px;
+		.c-svg--01-icon-platform-twitch{
+			color:map-get($themeTwitchColor, $theme);
+		}
+	}
+	&__user-tier{
+		display:block;
+		padding-top:2px;
+		color: map-get( $themeCommon, color);
+		font-size:rem(11px);
+	}
+	&__language{
+		position:absolute;
+		right:0;
+		bottom:0;
+		display:block;
+		padding:3px 11px;
+		border-radius:2px;
+		background-color:map-get( $themeElementBg, $theme);
+		color:map-get( $themeColor, $theme);
+		font-size:rem(11px);
+		z-index:1;
+		@include media-breakpoint-down(sm) {
+			right:auto;
+			bottom:auto;
+			left:57px;
+			top:9px;
+			padding:2px 6px 2px;
+			font-size:rem(9px);
+			background-color:#24242a;
+			color:map-get( $themeCommon, _white );
+
+		}
+	}
+
+}

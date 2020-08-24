@@ -1,0 +1,131 @@
+@font-face {
+	font-family: "svgFontOpgg";
+	src: url('../../opgg/fonts/svgFontOpgg.eot');
+	src: url('../../opgg/fonts/svgFontOpgg.eot?#iefix') format('eot'),
+		url('../../opgg/fonts/svgFontOpgg.woff') format('woff'),
+		url('../../opgg/fonts/svgFontOpgg.ttf') format('truetype');
+}
+
+@mixin opgg--styles {
+	font-family: "svgFontOpgg";
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	text-decoration: none;
+	text-transform: none;
+	display:inline-block;
+	line-height:1;
+}
+
+%opgg- {
+	@include opgg--styles;
+}
+
+@function opgg--char($filename) {
+	$char: "";
+
+	@if $filename == 00-opgglogo {
+		$char: "\E001";
+	}
+	@if $filename == 01-facebook {
+		$char: "\E002";
+	}
+	@if $filename == 01-instargram {
+		$char: "\E003";
+	}
+	@if $filename == 01-twiter {
+		$char: "\E004";
+	}
+	@if $filename == 01-weibo {
+		$char: "\E005";
+	}
+	@if $filename == 02-alerts {
+		$char: "\E006";
+	}
+	@if $filename == 02-arrow-right {
+		$char: "\E007";
+	}
+	@if $filename == 02-close-off {
+		$char: "\E008";
+	}
+	@if $filename == 02-language {
+		$char: "\E009";
+	}
+	@if $filename == 02-login {
+		$char: "\E00A";
+	}
+	@if $filename == 02-notification {
+		$char: "\E00B";
+	}
+	@if $filename == 02-setting {
+		$char: "\E00C";
+	}
+
+	@return $char;
+}
+
+@mixin opgg-($filename, $insert: before, $extend: true) {
+	display:inline-block;
+	line-height:0;
+	&:#{$insert} {
+		@if $extend {
+			@extend %opgg-;
+		} @else {
+			@include opgg--styles;
+		}
+		content: opgg--char($filename);
+
+	}
+}
+
+@mixin c-num-($filename, $insert: before, $extend: true) {
+	display:block;
+	&:#{$insert} {
+		@if $extend {
+			@extend %opgg-;
+		} @else {
+			@include opgg--styles;
+		}
+		content: opgg--char($filename);
+
+	}
+}
+
+.opgg--00-opgglogo {
+	@include opgg-(00-opgglogo);
+}
+.opgg--01-facebook {
+	@include opgg-(01-facebook);
+}
+.opgg--01-instargram {
+	@include opgg-(01-instargram);
+}
+.opgg--01-twiter {
+	@include opgg-(01-twiter);
+}
+.opgg--01-weibo {
+	@include opgg-(01-weibo);
+}
+.opgg--02-alerts {
+	@include opgg-(02-alerts);
+}
+.opgg--02-arrow-right {
+	@include opgg-(02-arrow-right);
+}
+.opgg--02-close-off {
+	@include opgg-(02-close-off);
+}
+.opgg--02-language {
+	@include opgg-(02-language);
+}
+.opgg--02-login {
+	@include opgg-(02-login);
+}
+.opgg--02-notification {
+	@include opgg-(02-notification);
+}
+.opgg--02-setting {
+	@include opgg-(02-setting);
+}

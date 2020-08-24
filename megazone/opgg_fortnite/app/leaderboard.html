@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Document</title>
+<link rel="stylesheet" type="text/css" href="/src/assets/css/app.css">
+<script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
+
+</head>
+<body>
+<article class="fn-article">
+<header class="opgg-header opgg-header--gamg-fn">
+	<div class="opgg-header__gnb">
+		<h1 class="opgg-header__logo"><a class="opgg-header__logo-anchor" href="#"><span class="opgg--00-opgglogo"></span><span class="hidden">OP.GG</span></a></h1>
+		<nav class="opgg-header__navi">
+			<button class="opgg-header__navi-open" type="button"><span class="opgg-header__navi-thumb"><img src="../src/opgg/img/navi/icon-navi-fn.png" alt="Fortnite"></span>Fortnite</button>
+			<div class="opgg-header__navi-box">
+				<div class="opgg-header__navi-list opgg-header__navi-list--type-game">
+					<strong class="opgg-header__navi-title">GAME STATS</strong>
+					<a class="opgg-header__navi-item" href="#"><span class="opgg-header__navi-poster opgg-header__navi-poster--game-lol"></span><span class="opgg-header__navi-name">League of Legends</span></a>
+					<a class="opgg-header__navi-item" href="#"><span class="opgg-header__navi-poster opgg-header__navi-poster--game-pubg"></span><span class="opgg-header__navi-name">PUBG</span></a>
+					<a class="opgg-header__navi-item" href="#"><span class="opgg-header__navi-poster opgg-header__navi-poster--game-ow"></span><span class="opgg-header__navi-name">Overwatch</span></a>
+					<a class="opgg-header__navi-item" href="#"><span class="opgg-header__navi-poster opgg-header__navi-poster--game-cr"></span><span class="opgg-header__navi-name">Clash Royale</span></a>
+					<a class="opgg-header__navi-item" href="#"><span class="opgg-header__navi-poster opgg-header__navi-poster--game-fn"></span><span class="opgg-header__navi-name">Fortnite</span></a>
+				</div>
+				<div class="opgg-header__navi-list opgg-header__navi-list--type-esports">
+					<strong class="opgg-header__navi-title">ESPORTS</strong>
+					<a class="opgg-header__navi-item" href="#"><span class="opgg-header__navi-poster opgg-header__navi-poster--esports-opgaming"></span><span class="opgg-header__navi-name">OP Gaming</span></a>
+					<a class="opgg-header__navi-item" href="#"><span class="opgg-header__navi-poster opgg-header__navi-poster--esports-bestgg"></span><span class="opgg-header__navi-name">BEST.GG</span></a>
+				</div>
+				<button class="opgg-header__navi-close" type="button"><span class="opgg--02-close-off"></span><span class="hidden">닫기</span></button>
+			</div>
+			<div class="layer-dim"></div>
+		</nav>
+
+		<div class="opgg-header__alert">
+			<aside class="opgg-app">
+				<div class="opgg-app__inner">
+					<span class="opgg-app__icon"><span class="opgg--02-alerts"></span></span>
+					<p class="opgg-app__text">OP.GG 통합앱이 바뀌었습니다! 다운 받고 경품도 받아가세요!</p>
+					<a class="opgg-app__download" href="#">다운받기</a>
+					<button class="opgg-app__close" type="button"><span class="opgg--02-close-off"></span></button>
+				</div>
+			</aside>
+		</div>
+
+		<div class="opgg-header__util">
+			<button class="opgg-header__util-open" type="button"><span class="opgg--02-setting"></span><span class="hidden">UTIL OPEN</span></button>
+			<div class="opgg-header__util-box">
+				<span class="opgg-header__info" href="#"><span class="opgg--00-opgglogo"></span></span>
+				<!-- <div class="opgg-header__util-item  opgg-header__util-item--type-login"><div class="opgg-login" ></div></div> -->
+				<div class="opgg-header__util-item opgg-header__util-item--type-language">
+					<div class="opgg-language">
+						<button class="opgg-language__open" type="button"><span class="opgg-language__open-icon"><span class="opgg--02-language"></span></span><span class="opgg-language__open-title">Language</span><span class="opgg-language__open-short">KR</span></button>
+						<div class="opgg-language__box">
+							<strong class="opgg-language__box-title">Language</strong>
+							<div class="opgg-language__list">
+								<a class="opgg-language__item opgg-language__item--is-active" href="#">한국어</a>
+								<a class="opgg-language__item" href="#">English</a>
+							</div>
+							<button class="opgg-language__close" type="button"><span class="opgg--02-close-off"></span><span class="hidden">닫기</span></button>
+						</div>
+						<div class="layer-dim"></div>
+					</div>
+				</div>
+				<div class="opgg-header__util-item  opgg-header__util-item--type-theme">
+					<div class="opgg-toggle">
+						<input class="opgg-toggle__btn" id="opggToggle" type="checkbox" role="button" >
+						<label class="opgg-toggle__label" for="opggToggle"><span class="opgg-toggle__check"></span>Dark Mode</label>
+					</div>
+				</div>
+				<button class="opgg-header__util-close" type="button">닫기</button>
+			</div>
+		</div>
+
+
+
+
+
+	</div>
+	<div class="opgg-header__snb">
+		<div class="opgg-header__snb-inner">
+			<div class="opgg-header__snb-list">
+				<a class="opgg-header__snb-item opgg-header__snb-item--is-active" href="#">Home</a>
+				<a class="opgg-header__snb-item" href="#">Live Stream</a>
+				<a class="opgg-header__snb-item" href="#">Leaderboards</a>
+				<a class="opgg-header__snb-item" href="#">Weapons</a>
+				<a class="opgg-header__snb-item" href="#">Map</a>
+			</div>
+		</div>
+		<div class="opgg-header__snb-option">
+			<div class="c-playersearch">
+				<div class="c-playersearch__box">
+					<span class="c-playersearch__input-box"><input class="c-playersearch__input-text" placeholder="Enter your EPIC name" type="text"><button class="c-playersearch__btn" type="submit"><span class="c-svg--00-icon-gg"></span></button>
+					</span>
+				</div>
+				<div class="c-playerresult"><!-- c-playerresult--is-expend -->
+					<nav class="c-tab__separator">
+						<button class="c-tab__separator-item c-tab__separator-item--is-active" type="button">Recent
+							Searchs</button>
+						<button class="c-tab__separator-item" type="button">Favorite</button>
+						<button class="c-tab__separator-item" type="button">Popular</button>
+					</nav>
+
+					<div class="c-playerresult__contents">
+						<ul class="c-playerresult__list">
+							<li class="c-playerresult__item">
+								<a class="c-playerresult__name" href="#">OvеlonUwatakashi</a>
+								<button class="c-playerresult__bookmark c-icons__bookmark c-icons__bookmark--is-save" type="button"><span class="c-svg--icon-bookmark"></span><span
+									 class="hidden">Favorites</span></button>
+								<button class="c-playerresult__remove" type="button"><span class="c-svg--icon-close-off"></span><span class="hidden">close</span>
+								</button>
+							</li>
+
+							<li class="c-playerresult__item">
+								<a class="c-playerresult__name" href="#">Ovеl i글자가 길어 지면 어떻게 되나보자 블라블라 블라</a>
+								<button class="c-playerresult__bookmark c-icons__bookmark c-icons__bookmark--is-save" type="button"><span class="c-svg--icon-bookmark"></span><span
+									 class="hidden">Favorites</span></button>
+								<button class="c-playerresult__remove" type="button"><span class="c-svg--icon-close-off"></span><span class="hidden">close</span>
+								</button>
+							</li>
+							<li class="c-playerresult__item">
+								<a class="c-playerresult__name" href="#">OvеlonUwatakashi</a>
+								<button class="c-playerresult__bookmark c-icons__bookmark c-icons__bookmark--is-save" type="button"><span class="c-svg--icon-bookmark"></span><span
+									 class="hidden">Favorites</span></button>
+								<button class="c-playerresult__remove" type="button"><span class="c-svg--icon-close-off"></span><span class="hidden">close</span>
+								</button>
+							</li>
+							<li class="c-playerresult__item">
+								<a class="c-playerresult__name" href="#">OvеlonUwatakashi</a>
+								<button class="c-playerresult__bookmark c-icons__bookmark c-icons__bookmark--is-save" type="button"><span class="c-svg--icon-bookmark"></span><span
+									 class="hidden">Favorites</span></button>
+								<button class="c-playerresult__remove" type="button"><span class="c-svg--icon-close-off"></span><span class="hidden">close</span>
+								</button>
+							</li>
+							<li class="c-playerresult__item">
+								<a class="c-playerresult__name" href="#">OvеlonUwatakashi</a>
+								<button class="c-playerresult__bookmark c-icons__bookmark " type="button"><span class="c-svg--icon-bookmark"></span><span
+									 class="hidden">Favorites</span></button>
+								<button class="c-playerresult__remove" type="button"><span class="c-svg--icon-close-off"></span><span class="hidden">close</span>
+								</button>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="opgg-header__notice"><!-- opgg-header__notice--code-red -->
+		이 공간에는 각 서비스에 대한 공지사항이 들어갑니다. 색상은 우선 옐로우가 기본이고, 서버 장애 및 긴급 상황이 있을 때는 레드색상을 사용하면 좋을 것 같아요.
+	</div>
+
+</header>
+
+
+
+
+
+<script>
+;$(document).ready( function(){
+	(function(){
+		var $opggNav = $('.opgg-header__navi-box'),
+			$btnNaviOpen = $('.opgg-header__navi-open'),
+			$btnNaviClose = $('.opgg-header__navi-close'),
+			openClass = 'opgg-header__navi-box--is-open';
+
+		$btnNaviOpen.on('click', function(){
+			$opggNav.toggleClass(openClass);
+		})
+		$btnNaviClose.on('click', function () {
+			$opggNav.removeClass(openClass);
+		})
+	})();
+
+	(function () {
+		var $opggUtil = $('.opgg-header__util-box'),
+			$btnUtilOpen = $('.opgg-header__util-open'),
+			$btnUtilClose = $('.opgg-header__util-close'),
+			openClass = 'opgg-header__util-box--is-open';
+
+		$btnUtilOpen.on('click', function () {
+			$opggUtil.toggleClass(openClass);
+		})
+		$btnUtilClose.on('click', function () {
+			$opggUtil.removeClass(openClass);
+		})
+	})();
+
+	(function () {
+		var $opggLang = $('.opgg-language__box'),
+			$btnLangOpen = $('.opgg-language__open'),
+			$btnLangClose = $('.opgg-language__close'),
+			openClass = 'opgg-language__box--is-open';
+
+		$btnLangOpen.on('click', function () {
+			$opggLang.toggleClass(openClass);
+			//mobile 예외처리
+			$('.opgg-header__util-box').removeClass('opgg-header__util-box--is-open');
+
+		})
+		$btnLangClose.on('click', function () {
+			$opggLang.removeClass(openClass);
+		})
+	})();
+
+
+});
+</script>
+	<div class="fn-body">
+		<main class="fn-main">
+			<div class="p-readerborder">
+				<article class="p-readerborder-article">
+					<header class="p-readerborder-header">
+						<h2 class="hidden">leaderboard</h2>
+						<div class="p-readerborder-header__inner">
+							<div class="p-readerborder-header__search">
+								<div class="c-playersearch">
+									<div class="c-playersearch__box">
+										<span class="c-playersearch__input-box">
+											<input class="c-playersearch__input-text" placeholder="Enter the name to search for..." type="text" />
+										</span>
+										<button class="c-playersearch__btn" type="submit"><span class="c-svg--00-icon-gg"></span></button>
+									</div>
+									<div class="c-playerresult">
+										<nav class="c-tab__separator c-playerresult__tab">
+											<button class="c-tab__separator-item c-tab__separator-item--is-active" type="button">Recent
+												Searchs</button>
+											<button class="c-tab__separator-item" type="button">Favorite</button>
+											<button class="c-tab__separator-item" type="button">Popular</button>
+										</nav>
+										<div class="c-playerresult__contents">
+											<ul class="c-playerresult__list">
+												<li class="c-playerresult__item">
+													<a class="c-playerresult__name" href="#">OvеlonUwatakashi</a>
+													<button class="c-playerresult__bookmark c-icons__bookmark c-icons__bookmark--is-save" type="button"><span class="c-svg--icon-bookmark"></span><span class="hidden">Favorites</span></button>
+													<button class="c-playerresult__remove" type="button"><span class="c-svg--icon-close-off"></span><span class="hidden">close</span>
+													</button>
+												</li>
+
+												<li class="c-playerresult__item">
+													<a class="c-playerresult__name" href="#">Ovеl i글자가 길어 지면 어떻게 되나보자 블라블라 블라</a>
+													<button class="c-playerresult__bookmark c-icons__bookmark" type="button"><span class="c-svg--icon-bookmark"></span><span class="hidden">Favorites</span></button>
+													<button class="c-playerresult__remove" type="button"><span class="c-svg--icon-close-off"></span><span class="hidden">close</span>
+													</button>
+												</li>
+												<li class="c-playerresult__item">
+													<a class="c-playerresult__name" href="#">OvеlonUwatakashi</a>
+													<button class="c-playerresult__bookmark c-icons__bookmark" type="button"><span class="c-svg--icon-bookmark"></span><span class="hidden">Favorites</span></button>
+													<button class="c-playerresult__remove" type="button"><span class="c-svg--icon-close-off"></span><span class="hidden">close</span>
+													</button>
+												</li>
+												<li class="c-playerresult__item">
+													<a class="c-playerresult__name" href="#">OvеlonUwatakashi</a>
+													<button class="c-playerresult__bookmark c-icons__bookmark" type="button"><span class="c-svg--icon-bookmark"></span><span class="hidden">Favorites</span></button>
+													<button class="c-playerresult__remove" type="button"><span class="c-svg--icon-close-off"></span><span class="hidden">close</span>
+													</button>
+												</li>
+												<li class="c-playerresult__item">
+													<a class="c-playerresult__name" href="#">OvеlonUwatakashi</a>
+													<button class="c-playerresult__bookmark c-icons__bookmark" type="button"><span class="c-svg--icon-bookmark"></span><span class="hidden">Favorites</span></button>
+													<button class="c-playerresult__remove" type="button"><span class="c-svg--icon-close-off"></span><span class="hidden">close</span>
+													</button>
+												</li>
+											</ul>
+											<p style="display:none" class="c-playerresult__nodata">There is no recent search history.</p>
+										</div>
+									</div>
+								</div>
+							</div>
+
+						</div>
+					</header>
+					<div class="p-readerborder-nav">
+						<div class="p-readerborder-nav__inner">
+							<nav class="c-tab__nav p-readerborder-play">
+								<button class="c-tab__nav-item c-tab__nav-item--is-active" type="button">OVERALL</button>
+								<button class="c-tab__nav-item" type="button">SOLO</button>
+								<button class="c-tab__nav-item" type="button">DUO</button>
+								<button class="c-tab__nav-item" type="button">SQUAD</button>
+							</nav>
+							<nav class="p-readerborder-category">
+								<div class="p-readerborder-category__item">
+									<h3 class="c-title p-readerborder-category__title">Platform</h3>
+									<span class="c-select c-select__custom c-select--theme-purple p-readerborder-category__select">
+										<button class="c-select__custom-btn" type="button">All Platforms</button>
+										<div class="c-select__custom-list">
+											<a class="c-select__custom-item" href="#">Window</a>
+											<a class="c-select__custom-item" href="#">xBox</a>
+											<a class="c-select__custom-item" href="#">Ps4</a>
+										</div>
+									</span>
+								</div>
+								<div class="p-readerborder-category__item">
+									<h3 class="c-title p-readerborder-category__title">Club</h3>
+									<span class="c-select c-select__custom c-select--theme-purple p-readerborder-category__select">
+										<button class="c-select__custom-btn" type="button">All Clubs</button>
+										<div class="c-select__custom-list">
+											<a class="c-select__custom-item" href="#">Club01</a>
+											<a class="c-select__custom-item" href="#">Club02</a>
+											<a class="c-select__custom-item" href="#">Club03</a>
+											<a class="c-select__custom-item" href="#">Club04</a>
+											<a class="c-select__custom-item" href="#">Club05</a>
+										</div>
+									</span>
+								</div>
+							</nav>
+						</div>
+					</div>
+					<section class="p-readerborder-section p-readerborder-rating">
+						<div class="p-readerborder-section__inner">
+							<div class="p-readerborder-rating__box">
+								<h2 class="c-title p-readerborder-rating__title">OP Rating Distribution</h2>
+								<div class="p-readerborder-rating__chart">
+									<div style="box-sizing:border-box; width:100%; height:100%;border:2px solid green;"></div>
+								</div>
+							</div>
+
+						</div>
+					</section>
+					<section class="p-readerborder-section p-readerborder-table">
+						<div class="p-readerborder-section__inner">
+							<div class="c-leaderboard p-readerborder-table__data">
+								<div class="c-cells c-leaderboard__header">
+									<div class="c-cells__cell c-leaderboard__header-item p-readerborder-table__cell--type-rank">Rank</div>
+									<div class="c-cells__cell c-leaderboard__header-item p-readerborder-table__cell--type-name">Player Name</div>
+									<div class="c-cells__cell c-leaderboard__header-item p-readerborder-table__cell--type-club">Club</div>
+									<div class="c-cells__cell c-leaderboard__header-item p-readerborder-table__cell--type-tier"><button class="c-btn__sort btn__sort--sort-ascending" type="button">Op Tier</button></div>
+									<div class="c-cells__cell c-leaderboard__header-item p-readerborder-table__cell--type-wins"><button class="c-btn__sort btn__sort--sort-descending" type="button">Wins</button></div>
+									<div class="c-cells__cell c-leaderboard__header-item p-readerborder-table__cell--type-rate"><button class="c-btn__sort" type="button">Win rate</button></div>
+									<div class="c-cells__cell c-leaderboard__header-item p-readerborder-table__cell--type-kills"><button class="c-btn__sort" type="button">Kills</button></div>
+									<div class="c-cells__cell c-leaderboard__header-item p-readerborder-table__cell--type-kd"><button class="c-btn__sort" type="button">K/D</button></div>
+									<div class="c-cells__cell c-leaderboard__header-item p-readerborder-table__cell--type-matches"><button class="c-btn__sort" type="button">Matches</button></div>
+								</div>
+								<ol class="c-leaderboard__list">
+									<li class="c-cells c-leaderboard__item">
+										<div class="c-cells__cell p-readerborder-table__cell--type-rank">#1</div>
+										<div class="c-cells__cell p-readerborder-table__cell--type-name">Daniel_KangDaniel_KangDaniel_Kang</div>
+										<div class="c-cells__cell p-readerborder-table__cell--type-club"><img class="p-readerborder-table__cell-club" src="../src/assets/img/temp/badge.png" alt="club명"></div>
+										<div class="c-cells__cell p-readerborder-table__cell--type-tier" data-sort="tier">Top 0.001%</div>
+										<div class="c-cells__cell p-readerborder-table__cell--type-wins" data-sort="wins" >4,680</div>
+										<div class="c-cells__cell p-readerborder-table__cell--type-rate" data-sort="rate">21.5%</div>
+										<div class="c-cells__cell p-readerborder-table__cell--type-kills" data-sort="kills">84,685</div>
+										<div class="c-cells__cell p-readerborder-table__cell--type-kd" data-sort="kd">332</div>
+										<div class="c-cells__cell p-readerborder-table__cell--type-matches">26,982</div>
+									</li>
+									<li class="c-cells c-leaderboard__item">
+										<div class="c-cells__cell p-readerborder-table__cell--type-rank">#2</div>
+										<div class="c-cells__cell p-readerborder-table__cell--type-name">Daniel_Kang <span class="c-svg--01-icon-platform-windows"></span> <span class="c-svg--01-icon-platform-twitch"></span></div>
+										<div class="c-cells__cell p-readerborder-table__cell--type-club"><img class="p-readerborder-table__cell-club" src="../src/assets/img/temp/badge.png"
+											 alt="club명"></div>
+										<div class="c-cells__cell p-readerborder-table__cell--type-tier" data-sort="tier">Top 0.001%</div>
+										<div class="c-cells__cell p-readerborder-table__cell--type-wins" data-sort="wins">4,680</div>
+										<div class="c-cells__cell p-readerborder-table__cell--type-rate" data-sort="rate">21.5%</div>
+										<div class="c-cells__cell p-readerborder-table__cell--type-kills" data-sort="kills">84,685</div>
+										<div class="c-cells__cell p-readerborder-table__cell--type-kd" data-sort="kd">332</div>
+										<div class="c-cells__cell p-readerborder-table__cell--type-matches">26,982</div>
+									</li>
+									<li class="c-cells c-leaderboard__item">
+										<div class="c-cells__cell p-readerborder-table__cell--type-rank">#3</div>
+										<div class="c-cells__cell p-readerborder-table__cell--type-name">Daniel_Kang</div>
+										<div class="c-cells__cell p-readerborder-table__cell--type-club"><img class="p-readerborder-table__cell-club" src="../src/assets/img/temp/badge.png"
+											 alt="club명"></div>
+										<div class="c-cells__cell p-readerborder-table__cell--type-tier" data-sort="tier">Top 0.001%</div>
+										<div class="c-cells__cell p-readerborder-table__cell--type-wins" data-sort="wins">4,680</div>
+										<div class="c-cells__cell p-readerborder-table__cell--type-rate" data-sort="rate">21.5%</div>
+										<div class="c-cells__cell p-readerborder-table__cell--type-kills" data-sort="kills">84,685</div>
+										<div class="c-cells__cell p-readerborder-table__cell--type-kd" data-sort="kd">332</div>
+										<div class="c-cells__cell p-readerborder-table__cell--type-matches">26,982</div>
+									</li>
+									<li class="c-cells c-leaderboard__item">
+										<div class="c-cells__cell p-readerborder-table__cell--type-rank">#4</div>
+										<div class="c-cells__cell p-readerborder-table__cell--type-name">Daniel_Kang</div>
+										<div class="c-cells__cell p-readerborder-table__cell--type-club"><img class="p-readerborder-table__cell-club" src="../src/assets/img/temp/badge.png"
+											 alt="club명"></div>
+										<div class="c-cells__cell p-readerborder-table__cell--type-tier" data-sort="tier">Top 0.001%</div>
+										<div class="c-cells__cell p-readerborder-table__cell--type-wins" data-sort="wins">4,680</div>
+										<div class="c-cells__cell p-readerborder-table__cell--type-rate" data-sort="rate">21.5%</div>
+										<div class="c-cells__cell p-readerborder-table__cell--type-kills" data-sort="kills">84,685</div>
+										<div class="c-cells__cell p-readerborder-table__cell--type-kd" data-sort="kd">332</div>
+										<div class="c-cells__cell p-readerborder-table__cell--type-matches">26,982</div>
+									</li>
+								</ol>
+								<div class="c-leaderboard__sort">
+									<span class="c-leaderboard__sort-select">
+										<select id="sortSelect">
+											<option value="tier">Op Tier</option>
+											<option value="wins">Wins</option>
+											<option value="rate">Win rate</option>
+											<option value="kills">Kills</option>
+											<option value="kd">K/D</option>
+										</select>
+									</span>
+								</div>
+							</div>
+						</div>
+					</section>
+
+				</article>
+			</div>
+
+			
+<footer class="opgg-footer">
+	<div class="opgg-footer__inner">
+		<nav class="opgg-footer__nav">
+			<a class="opgg-footer__nav-item" href="#">ABOUT OP.GG</a>
+			<a class="opgg-footer__nav-item" href="#">Business</a>
+			<a class="opgg-footer__nav-item" href="#">Feedback</a>
+		</nav>
+		<nav class="opgg-footer__social">
+			<a class="opgg-footer__social-item" href="#"><span class="opgg--01-twiter"></span><span class="hidden">twiter</span></a>
+			<a class="opgg-footer__social-item" href="#"><span class="opgg--01-instargram"></span><span class="hidden">instargram</span></a>
+			<a class="opgg-footer__social-item" href="#"><span class="opgg--01-facebook"></span><span class="hidden">facebook</span></a>
+			<a class="opgg-footer__social-item" href="#"><span class="opgg--01-weibo"></span><span class="hidden">weibo</span></a>
+		</nav>
+		<small class="opgg-footer__copyright">&copy; 2012-2017 OP.GG. Data based on Fortnites Korea.</small>
+	</div>
+</footer>
+
+
+<script src="../src/assets/js/test.js"></script>
+		</main>
+
+    </div>
+
+</article>
+<script>
+;$(document).ready( function(){
+	(function(){
+		var $select = $('#sortSelect'),
+			$target = $('.c-leaderboard');
+		$select.on('change', function(){
+			var _this = $(this),
+				$option = _this.find('option:selected'),
+				selectVal = $option.val(),
+				$targetItem = $target.find('.c-leaderboard__item');
+			$targetItem.find('[data-sort="' + selectVal + '"]')
+			.removeClass('p-readerborder-table__cell--is-inactive')
+			.addClass('p-readerborder-table__cell--is-active')
+			.siblings('[data-sort]')
+			.removeClass('p-readerborder-table__cell--is-active')
+			.addClass('p-readerborder-table__cell--is-inactive')
+
+
+		});
+	})()
+})
+</script>
+
+</body>
+</html>

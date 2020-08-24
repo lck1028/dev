@@ -1,0 +1,61 @@
+.c-tierchart{
+	position:relative;
+	color:map-get( $themeCommon, color );
+	font-size:rem(13px);
+	&__title{
+		color:map-get( $themeCommon, color );
+		font-weight:700;
+	}
+	&__data{
+		@include ellipsis;
+		position:absolute;
+		right:0;
+		top:-4px;
+		display:block;
+		max-width:65%;
+		color:map-get( $themeColor, $theme );
+		font-size:rem(18px);
+		font-weight:700;
+		font-family: $font-roboto;
+		@include media-breakpoint-down(sm) {
+			font-size:rem(18px);
+		}
+	}
+	&__desc{
+
+	}
+	&__bar-box{
+		position:relative;
+		height:4px;
+		margin:8px 0 3px;
+		background-color:map-get( $themeElementBg, $theme );
+		background-position:100% 50%;
+		background-repeat:repeat;
+		overflow:hidden;
+		&--type-pettern{
+			height:16px;
+			border-radius:8px;
+			.c-tierchart__bar{
+				background-color:transparent;
+				background-image:url($imgPath+'/common/tierchart_bar.png');
+				transform-origin:0% 50%;
+				transform:skew(45deg);
+			}
+		}
+	}
+	&__bar{
+		position:absolute;
+		left:0;
+		top:0;
+		display:block;
+		height:100%;
+		background-color:map-get( $themeColor, $theme );
+		background-position:inherit;
+		background-repeat:inherit;
+		&--state-record{
+			background-color:map-get( $themeCommon, record );
+		}
+
+
+	}
+}

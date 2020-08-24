@@ -1,0 +1,130 @@
+//초기 테마
+// cssprop : map-get( obj, obj-key);
+// ex) background-color : map-get ( $theme, bg )
+
+//공통
+// themechange 미요소들을 공통사용
+$themeCommon : (
+	//default
+	_white : #ffffff,
+	_black : #31313c,
+	_purple : #5a5ed2,
+	_red : #ec1413,
+	_yellow: #ffd702,
+	_orange : #ffA732,
+	//text
+	title : 'null',
+	color : #777777,
+	dimColor : #b3b3b3,
+	//play
+	solo : #2886ff,
+	duo : #ed7c0d,
+	squad : #c12bff,
+	defeat : #9d9d9d,
+	//state
+	plus : #2bb015,
+	minus : #bb200f,
+	record :#2887ff,
+	//sns
+	facebook : #4b69ba,
+	twitter : #54abed,
+
+
+
+
+
+);
+
+
+$theme : light;
+//$theme : dark; //여기값을 light or dark로 바꿧을 때.
+
+// ↓ 여기처럼 한 변수에 light, dark값이 담기도록 바꿔주세요.
+$themeColor : (
+	light: #31313c,
+	dark: #ffffff
+);
+$themeColorDark : (
+	light: #777777,
+	dark: #b3b3b3
+);
+$themeBg : (
+	light: #ffffff,
+	dark: #31313c
+);
+$themeBgDoc : (
+	light: #f0f0f0,
+	dark: #1c1c1f
+);
+$themeBgimage : (
+	light: url($imgPath+'common/bg_fortnite_light.jpg'),
+	dark: url($imgPath+'common/bg_fortnite_dark.jpg')
+);
+$themeBgimage2x : (
+	light: url($imgPath+'common/bg_fortnite_light@2x.jpg'),
+	dark: url($imgPath+'common/bg_fortnite_dark@2x.jpg')
+);
+$themeBoxShadow : (
+	light :  0 2px 2px 0 rgba(190, 190, 190, 0.5),
+	dark :  0 2px 2px 0 rgba(65, 65, 65, 0.5)
+);
+$themeElementBg : (
+	light: #e4e4e4,
+	dark: #24242a
+);
+
+$themeTabTextColor : (
+	light: #e4e4e4,
+	dark: #414141
+);
+
+$themeBtnRadiusBg : (
+	light: #e4e4e4,
+	dark: #24242a
+);
+
+$themeSelectBorder : (
+	light: #e4e4e4,
+	dark: #414141
+);
+
+$themeLeaderboardListColor : (
+	light: #31313c,
+	dark: #fcdada
+);
+
+$themeLeaderboardListTopColor : (
+	light: #31313c,
+	dark: #ffffff
+);
+
+$themeLeaderboardListTopBg : (
+	light: #ffffff,
+	dark: #24242a
+);
+
+$themeTableColor : (
+	light: #31313c,
+	dark: #e4e4e4
+);
+
+$themeGridBorder :(
+	light: #e5e5e5,
+	dark: #24242a
+);
+
+$themeIconColor :(
+	light: #9d9d9d,
+	dark: #777777
+);
+
+$themeCalendarColor : (
+	light : #9d9d9d,
+	dark : #31313c
+);
+
+$themeTwitchColor : (
+	light : #6441a4,
+	dark : #ffffff
+)
+

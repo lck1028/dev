@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="/src/assets/css/app.css">
+	<script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
+
+</head>
+<body style="padding:100px;">
+
+	<div style="position:fixed; right:0; bottom:0; padding:10px 15px; background-color:#ffffff;">
+		<a target="_blank" href="" style=""><del>header</del></a><br>
+		<a target="_blank" href="" style=""><del>footer</del></a><br>
+		<a target="_blank" href="/app/home.html" style="color:red;">HOME 완료</a><br>
+		<a target="_blank" href="/app/profile.html" style="color:red;">profile 완료</a><br>
+		<a target="_blank" href="/app/leaderboard.html" style="color:red;">leaderboear 완료</a><br>
+		<a target="_blank" href="/app/result.html" style="color:red;">검색결과 완료</a><br>
+		<a target="_blank" href="/app/oops.html" style="color:red;">oops! 완료</a><br>
+	</div>
+
+	<div style="padding:30px;">
+		<div>
+			<h1>ICONS</h1>
+			<div>
+				<span class="c-icons__live">LIVE</span>
+				<br><br>
+				<span class="c-icons__live c-icons__live--size-L">LIVE</span>
+				<br>
+
+				<br>
+				<br>
+				<mark>theme color를 추가 하기 위해 svg > FontAwesome 으로 convert 하여 사용함<br>
+				MD 파일 확인 필수</mark>
+				<hr>
+				<div>
+					<span class="c-svg--icon-view"></span>
+					<span class="c-svg--00-icon-gg"></span>
+					<span class="c-svg--icon-instargram"></span>
+					<span class="c-svg--01-icon-platform-ps-4"></span>
+					<span class="c-svg--01-icon-platform-twitch"></span>
+					<span class="c-svg--01-icon-platform-windows"></span>
+					<span class="c-svg--01-icon-platform-xbox"></span>
+					<span class="c-svg--icon-share"></span>
+					<span class="c-svg--02-icon-twiter"></span>
+					<span class="c-svg--02-icon-facebook"></span>
+					<span class="c-svg--icon-close"></span>
+					<span class="c-svg--icon-close-off"></span>
+					<span class="c-svg--icon-noti"></span>
+					<span class="c-svg--icon-followers"></span>
+					<span class="c-svg--icon-maxviewers"></span>
+					<span class="c-svg--icon-avgviewers"></span>
+					<span class="c-svg--icon-bookmark"></span>
+					<span class="c-svg--icon-reload"></span>
+					<span class="c-svg--icon-add"></span>
+					<span class="c-svg--icon-tier__wrap">
+						<span class="c-svg--icon-tier-bg"></span>
+						<span class="c-svg--icon-tier"></span>
+					</span>
+					<span class="c-svg--icon-winrate"></span>
+					<span class="c-svg--icon-wins-l"></span>
+
+				</div>
+				<span class="c-icons__livestream"></span>
+				<span class="c-svg--icon-winrate"></span>
+				<span class="c-icons__play"><span class="c-svg--icon-movie-play-l"></span></span>
+
+				<hr>
+
+
+				</div>
+			</div>
+		</div>
+
+
+
+		<div>
+			<h1>TAB-nav</h1>
+			<nav class="c-tab__nav">
+				<button class="c-tab__nav-item c-tab__nav-item--is-active" type="button">Menu111</button>
+				<button class="c-tab__nav-item" type="button">Menu222</button>
+				<button class="c-tab__nav-item" type="button">Menu333</button>
+			</nav>
+		</div>
+<hr>
+		<div>
+			<h1>TAB-sub</h1>
+			<div class="c-tab__sub">
+				<button class="c-tab__sub-item c-tab__sub-item--is-active" type="button">OP Tier</button>
+				<button class="c-tab__sub-item" type="button">Rank</button>
+				<button class="c-tab__sub-item" type="button">Menu333</button>
+				<button class="c-tab__sub-item" type="button">Menu333</button>
+				<button class="c-tab__sub-item" type="button">Menu333</button>
+			</div>
+			<br><br>
+			<div class="c-tab__sub">
+				<button class="c-tab__sub-item tab__sub-item--type-platform c-tab__sub-item--is-active" type="button">All</button>
+				<button class="c-tab__sub-item tab__sub-item--type-platform" type="button">
+					<span class="c-svg--01-icon-platform-windows"></span>
+				</button>
+				<button class="c-tab__sub-item tab__sub-item--type-platform" type="button">
+					<span class="c-svg--01-icon-platform-xbox"></span>
+				</button>
+				<button class="c-tab__sub-item tab__sub-item--type-platform" type="button">
+					<span class="c-svg--01-icon-platform-ps-4"></span>
+				</button>
+			</div>
+		</div>
+<hr>
+		<div>
+			<h1>Tab-text</h1>
+			<div class="c-tab__text">
+				<button class="c-tab__text-item c-tab__text-item--is-active" type="button">texttext</button>
+				<button class="c-tab__text-item" type="button">texttext</button>
+			</div>
+		</div>
+<hr>
+		<div>
+			<h1>Tab-separator</h1>
+			<nav class="c-tab__separator">
+				<button class="c-tab__separator-item c-tab__separator-item--is-active" type="button">Recent
+					Searchs</button>
+				<button class="c-tab__separator-item" type="button">Favorite</button>
+				<button class="c-tab__separator-item" type="button">Popular</button>
+			</nav>
+		</div>
+
+<hr>
+		<div>
+			<h1>Tab-btn</h1>
+			<div class="c-tab__btn">
+				<button class="c-tab__btn-item c-btn__radius c-btn--theme-purple c-tab__btn-item--is-active" type="button">Season 1</button>
+				<button class="c-tab__btn-item c-btn__radius c-btn--theme-purple" type="button">Season 2</button>
+				<button class="c-tab__btn-item c-btn__radius c-btn--theme-red" type="button">테스트용 빨간버튼</button>
+			</div>
+		</div>
+<br><br><hr>
+		<div>
+			<h1>select</h1>
+			<span class="c-select">
+				<select>
+					<option>option01</option>
+					<option>option02option02option02option02</option>
+					<option>option03</option>
+				</select>
+			</span>
+
+			<span class="c-select c-select--theme-purple">
+				<select>
+					<option>option01</option>
+					<option>option02option02option02option02</option>
+					<option>option03</option>
+				</select>
+			</span>
+
+			<span class="c-select c-select__custom">
+				<button class="c-select__custom-btn" type="button">Language</button>
+				<div class="c-select__custom-list">
+					<a class="c-select__custom-item" href="#">Korean</a>
+					<a class="c-select__custom-item" href="#">English</a>
+				</div>
+			</span>
+
+			<span class="c-select c-select__custom c-select--theme-purple">
+				<button class="c-select__custom-btn" type="button">Language</button>
+				<div class="c-select__custom-list">
+					<a class="c-select__custom-item" href="#">Korean</a>
+					<a class="c-select__custom-item" href="#">English</a>
+				</div>
+			</span>
+
+
+
+<br><br><hr>
+
+		</div>
+
+		<div>
+			<h1>leaderboard</h1>
+			<!-- cell 간격은 page에서 처리 -->
+			<div class="c-leaderboard">
+				<div class="c-cells c-leaderboard__header">
+					<div class="c-cells__cell c-leaderboard__header-item">Rank</div>
+					<div class="c-cells__cell c-leaderboard__header-item">Player Name</div>
+					<div class="c-cells__cell c-leaderboard__header-item">Club</div>
+					<div class="c-cells__cell c-leaderboard__header-item"><button class="c-btn__sort btn__sort--sort-ascending" type="button">Op Tier</button></div>
+					<div class="c-cells__cell c-leaderboard__header-item"><button class="c-btn__sort btn__sort--sort-descending" type="button">Wins</button></div>
+					<div class="c-cells__cell c-leaderboard__header-item"><button class="c-btn__sort" type="button">Win rate</button></div>
+					<div class="c-cells__cell c-leaderboard__header-item"><button class="c-btn__sort" type="button">Kills</button></div>
+					<div class="c-cells__cell c-leaderboard__header-item"><button class="c-btn__sort" type="button">K/D</button></div>
+					<div class="c-cells__cell c-leaderboard__header-item"><button class="c-btn__sort" type="button">Matches</button></div>
+				</div>
+				<ol class="c-leaderboard__list">
+					<li class="c-cells c-leaderboard__item">
+						<div class="c-cells__cell">#1</div>
+						<div class="c-cells__cell">Daniel_Kang</div>
+						<div class="c-cells__cell">Club</div>
+						<div class="c-cells__cell">Top 0.001%</div>
+						<div class="c-cells__cell">4,680</div>
+						<div class="c-cells__cell">21.5%</div>
+						<div class="c-cells__cell">84,685</div>
+						<div class="c-cells__cell">332</div>
+						<div class="c-cells__cell">26,982</div>
+					</li>
+					<li class="c-cells c-leaderboard__item">
+						<div class="c-cells__cell">#1</div>
+						<div class="c-cells__cell">Daniel_Kang</div>
+						<div class="c-cells__cell">Club</div>
+						<div class="c-cells__cell">Top 0.001%</div>
+						<div class="c-cells__cell">4,680</div>
+						<div class="c-cells__cell">21.5%</div>
+						<div class="c-cells__cell">84,685</div>
+						<div class="c-cells__cell">332</div>
+						<div class="c-cells__cell">26,982</div>
+					</li>
+					<li class="c-cells c-leaderboard__item">
+						<div class="c-cells__cell">#1</div>
+						<div class="c-cells__cell">Daniel_Kang</div>
+						<div class="c-cells__cell">Club</div>
+						<div class="c-cells__cell">Top 0.001%</div>
+						<div class="c-cells__cell">4,680</div>
+						<div class="c-cells__cell">21.5%</div>
+						<div class="c-cells__cell">84,685</div>
+						<div class="c-cells__cell">332</div>
+						<div class="c-cells__cell">26,982</div>
+					</li>
+					<li class="c-cells c-leaderboard__item">
+						<div class="c-cells__cell">#1</div>
+						<div class="c-cells__cell">Daniel_Kang</div>
+						<div class="c-cells__cell">Club</div>
+						<div class="c-cells__cell">Top 0.001%</div>
+						<div class="c-cells__cell">4,680</div>
+						<div class="c-cells__cell">21.5%</div>
+						<div class="c-cells__cell">84,685</div>
+						<div class="c-cells__cell">332</div>
+						<div class="c-cells__cell">26,982</div>
+					</li>
+				</ol>
+			</div>
+		</div>
+
+<hr>
+		<div>
+			<h1>table</h1>
+			<div>
+				<table class="c-table" >
+					<caption>캡션캡션</caption>
+					<colgroup>
+					<col>
+					<col>
+					<col>
+					</colgroup>
+					<thead class="c-table__head">
+					<tr class="c-table__tr">
+						<th scope="col" class="c-table__th">#</th>
+						<th scope="col" class="c-table__th">Player</th>
+						<th scope="col" class="c-table__th">Wins</th>
+					</tr>
+					</thead>
+					<tbody class="c-table__tbody">
+					<tr class="c-table__tr">
+						<td class="c-table__td">1</td>
+						<td class="c-table__td"><a href="#">Uwatakashi_</a></td>
+						<td class="c-table__td">4,689</td>
+					</tr>
+					<tr class="c-table__tr">
+						<td class="c-table__td">2</td>
+						<td class="c-table__td">Uwatakashi_</td>
+						<td class="c-table__td">4,689</td>
+					</tr>
+					<tr class="c-table__tr">
+						<td class="c-table__td">3</td>
+						<td class="c-table__td">Uwatakashi_Uwatakashi_ 글자가 길어 지면 어떻게 되나보자 블라블라블라글자가 길어 지면 어떻게 되나보자 블라블라블라글자가 길어 지면 어떻게 되나보자 블라블라블라</td>
+						<td class="c-table__td">4,689</td>
+					</tr>
+					<tr class="c-table__tr">
+						<td class="c-table__td">4</td>
+						<td class="c-table__td">Uwatakashi_</td>
+						<td class="c-table__td">4,689</td>
+					</tr>
+					<tr class="c-table__tr">
+						<td class="c-table__td">5</td>
+						<td class="c-table__td">Uwatakashi_</td>
+						<td class="c-table__td">4,689</td>
+					</tr>
+					</tbody>
+				</table>
+			</div>
+			<hr>
+			<h2>테이블 비율</h2>
+			<!-- wrapper에 float reset 필수 -->
+			<div class=>
+				<table class="c-table c-table--type-ratio">
+					<caption>캡션캡션</caption>
+					<colgroup>
+						<col>
+						<col>
+						<col>
+					</colgroup>
+					<thead class="c-table__head">
+						<tr class="c-table__tr">
+							<th scope="col" class="c-table__th">#</th>
+							<th scope="col" class="c-table__th">Player</th>
+							<th scope="col" class="c-table__th">Wins</th>
+						</tr>
+					</thead>
+					<tbody class="c-table__tbody">
+						<tr class="c-table__tr">
+							<td class="c-table__td">1</td>
+							<td class="c-table__td"><a href="#">Uwatakashi_</a></td>
+							<td class="c-table__td">4,689</td>
+						</tr>
+						<tr class="c-table__tr">
+							<td class="c-table__td">2</td>
+							<td class="c-table__td">Uwatakashi_</td>
+							<td class="c-table__td">4,689</td>
+						</tr>
+						<tr class="c-table__tr">
+							<td class="c-table__td">3</td>
+							<td class="c-table__td">Uwatakashi_Uwatakashi_ 글자가 길어 지면 어떻게 되나보자 블라블라블라글자가 길어 지면 어떻게 되나보자 블라블라블라글자가 길어 지면 어떻게 되나보자
+								블라블라블라</td>
+							<td class="c-table__td">4,689</td>
+						</tr>
+						<tr class="c-table__tr">
+							<td class="c-table__td">4</td>
+							<td class="c-table__td">Uwatakashi_</td>
+							<td class="c-table__td">4,689</td>
+						</tr>
+						<tr class="c-table__tr">
+							<td class="c-table__td">5</td>
+							<td class="c-table__td">Uwatakashi_</td>
+							<td class="c-table__td">4,689</td>
+						</tr>
+					</tbody>
+				</table>
+				<table class="c-table c-table--type-ratio">
+					<caption>캡션캡션</caption>
+					<colgroup>
+						<col>
+						<col>
+						<col>
+					</colgroup>
+					<thead class="c-table__head">
+						<tr class="c-table__tr">
+							<th scope="col" class="c-table__th">#</th>
+							<th scope="col" class="c-table__th">Player</th>
+							<th scope="col" class="c-table__th">Wins</th>
+						</tr>
+					</thead>
+					<tbody class="c-table__tbody">
+						<tr class="c-table__tr">
+							<td class="c-table__td">1</td>
+							<td class="c-table__td"><a href="#">Uwatakashi_</a></td>
+							<td class="c-table__td">4,689</td>
+						</tr>
+						<tr class="c-table__tr">
+							<td class="c-table__td">2</td>
+							<td class="c-table__td">Uwatakashi_</td>
+							<td class="c-table__td">4,689</td>
+						</tr>
+						<tr class="c-table__tr">
+							<td class="c-table__td">3</td>
+							<td class="c-table__td">Uwatakashi_Uwatakashi_ 글자가 길어 지면 어떻게 되나보자 블라블라블라글자가 길어 지면 어떻게 되나보자 블라블라블라글자가 길어 지면 어떻게 되나보자
+								블라블라블라</td>
+							<td class="c-table__td">4,689</td>
+						</tr>
+						<tr class="c-table__tr">
+							<td class="c-table__td">4</td>
+							<td class="c-table__td">Uwatakashi_</td>
+							<td class="c-table__td">4,689</td>
+						</tr>
+						<tr class="c-table__tr">
+							<td class="c-table__td">5</td>
+							<td class="c-table__td">Uwatakashi_</td>
+							<td class="c-table__td">4,689</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<hr>
+
+
+		</div>
+
+		<br>
+		<hr>
+		<br>
+		<div>
+			<h1>media</h1>
+			<div style="display:inline-block;width:250px;vertical-align:top;">
+				<div class="c-media">
+					<div class="c-media__frame o-ratio o-ratio--16x9">
+						<img src="./src/assets/img/temp/@temp_video.jpg" alt="">
+						<span class="c-media__live c-icons__live">LIVE</span>
+						<span class="c-media__view">
+							<span class="c-media__view-icon">
+								<span class="c-media__view-svg c-svg--icon-view"></span>
+							</span>
+							<span class="c-media__view-count">999,999,999</span>
+						</span>
+					</div>
+					<div class="c-media__contents">
+						<strong class="c-media__title">Fresh Dew | Pon Pon merch Live! Teamninja.com | @Ninja 글자가길어지면 어떻게 되나보자 블라블라 글자가 길어지면 어떻게 되나보자 블라블라</strong>
+						<div class="c-media__user-info">
+							<span class="c-media__user-mark"><img src="./src/assets/img/temp/badge.png" alt=""></span>
+							<span class="c-media__user-name">Daniel_Kang 글자가 길어지면 어떻게 되나보자 블라블라</span>
+							<span class="c-media__user-tier">Diamond</span>
+						</div>
+					</div>
+					<span class="c-media__language">English</span>
+
+
+				</div>
+			</div>
+
+			<div style="display:inline-block;width:250px;vertical-align:top;">
+				<a class="c-media" href="#">
+					<div class="c-media__frame o-ratio o-ratio--16x9">
+						<img src="./src/assets/img/temp/@temp_video.jpg" alt="">
+						<span class="c-media__live c-icons__live">LIVE</span>
+						<span class="c-media__view">
+							<span class="c-media__view-icon">
+								<span class="c-media__view-svg c-svg--icon-view"></span>
+							</span>
+							<span class="c-media__view-count">999,999,999</span>
+						</span>
+					</div>
+					<div class="c-media__contents">
+						<strong class="c-media__title">Fresh Dew | Pon Pon merch Live! Teamninja.com | @Ninja 글자가길어지면 어떻게 되나보자 블라블라 글자가 길어지면
+							어떻게 되나보자 블라블라</strong>
+						<div class="c-media__user-info">
+							<span class="c-media__user-name">Daniel_Kang 글자가 길어지면 어떻게 되나보자 블라블라
+								<span class="c-media__user-platfrom">
+									<span class="c-svg--01-icon-platform-twitch"></span>
+								</span>
+							</span>
+						</div>
+					</div>
+					<span class="c-media__language">English</span>
+				</a>
+			</div>
+		</div>
+
+		<br>
+		<hr>
+		<br>
+		<div>
+			<h1>tierchart</h1>
+			<div style="display:inline-block; width:200px; padding:50px;">
+
+				<div class="c-tierchart">
+					<strong class="c-tierchart__title">TITLE</strong>
+					<span class="c-tierchart__data">999,999,999,999</span>
+					<div class="c-tierchart__bar-box">
+						<span class="c-tierchart__bar" style="width:70%"></span>
+					</div>
+					<span class="c-tierchart__desc">Top 0.00001%</span>
+				</div>
+
+			</div>
+			<div style="display:inline-block; width:200px; padding:50px;">
+
+				<div class="c-tierchart">
+					<strong class="c-tierchart__title">TITLE</strong>
+					<span class="c-tierchart__data">999,999,999,999</span>
+					<div class="c-tierchart__bar-box">
+						<span class="c-tierchart__bar c-tierchart__bar--state-record" style="width:70%"></span>
+					</div>
+					<span class="c-tierchart__desc c-fonts--state-plus">+ 7.31%</span>
+				</div>
+
+			</div>
+			<div style="display:inline-block; width:200px; padding:50px;">
+
+				<div class="c-tierchart">
+					<strong class="c-tierchart__title">TITLE</strong>
+					<span class="c-tierchart__data">999,999,999,999</span>
+					<div class="c-tierchart__bar-box">
+						<span class="c-tierchart__bar c-tierchart__bar--state-record" style="width:70%"></span>
+					</div>
+					<span class="c-tierchart__desc c-fonts--state-minus">- 99,99%</span>
+				</div>
+
+			</div>
+
+			<div style="display:inline-block; width:200px; padding:50px;">
+
+				<div class="c-tierchart">
+					<strong class="c-tierchart__title">TITLE</strong>
+					<span class="c-tierchart__data">999,999,999,999</span>
+					<div class="c-tierchart__bar-box c-tierchart__bar-box--type-pettern">
+						<span class="c-tierchart__bar c-tierchart__bar" style="width:70%"></span>
+					</div>
+					<span class="c-tierchart__desc c-fonts--state-minus">- 99,99%</span>
+				</div>
+
+			</div>
+		</div>
+
+
+		<div>
+			<h1>search </h1>
+			<div class="c-playersearch">
+				<div class="c-playersearch__box">
+					<span class="c-playersearch__input-box"><input class="c-playersearch__input-text" placeholder="Enter your EPIC name &nbsp;&nbsp; &#xE004 &nbsp; &#xE005 &nbsp; &#xE002" type="text" />
+					<button class="c-playersearch__btn" type="submit"><span class="c-svg--00-icon-gg"></span></button>
+				</div>
+				<div class="c-playerresult">
+					<nav class="c-tab__separator">
+						<button class="c-tab__separator-item c-tab__separator-item--is-active" type="button">Recent
+								Searchs</button>
+						<button class="c-tab__separator-item" type="button">Favorite</button>
+						<button class="c-tab__separator-item" type="button">Popular</button>
+					</nav>
+
+					<div class="c-playerresult__contents">
+						<ul class="c-playerresult__list">
+							<li class="c-playerresult__item">
+								<a class="c-playerresult__name" href="#">OvеlonUwatakashi</a>
+								<button class="c-playerresult__bookmark c-icons__bookmark c-icons__bookmark--is-save" type="button"><span class="c-svg--icon-bookmark"></span><span
+									 class="hidden">Favorites</span></button>
+								<button class="c-playerresult__remove" type="button"><span class="c-svg--icon-close-off"></span><span class="hidden">close</span>
+								</button>
+							</li>
+
+							<li class="c-playerresult__item">
+								<a class="c-playerresult__name" href="#">Ovеl i글자가 길어 지면 어떻게 되나보자 블라블라 블라</a>
+								<button class="c-playerresult__bookmark c-icons__bookmark c-icons__bookmark--is-save" type="button"><span class="c-svg--icon-bookmark"></span><span
+									 class="hidden">Favorites</span></button>
+								<button class="c-playerresult__remove" type="button"><span class="c-svg--icon-close-off"></span><span class="hidden">close</span>
+								</button>
+							</li>
+							<li class="c-playerresult__item">
+								<a class="c-playerresult__name" href="#">OvеlonUwatakashi</a>
+								<button class="c-playerresult__bookmark c-icons__bookmark c-icons__bookmark--is-save" type="button"><span class="c-svg--icon-bookmark"></span><span
+									 class="hidden">Favorites</span></button>
+								<button class="c-playerresult__remove" type="button"><span class="c-svg--icon-close-off"></span><span class="hidden">close</span>
+								</button>
+							</li>
+							<li class="c-playerresult__item">
+								<a class="c-playerresult__name" href="#">OvеlonUwatakashi</a>
+								<button class="c-playerresult__bookmark c-icons__bookmark c-icons__bookmark--is-save" type="button"><span class="c-svg--icon-bookmark"></span><span
+									 class="hidden">Favorites</span></button>
+								<button class="c-playerresult__remove" type="button"><span class="c-svg--icon-close-off"></span><span class="hidden">close</span>
+								</button>
+							</li>
+							<li class="c-playerresult__item">
+								<a class="c-playerresult__name" href="#">OvеlonUwatakashi</a>
+								<button class="c-playerresult__bookmark c-icons__bookmark " type="button"><span class="c-svg--icon-bookmark"></span><span
+									 class="hidden">Favorites</span></button>
+								<button class="c-playerresult__remove" type="button"><span class="c-svg--icon-close-off"></span><span class="hidden">close</span>
+								</button>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div>
+			<h1>Share URL</h1>
+			<div style="width:300px">
+				<span class="c-urlcopy">
+					<input class="c-urlcopy__input" type="text" readonly value="https://fn.op.gg/userpagtextetex/" /><button class="c-urlcopy__btn" type="button">url copy</button>
+				</span>
+			</div>
+
+		</div>
+
+		<div>
+			<h1>layer</h1>
+			<button type="button" id="btn_test">레이어 팝업 보기</button>
+			<div class="c-layer" data-layer="btn_test">
+				<div class="c-layer__dim"></div>
+				<article class="c-layer__article">
+					<header class="c-layer__header"><h3 class="c-layer__header-title">제목제목제목</h3></header>
+					<div class="c-layer__body">
+						<section class="c-layer__section">
+ㅁㄴㅇㅁㄴㅇㄴㅇㅇㄴㅁㄴㅇㅁㄴㅇㄴㅇㅇㄴㅁㄴㅇㅁㄴㅇㄴㅇㅇㄴㅁㄴㅇㅁㄴㅇㄴㅇㅇㄴㅁㄴㅇㅁㄴㅇㄴㅇㅇㄴㅁㄴㅇㅁㄴㅇㄴㅇㅇㄴㅁㄴㅇㅁㄴㅇㄴㅇㅇㄴㅁㄴㅇㅁㄴㅇㄴㅇㅇㄴㅁㄴㅇㅁㄴㅇㄴㅇㅇㄴㅁㄴㅇㅁㄴㅇㄴㅇㅇㄴㅁㄴㅇㅁㄴㅇㄴㅇㅇㄴㅁㄴㅇㅁㄴㅇㄴㅇㅇㄴㅁㄴㅇㅁㄴㅇㄴㅇㅇㄴㅁㄴㅇㅁㄴㅇㄴㅇㅇㄴㅁㄴㅇㅁㄴㅇㄴㅇㅇㄴㅁㄴㅇㅁㄴㅇㄴㅇㅇㄴㅁㄴㅇㅁㄴㅇㄴㅇㅇㄴㅁㄴㅇㅁㄴㅇㄴㅇㅇㄴㅁㄴㅇㅁㄴㅇㄴㅇㅇㄴㅁㄴㅇㅁㄴㅇㄴㅇㅇㄴㅁㄴㅇㅁㄴㅇㄴㅇㅇㄴㅁㄴㅇㅁㄴㅇㄴㅇㅇㄴㅁㄴㅇㅁㄴㅇㄴㅇㅇㄴㅁㄴㅇㅁㄴㅇㄴㅇㅇㄴㅁㄴㅇㅁㄴㅇㄴㅇㅇㄴㅁㄴㅇㅁㄴㅇㄴㅇㅇㄴㅁㄴㅇㅁㄴㅇㄴㅇㅇㄴㅁㄴㅇㅁㄴㅇㄴㅇㅇㄴㅁㄴㅇㅁㄴㅇㄴㅇㅇㄴㅁㄴㅇㅁㄴㅇㄴㅇㅇㄴㅁㄴㅇㅁㄴㅇㄴㅇㅇㄴㅁㄴㅇㅁㄴㅇㄴㅇㅇㄴㅁㄴㅇㅁㄴㅇㄴㅇㅇㄴㅁㄴㅇㄴㅇㅇㄴㅁㄴㅇㅁㄴㅇㄴㅇㅇㄴㅁㄴㅇㅁㄴㅇㄴㅇㅇㄴㅁㄴㅇㅁㄴㅇㄴㅇㅇㄴㅁㄴㅇㅁㄴㅇㄴㅇㅇㄴㅁㄴㅇㅁㄴㅇㄴㅇㅇㄴㅁㄴㅇㅁㄴㅇㄴㅇㅇㄴㅁㄴㅇㅁㄴㅇㄴㅇㅇㄴㅁㄴㅇㅁㄴㅇㄴㅇㅇㄴㅁㄴㅇㅁㄴㅇㄴㅇㅇㄴㅁㄴㅇㅁㄴㅇㄴㅇㅇㄴㅁㄴㅇㅁㄴㅇㄴㅇㅇㄴㅁㄴㅇㅁㄴㅇㄴㅇㅇㄴㅁㄴㅇㅁㄴㅇㄴㅇㅇㄴㅁㄴㅇㅁㄴㅇㄴㅇㅇㄴㅁㄴㅇㅁㄴㅇㄴㅇㅇㄴㅁㄴㅇㅁㄴㅇㄴㅇㅇㄴㅁㄴㅇㅁㄴㅇㄴㅇㅇㄴㅁㄴㅇㅁㄴㅇㄴㅇㅇㄴㅁㄴㅇㅁㄴㅇㄴㅇㅇㄴㅁㄴㅇㅁㄴㅇㄴㅇㅇㄴㅁㄴㅇㅁㄴㅇㄴㅇㅇㄴㅁㄴㅇㅁㄴㅇㄴㅇㅇㄴㅁㄴㅇㅁㄴㅇㄴㅇㅇㄴㅁㄴㅇㅁㄴㅇㄴㅇㅇㄴㅁㄴㅇㅁㄴㅇㄴㅇㅇㄴㅁㄴㅇㅁㄴㅇㄴㅇㅇㄴㅁㄴㅇㅁㄴㅇㄴㅇㅇㄴㅁㄴㅇㅁㄴㅇㄴㅇㅇㄴㅁㄴㅇㅁㄴㅇㄴㅇㅇㄴㅁㄴㅇㅁㄴㅇㄴㅇㅇㄴㅁㄴㅇㅁㄴㅇㄴㅇㅇㄴㅁㄴㅇㅁㄴㅇㄴㅇㅇㄴㅁㄴㅇㅁㄴㅇㄴㅇㅇㄴㅁㄴㅇㅁㄴㅇㄴㅇㅇㄴㅁㄴㅇㅁㄴㅇㄴㅇㅇㄴㅁㄴㅇㅁㄴㅇㄴㅇㅇㄴㅁㄴㅇㅁㄴㅇㄴㅇㅇㄴ<br>
+ㅁㄴㅇㅁㄴㅇㄴㅇㅇㄴ<br>
+ㅁㄴㅇㅁㄴㅇㄴㅇㅇㄴ<br>
+ㅁㄴㅇㅁㄴㅇㄴㅇㅇㄴ<br>
+ㅁㄴㅇㅁㄴㅇㄴㅇㅇㄴ<br>
+ㅁㄴㅇㅁㄴㅇㄴㅇㅇㄴ<br>
+ㅁㄴㅇㅁㄴㅇㄴㅇㅇㄴ
+
+						</section>
+					</div>
+					<button type="button" class="c-layer__btn-close"><span class="c-svg--icon-close-off"></span></button>
+				</article>
+			</div>
+		</div>
+
+
+
+		<div>
+			<h1>tooltip</h1>
+			<div>
+
+				<span class="c-tooltip">
+					<strong>나는 툴팁이야~~</strong>
+					<span class="c-tooltip__box">
+						<span class="c-tooltip__title">툴팁 타이틀</span>
+						<span class="c-tooltip__contents">툴팁 내용내욘내욘 내용내용 내용내용 내용내용내용내용</span>
+					</span>
+				</span>
+			</div>
+
+		</div>
+
+
+
+
+	</div>
+
+
+
+<script src="./src/assets/js/test.js"></script>
+</body>
+</html>

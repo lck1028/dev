@@ -1,0 +1,19 @@
+
+//
+//
+//
+//
+//
+
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {height:auto;-webkit-appearance:none; margin:0;}
+input[type='search'] {-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box;}
+input[type='search']::-webkit-search-cancel-button, input[type='search']::-webkit-search-decoration {-webkit-appearance:none;}
+input[type="text"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="date"],
+input[type="number"],
+input[type="email"]{box-sizing:border-box;width:100%;margin:0;padding:0; border:none; }
+

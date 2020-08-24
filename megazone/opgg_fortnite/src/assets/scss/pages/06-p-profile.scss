@@ -1,0 +1,1314 @@
+.p-profile{
+	@include layout--inner-width;
+}
+.p-profile-article{
+
+}
+
+.p-profile-header{
+	position:relative;
+	padding-top:72px;
+	padding-bottom:40px;
+	@include media-breakpoint-down(sm) {
+		padding-top:36px;
+		padding-bottom:27px;
+	}
+	&__inner{
+		@include layout--max-width;
+		position:relative;
+		box-sizing:border-box;
+		padding-left:126px;
+		padding-right:190px;
+		@include media-breakpoint-down(sm) {
+			padding-left:102px;
+			padding-right:0;
+		}
+
+	}
+	&__platform-box{
+		$size : 102px;
+		position:absolute;
+		left:0;
+		top:0;
+		display:block;
+		width: $size;
+		height: $size;
+		color:map-get( $themeCommon, _white );
+		text-align:center;
+		&::before{
+			@include pseudo(inline-block);
+			height:100%;
+			margin:0 -2px;
+			vertical-align:middle;
+
+		}
+		@include media-breakpoint-down(sm) {
+			$size : 88px;
+			width: $size;
+			height: $size;
+		}
+		&--theme-purple{
+			background-color:map-get( $themeCommon, _purple );
+		}
+	}
+	&__platform{
+		font-size:36px;
+		vertical-align:middle;
+	}
+	&__media{
+		position:absolute;
+		right:16px;
+		top:15px;
+		font-size:14px;
+	}
+	&__info-wrap{
+
+	}
+	&__player{
+		color : map-get( $themeColor , $theme );
+		font-size:rem(34);
+		line-height:0.7;
+		@include media-breakpoint-down(sm) {
+			padding-right:50px;
+			font-size:rem(18);
+			line-height:1.2;
+			word-break: break-word;
+		}
+		@include media-breakpoint-down(xs) {
+			padding-right:0;
+		}
+		&--bookmark{
+			margin-left:8px;
+			@include media-breakpoint-down(sm) {
+				position:absolute;
+				right:26px;
+				top:3px;
+			}
+			@include media-breakpoint-down(xs) {
+				top:-20px;
+			}
+
+		}
+	}
+	&__info-list{
+		display:table;
+		width:100%;
+		padding-top:20px;
+		@include media-breakpoint-down(sm) {
+			padding-top:8px;
+		}
+	}
+	&__info-item{
+		position:relative;
+		display:table-cell;
+		padding-left:14px;
+		padding-right:10px;
+		@include media-breakpoint-down(xs) {
+			display:block;
+			padding:0;
+		}
+		&::before{
+			@include pseudo();
+			position:absolute;
+			left:0;
+			top:5px;
+			bottom:9px;
+			width:1px;
+			background-color:map-get( $themeLeaderboardListColor , $theme );;
+			@include media-breakpoint-down(sm) {
+				bottom:6px;
+			}
+			@include media-breakpoint-down(xs) {
+				display:none
+			}
+		}
+		&:first-child{
+			width:250px;
+			padding-left:0;
+			&::before{
+				display:none;
+			}
+			@include media-breakpoint-down(sm) {
+				width:86px;
+			}
+		}
+	}
+	&__info-content{
+		padding-top:4px;
+		color : map-get( $themeColor , $theme );
+		font-size:rem(28);
+		font-weight:700;
+		font-family: $font-roboto;
+		text-overflow:ellipsis;
+		overflow:hidden;
+		white-space:nowrap;
+		@include media-breakpoint-down(sm) {
+			padding-top:8px;
+			font-size:rem(16);
+			text-overflow:ellipsis;
+			overflow:hidden;
+			white-space:normal;
+			word-break: break-all;
+		}
+		[class^="c-svg"]{
+			margin-left:12px;
+			color : map-get( $themeCommon , color );
+			font-size:18px;
+			vertical-align:2px;
+			&:first-child{
+				margin-left:0;
+			}
+			&.c-svg--is-active{
+				color : map-get( $themeColor , $theme );
+			}
+		}
+
+	}
+	&__share{
+		position:absolute;
+		right:0;
+		top:0;
+		font-size:18px;
+		@include media-breakpoint-down(xs) {
+			top:-23px;
+		}
+	}
+	&__add{
+		position:relative;
+		display:inline-block;
+		margin-right:20px;
+		padding-right:15px;
+		color:map-get( $themeColor, $theme );
+		@include media-breakpoint-down(sm) {
+			display:none;
+		}
+		&::after{
+			@include pseudo;
+			position:absolute;
+			right:0;
+			top:5px;
+			width:1px;
+			height:18px;
+			background-color:#777777;
+		}
+		&-btn{
+			padding:5px;
+			font-size:rem(12);
+			vertical-align:middle;
+		}
+		&-text{
+			display:inline-block;
+			padding-left:4px;
+			font-size:rem(11);
+			vertical-align:2px;
+		}
+	}
+	&__sns{
+		position:relative;
+		display:inline-block;
+		vertical-align:bottom;
+		&-btn{
+			position:absolute;
+			left:0;
+			top:0;
+			opacity:0;
+		}
+		&-share{
+			color : map-get( $themeColor , $theme );
+			font-size:18px;
+		}
+		&-list{
+			display:inline-block;
+			@include media-breakpoint-down(sm) {
+				display:none;
+				position:absolute;
+				right:0;
+				top:100%;
+			}
+		}
+		&-item{
+			margin-left:14px;
+			color : map-get( $themeColor , $theme );
+			font-size:18px;
+			@include media-breakpoint-down(sm) {
+				display:block;
+				margin:5px 0;
+			}
+		}
+	}
+
+	&__reload{
+		position:absolute;
+		right:0;
+		bottom:5px;
+		@include media-breakpoint-down(sm) {
+			display:none;
+		}
+	}
+
+}
+.p-profile-section{
+	&__inner{}
+	&__box{
+		@include clear;
+		margin-top:40px;
+		@include media-breakpoint-down(sm) {
+			margin-top:24px;
+		}
+	}
+}
+.p-profile-media{
+	&__wrap{
+		@include clear;
+		@include shadow--roundBox;
+		position:relative;
+	}
+	&__frame{
+		float:left;
+		box-sizing:border-box;
+		padding: 30px 27px 0 24px;
+		width:67.7%;
+		@include media-breakpoint-down(sm) {
+			float:none;
+			width:calc(100% + 32px);
+			margin-left:-16px;
+
+		}
+	}
+	&__info{
+		position:absolute;
+		box-sizing:border-box;
+		right:0;
+		top:32.38%;
+		width:32.3%;
+		height:67.62%;
+		padding: 30px 27px 0 24px;
+		@include media-breakpoint-down(sm) {
+			position:static;
+			width:100%;
+			height:auto;
+			padding: 24px 20px 16px;
+		}
+
+		&-box{
+			color : map-get($themeColor , $theme);
+			@include media-breakpoint-down(sm) {
+				padding-left:60px;
+				padding-bottom:10px;
+			}
+		}
+		&-subtitle{
+			display:block;
+			margin-bottom:16px;
+			@include media-breakpoint-down(sm) {
+				font-size:11px;
+			}
+		}
+		&-title{
+			position:relative;;
+			display:block;
+			margin-top:5px;
+			font-size:rem(24);
+			font-weight:700;
+			@include media-breakpoint-down(sm) {
+				margin-top:10px;
+				font-size:rem(20px);
+			}
+		}
+		&-rank{
+			position:absolute;
+			right:calc(100% + 9px);
+			top:0;
+			font-size:rem(80);
+			color : map-get( $themeCommon, _yellow);
+			transform:translateY(-50%);
+			@include media-breakpoint-down(sm) {
+				right:calc(100% + 20px);
+				font-size:rem(77);
+			}
+		}
+		&-state{
+			@include clear;
+			&--type-main{
+
+			}
+			&--type-sub{
+
+			}
+
+		}
+		&-chart{
+			&.c-tierchart{
+				font-size:rem(11);
+
+				.p-profile-media__info-state--type-main &{
+					padding:10px 0;
+					.c-tierchart{
+						&__data{
+							top:-10px;
+							font-size:rem(24);
+						}
+						&__bar-box{
+							height:16px;
+							margin-top:3px;
+						}
+					}
+				}
+				.p-profile-media__info-state--type-sub &{
+					box-sizing:border-box;
+					width:50%;
+					margin:6px 0;
+					.c-tierchart{
+						&__data{
+							position:static;
+							max-width:100%;
+							font-size:rem(18);
+						}
+						&__bar-box{
+							height:2px;
+							margin:4px 0;
+						}
+					}
+					&:nth-child(odd){
+						float:left;
+						clear:left;
+						padding-right:20px;
+						@include media-breakpoint-down(xs) {
+							padding-right:10px;
+						}
+					}
+					&:nth-child(even){
+						float:right;
+						clear:right;
+						padding-left:20px;
+						@include media-breakpoint-down(xs) {
+							padding-left:10px;
+						}
+
+						.c-tierchart__data{
+							color:#777777;
+						}
+					}
+				}
+			}
+		}
+
+
+	}
+	&__viewer{
+		float:left;
+		clear:left;
+		position:relative;
+		box-sizing:border-box;
+		width:67.7%;
+		height:255px;
+		padding: 30px 27px 0 24px;;
+		border-right-width:1px;
+		border-right-style:solid;
+		border-right-color: map-get($themeGridBorder , $theme);
+		@include media-breakpoint-down(sm) {
+			display:none;
+		}
+		&-header{
+			display:table;
+			width:100%;
+			.p-profile-media__follower-title{
+				display:inline-block;
+				color:map-get( $themeCommon, color );
+			}
+		}
+		&-box{
+			display:table-cell;
+		}
+		&-databox{
+			display:block;
+			color:map-get($themeColor , $theme);
+			.p-profile-media__viewer-box--type-follwer &{
+				display:inline-block;
+				padding-left:16px;
+				color:map-get( $themeColor, $theme);
+			}
+		}
+		&-data{
+			font-size:rem(34);
+			font-weight:700;
+			font-family: $font-roboto;
+			.p-profile-media__viewer-box--type-follwer &{
+				font-size:rem(18);
+				font-weight:400;
+			}
+		}
+		&-variation{
+			display:inline-block;
+			margin-left:8px;
+			font-size:rem(15);
+		}
+		&-chart{
+			position:absolute;
+			right:0;
+			bottom:0;
+			width:100%;
+			height:100%;
+			max-height:60%;
+
+		}
+	}
+	&__matches{
+		position:absolute;
+		box-sizing:border-box;
+		right:0;
+		top:0;
+		width:32.3%;
+		height:32.38%;
+		padding:30px 27px 0 24px;
+		padding-bottom:16px;
+		border-bottom-width:1px;
+		border-bottom-style:solid;
+		border-bottom-color: map-get($themeGridBorder , $theme);
+		@include media-breakpoint-down(sm) {
+			display:none;
+		}
+		&-chart{
+			height:84%;
+		}
+	}
+	&__matches-tooltip{
+		margin-left:8px;
+		color:map-get( $themeCommon , color );
+		vertical-align:-2px;
+	}
+
+
+}
+
+
+.p-profile-simple{
+	position:relative;
+	&__wrap{
+		@include clear;
+		@include shadow--roundBox;
+		padding-top:24px;
+
+	}
+	&__follower{
+		float:left;
+		position:relative;
+		box-sizing:border-box;
+		width:60%;
+		padding-bottom:24px;
+		padding-left:24px;
+		@include media-breakpoint-down(sm) {
+			float:none;
+			width:100%;
+			padding:0 20px 12px;
+			.c-cells__cell{
+				&:first-child{
+					display:table-caption;
+					padding-bottom:16px;
+					padding-left:60px;
+					.p-profile-simple__follower-data{
+						.p-profile-simple__follower-icon{
+							position:absolute;
+							left:-60px;
+							top:-20px;
+							font-size:48px;
+						}
+					}
+				}
+			}
+		}
+		&::after{
+			@include pseudo;
+			position:absolute;
+			right:0;
+			top:2px;
+			bottom:0;
+			width:1px;
+			background-color:map-get( $themeGridBorder, $theme );
+			@include media-breakpoint-down(sm) {
+				display:none;
+			}
+		}
+		&-data{
+			position:relative;
+			display:block;
+			margin-top:5px;
+			color: map-get( $themeColor, $theme );
+			font-size:rem(28);
+			font-weight:700;
+			font-family: $font-roboto;
+			@include media-breakpoint-down(xs) {
+				font-size:rem(22);
+			}
+		}
+		&-icon{
+			color: map-get( $themeCommon, color );
+			font-size:36px;
+			vertical-align:-8px;
+			@include media-breakpoint-down(sm) {
+				font-size:24px;
+				vertical-align:-4px;
+			}
+		}
+	}
+	&__mediatime{
+		float:left;
+		box-sizing:border-box;
+		width:40%;
+		padding-left:24px;
+		padding-right:24px;
+		&-data{
+			display:block;
+			margin-top:15px;
+			color:map-get( $themeColor, $theme );
+			font-size:rem(18);
+			font-family: $font-roboto;
+		}
+		&-hours{
+			display:inline-block;
+			margin-right:5px;
+			color: map-get( $themeCommon, color );
+			font-size:rem(13);
+			font-weight:400;
+		}
+		@include media-breakpoint-down(sm) {
+			float:none;
+			width:100%;
+			padding:16px 20px;
+			border-top-width:1px;
+			border-top-style:solid;
+			border-top-color:map-get( $themeGridBorder, $theme );
+
+		}
+	}
+
+
+}
+
+.p-profile-nav{
+	padding-top:30px;
+	@include media-breakpoint-down(sm) {
+		.c-tab__nav-item{
+			width:50%;
+			min-width:auto;
+		}
+	}
+
+}
+
+.p-profile-season{
+	padding-top:40px;
+	&__nav{
+		@include media-breakpoint-down(sm) {
+			font-size:0;
+			line-height:0;
+			white-space:nowrap;
+			overflow-x:auto;
+			-webkit-overflow-scrolling: touch;
+		}
+	}
+	&__notice{
+		margin-top:16px;
+		@include media-breakpoint-down(sm) {
+			display:none;
+		}
+	}
+	&__overall{
+		@include shadow--roundBox;
+		@include clear;
+		margin-top:24px;
+		&-main{
+			@include clear;
+			float:left;
+			display:table;
+			box-sizing:border-box;
+			width:42.2%;
+			@include media-breakpoint-down(sm) {
+				float:none;
+				width:100%;
+				border-bottom-width:1px;
+				border-bottom-style:solid;
+				border-bottom-color:map-get($themeElementBg , $theme	);
+			}
+		}
+		&-mainitem{
+			box-sizing:border-box;
+			display:table-cell;
+			padding:24px 5px 24px 24px;
+			&#{&}--type-teir{
+				position:relative;
+				padding-left:108px;
+				@include media-breakpoint-down(sm) {
+					padding-left:90px;
+				}
+				&::before{
+					@include pseudo;
+					position:absolute;
+					left:-1px;
+					bottom:0;
+					width:1px;
+					height:83px;
+					background-color:map-get($themeGridBorder, $theme);
+					@include media-breakpoint-down(sm) {
+						display:none;
+					}
+				}
+				.p-profile-season__overall-tierlogo{
+					position:absolute;
+					left:24px;
+					top:24px;
+					width:60px;
+					height:60px;
+					@include media-breakpoint-down(sm) {
+						position:absolute;
+						left:24px;
+						top:24px;
+						width:48px;
+						height:48px;
+					}
+				}
+
+			}
+			&#{&}--type-match{
+			}
+
+		}
+		&-maindata{
+			margin-top:5px;
+			color:map-get( $themeColor , $theme );
+			font-size:rem(28);
+			font-weight:700;
+			font-family: $font-roboto;
+			@include media-breakpoint-down(sm) {
+				font-size:rem(18);
+			}
+		}
+		&-sub{
+			float:left;
+			box-sizing:border-box;
+			width:57.8%;
+			padding:35px 10px 20px;
+			@include media-breakpoint-down(sm) {
+				float:none;
+				width:100%;
+				padding:12px 0 20px;
+			}
+		}
+		&-subcell{
+			padding:0 15px;
+			@include media-breakpoint-down(sm) {
+				padding:7px 20px;
+				&:first-child{
+					display:table-caption;
+				}
+			}
+		}
+	}
+
+	&__trend{
+		@include shadow--roundBox;
+		position:relative;
+		margin-top:16px;
+		padding:24px 24px;
+		background-color:map-get( $themeBg, $theme );
+		@include media-breakpoint-down(sm) {
+			display:none;
+		}
+		&-tab{
+			position:absolute;
+			top:24px;
+			left:50%;
+			transform:translateX(-50%);
+		}
+		&-select{
+			position:absolute;
+			top:24px;
+			right:24px;
+			max-width:140px;
+		}
+		&-chart{
+			height:200px;
+			margin-top:24px;
+		}
+		&-tooltip{
+			.c-tooltip__box{
+				bottom:calc(100% + 14px);
+			}
+
+		}
+	}
+
+	&__play{
+		margin-top:24px;
+		@include media-breakpoint-down(sm) {
+			margin-top:20px;
+		}
+		&-list{
+			display:table;
+			table-layout:fixed;
+			width:calc( 100% + 18px);
+			margin-left:-9px;
+			@include media-breakpoint-down(sm) {
+				width:100%;
+				margin-left:0px;
+			}
+		}
+		&-item{
+			display:table-cell;
+			padding:0 9px;
+			@include media-breakpoint-down(sm) {
+				display:block;
+				margin-top:16px;
+				padding:0;
+				&:first-child{
+					margin-top:0;
+				}
+			}
+		}
+	}
+}
+
+//.p-profile-season__play
+// contents depth가 깊어 따로 뽑아냄
+.p-play{
+	&__box{
+		@include shadow--roundBox;
+		overflow:hidden;
+	}
+	&__nodata{
+		@include text--flexCenter;
+		width:100%;
+		height:321px;
+		color:map-get( $themeCommon , color );
+		font-size:rem(13);
+		@include media-breakpoint-down(sm) {
+			font-size:rem(12);
+		}
+	}
+	&__subtitle{
+		color : map-get( $themeCommon, color);
+		font-size:rem(11);
+		font-weight:700;
+
+	}
+	&__data{
+		color : map-get( $themeColor, $theme);
+		font-size:rem(18);
+		font-weight:700;
+		font-family: $font-roboto;
+	}
+	&__header{
+		padding:31px 24px 23px 24px;
+		background-color:map-get( $themeElementBg, $theme );
+		@include media-breakpoint-down(sm) {
+			padding:22px 20px 13px 20px;
+		}
+		.p-play--type-solo &{
+			background-color:map-get( $themeCommon, solo );
+		}
+		.p-play--type-duo &{
+			background-color:map-get( $themeCommon, duo );
+		}
+		.p-play--type-squad &{
+			background-color:map-get( $themeCommon, squad );
+		}
+	}
+	&__type,
+	&__match{
+		display:inline-block;
+		color:map-get( $themeColor, $theme );
+		font-size:rem(15);
+		font-weight:700;
+		@include media-breakpoint-down(sm) {
+			font-size:rem(14);
+		}
+		.p-play--type-solo &,
+		.p-play--type-duo &,
+		.p-play--type-squad &{
+			color :map-get( $themeCommon, _white );
+		}
+	}
+	&__type{
+		width:38%;
+		text-align:left;
+	}
+	&__match{
+		width:60%;
+		text-align:right;
+		&-data{
+			@include media-breakpoint-down(sm) {
+				font-size:rem(15);
+			}
+		}
+		&-name{
+			display:inline-block;
+			padding-left:4px;
+			color: map-get( $themeCommon, color );
+			font-size:rem(13);
+			font-weight:400;
+			@include media-breakpoint-down(sm) {
+				font-size:rem(13);
+			}
+			.p-play--type-solo &,
+			.p-play--type-duo &,
+			.p-play--type-squad &{
+				color: #e4e4e4;
+			}
+		}
+	}
+	&__body{
+		padding:15px 24px 0;
+	}
+	&__tier{
+		position:relative;
+		min-height:87px;
+		padding-left:120px;
+		padding-bottom:7px;
+		@include media-breakpoint-down(sm) {
+			padding-left:164px;
+			min-height:auto;
+		}
+		&-logo{
+			position:absolute;
+			left:10px;
+			top:-41px;
+			@include media-breakpoint-down(xs) {
+				top:-30px;
+			}
+		}
+		&-mark{
+			position:relative;
+			left:0;
+			top:0;
+			display:block;
+			font-size:127px;
+			line-height:0;
+			.p-play--type-solo &{
+			color:map-get( $themeCommon, solo );
+			}
+			.p-play--type-duo &{
+				color:map-get( $themeCommon, duo );
+			}
+			.p-play--type-squad &{
+				color:map-get( $themeCommon, squad );
+			}
+		}
+		&-img{
+			position:absolute;
+			left:12px;
+			right:24px;
+			bottom:13px;
+			max-width:100%;
+			z-index:1;
+		}
+		&-winrate{
+			position:absolute;
+			left:63px;
+			top:84px;
+			color: map-get($themeCommon, _black);
+			font-size:rem(67);
+			line-height:1;
+			@include media-breakpoint-down(sm) {
+				left:0px;
+				top:90px;
+			}
+		}
+		&-winratedata{
+			position:absolute;
+			left:48px;
+			top:34px;
+			font-size:rem(18);
+			font-weight:700;
+			font-family: $font-roboto;
+			transform:rotate(-10deg);
+		}
+		&-name{
+			display:block;
+		}
+		&-title{
+			display:block;
+			font-size:24px;
+			font-family:$font-openSans;
+			@include media-breakpoint-down(sm) {
+				font-size:rem(18);
+			}
+		}
+		&-ratio{
+			display:table;
+			table-layout:fixed;
+			box-sizing:border-box;
+			width:100%;
+			padding-bottom:11px;
+			border-bottom-width:1px;
+			border-bottom-style:solid;
+			border-bottom-color: map-get($themeGridBorder, $theme);
+			@include media-breakpoint-down(sm) {
+				padding-left:164px;
+			}
+		}
+		&-ratioitem{
+			display:table-cell;
+			padding-left:20px;
+			&:first-child{
+				padding-left:0;
+			}
+			@include media-breakpoint-down(xs) {
+				display:block;
+				padding-left:0;
+			}
+		}
+		&-data{
+			font-size:rem(24);
+			@include media-breakpoint-down(sm) {
+				font-size:rem(18);
+			}
+		}
+	}
+	&__footer{
+		&-list{
+			@include clear;
+			padding:19px 24px 23px;
+			@include media-breakpoint-down(sm) {
+				padding:16px 20px 16px;
+			}
+		}
+		&-item{
+			box-sizing:border-box;
+			display:table;
+			width:50%;
+			padding:5px 0;
+			&:nth-child(odd){
+				float:left;
+				clear:left;
+				padding-right:19px;
+				@include media-breakpoint-down(xs) {
+					padding-right:10px;
+				}
+			}
+			&:nth-child(even){
+				float:right;
+				clear:right;
+				padding-left:19px;
+				@include media-breakpoint-down(xs) {
+					padding-left:10px;
+				}
+			}
+		}
+		&-title,
+		&-data{
+			display:table-cell;
+			vertical-align:middle;
+		}
+		&-title{
+			padding-top:2px;
+			font-size:rem(11);
+			vertical-align:top;
+		}
+		&-data{
+			text-align:right;
+		}
+
+
+	}
+
+}
+
+.p-profile-record{
+	float:left;
+	width:714px;
+	@include media-breakpoint-down(sm) {
+		float:none;
+		width:100%;
+	}
+	&__titlebox{
+		@include shadow--roundBox;
+		position:relative;
+		padding:31px 200px 23px 23px;
+		@include media-breakpoint-down(sm) {
+			margin-bottom:6px;;
+			padding:20px;
+		}
+	}
+	&__title{
+
+	}
+	&__reload{
+		position:absolute;
+		right:15px;
+		top:31px;
+		@include media-breakpoint-down(sm) {
+			display:none;
+		}
+	}
+	&__calendar{
+		&-list{
+			@include clear;
+			margin:0 -8px;
+			padding-top:28px;
+			@include media-breakpoint-down(sm) {
+				margin:0 -4px;
+				padding-top:2px;
+			}
+		}
+		&-item{
+			float:left;
+			box-sizing:border-box;
+			padding:8px;
+			width:20%;
+			&:nth-child(5n+1){
+				clear:left;
+			}
+			@include media-breakpoint-down(sm) {
+				padding:4px;
+				width:33.3%;
+				&:nth-child(5n+1){
+					clear:none;
+				}
+				&:nth-child(3n+1){
+					clear:left;
+				}
+			}
+			@include media-breakpoint-down(xs) {
+				padding:4px;
+				width:50%;
+				&:nth-child(5n+1),
+				&:nth-child(3n+1){
+					clear:none;
+				}
+				&:nth-child(2n+1){
+					clear:left;
+				}
+			}
+		}
+	}
+
+}
+
+.p-calendar{
+	&__item{
+		@include shadow--roundBox;
+		position:relative;
+		text-align:center;
+		border-width:0;
+		border-style:solid;
+		background-color:map-get($themeBg, $theme);
+		&::before{
+			@include pseudo();
+			padding-bottom:100%;
+		}
+		&-inner{
+			position:absolute;
+			left:0;
+			top:0;
+			box-sizing:border-box;
+			width:100%;
+			height:100%;
+			padding-top:30px;
+			@include media-breakpoint-down(sm) {
+				@include text--flexCenter;
+				padding-top:0;
+			}
+		}
+		&--play-solo,
+		&--play-duo,
+		&--play-squad{
+			border-width:2px;
+		}
+		&--play-solo{
+			border-color:map-get( $themeCommon , solo);
+		}
+		&--play-duo{
+			border-color:map-get( $themeCommon , duo);
+		}
+		&--play-squad{
+			border-color:map-get( $themeCommon , squad);
+		}
+		&--play-defeat{
+			border-width:1px;
+			border-color:map-get( $themeCalendarColor , $theme);
+			background-color:map-get( $themeElementBg , $theme);
+		}
+		&--play-matches{
+			border-width:2px;
+			border-color:transparent;
+			background-color:map-get( $themeBg , $theme);;
+		}
+
+	}
+	&__days{
+		border-width:1px;
+		border-color:map-get( $themeCalendarColor , $theme);
+		background-color:transparent;
+		color:map-get( $themeCalendarColor , $theme);
+		font-weight:700;
+		font-family: $font-roboto;
+		.p-calendar__item-inner{
+			padding:15px 0;
+		}
+		&-month{
+			width:100%;
+			font-size:rem(18);
+			@include media-breakpoint-down(sm) {
+				font-size:rem(14);
+			}
+		}
+		&-day{
+			width:100%;
+			font-size:rem(36);
+			@include media-breakpoint-down(sm) {
+				font-size:rem(28);
+			}
+		}
+		&-week{
+			width:100%;
+			font-size:rem(14);
+			@include media-breakpoint-down(sm) {
+				font-size:rem(12);
+			}
+		}
+	}
+	&__play{
+		position:absolute;
+		left:-2px;
+		top:-2px;
+		box-sizing:border-box;
+		min-width:45px;
+		padding:3px 0 3px 8px;
+		border-radius:4px 0 4px 0;
+		background-color:map-get( $themeCommon, _black );
+		color:map-get( $themeCommon, _white );
+		font-size:rem(11);
+		font-family: $font-roboto;
+		text-align:left;
+		.p-calendar__item--play-solo &{
+			background-color:map-get( $themeCommon , solo);
+			&::before{
+				background-color:map-get( $themeCommon , solo);
+			}
+		}
+		.p-calendar__item--play-duo &{
+			background-color:map-get( $themeCommon , duo);
+			&::before{
+				background-color:map-get( $themeCommon , duo);
+			}
+		}
+		.p-calendar__item--play-squad &{
+			background-color:map-get( $themeCommon , squad);
+			&::before{
+				background-color:map-get( $themeCommon , squad);
+			}
+		}
+		.p-calendar__item--play-defeat &{
+			left:-1px;
+			top:-1px;
+			background-color:map-get( $themeCalendarColor , $theme);
+		}
+		.p-calendar__item--play-matches &{
+			left:0;
+			top:0;
+			padding-left:25px;
+			background-color:transparent;
+			color:map-get( $themeColor , $theme);
+			font-weight:700;
+			&::before{
+				@include pseudo;
+				@include roundcircle;
+				position:absolute;
+				left:9px;
+				top:50%;
+				width:8px;
+				height:8px;
+				margin-top:-5px;
+			}
+		}
+	}
+	&__title{
+		width:100%;
+		color:map-get( $themeColor , $theme);
+		font-size:rem(14);
+		font-weight:700;
+		font-family: $font-roboto;
+		.p-calendar__item--play-defeat &{
+			color:map-get( $themeCommon , color);
+		}
+		@include media-breakpoint-down(sm) {
+			margin-top:10px;
+		}
+	}
+	&__ago{
+		margin-top:4px;
+		color:map-get( $themeCommon , color);
+		font-size:rem(11);
+		@include media-breakpoint-down(sm) {
+			margin-top:2px;
+		}
+	}
+	&__data{
+		display:table;
+		table-layout:fixed;
+		width:100%;
+		box-sizing:border-box;
+		padding-top:8px;
+		&-item{
+			display:table-cell;
+
+			&#{&}--type-kill{
+				text-align:right;
+				padding-right:16px;
+			}
+			&#{&}--type-score{
+				text-align:center;
+				padding-right:8px;
+			}
+		}
+		&-content{
+			display:block;
+			font-size:rem(18);
+			font-weight:700;
+			font-family: $font-roboto;
+			color:map-get( $themeColor , $theme);
+			@include media-breakpoint-down(sm) {
+				font-size:rem(12);
+			}
+			.p-calendar__item--play-defeat &{
+				color:map-get( $themeCommon , color);
+			}
+
+		}
+		&-title{
+			display:block;
+			color:map-get( $themeCommon , color);
+			font-size:rem(11);
+
+		}
+
+
+	}
+
+
+
+
+}
+
+.p-profile-popular{
+	@include shadow--roundBox;
+	float:right;
+	box-sizing:border-box;
+	width:348px;
+	padding:31px 24px 24px;
+	@include media-breakpoint-down(sm) {
+		float:none;
+		display:none;
+	}
+	&__list{
+		margin-top:24px;
+	}
+	&__item{
+		margin-top:24px;
+		&:first-child{
+			margin-top:0;
+		}
+	}
+}
+
+

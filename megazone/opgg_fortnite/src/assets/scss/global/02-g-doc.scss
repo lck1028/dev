@@ -1,0 +1,14 @@
+[lang|=ko]{ font-family: $font-malgun; }
+[lang|=en]{ font-family: $font-openSans; }
+
+html{
+	font-size: $base-font-size;
+	line-height: $base-line-height;
+	letter-spacing:$base-letter-spacing;
+	-webkit-font-smoothing: antialiased;
+}
+body{
+	background-color:map-get($themeBgDoc,$theme);
+	color:$base-color;
+	font-weight:400;
+}

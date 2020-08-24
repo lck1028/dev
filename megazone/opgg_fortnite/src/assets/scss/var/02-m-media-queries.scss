@@ -1,0 +1,15 @@
+// 부트스트랩 breakpoints overried 하여 사용
+// http://bootstrap4.kr/docs/4.0/layout/overview/ 참고
+//
+// @include media-breakpoint-down(md) {}
+// @include media-breakpoint-up(md) {}
+//
+$grid-breakpoints: (
+  xs: 0,
+  sm: 321px,
+  md: 768px,
+  lg: 960px,
+  xl: 1080px,
+  xxl: 1920px,
+  xxxl: 2460px
+) !default;

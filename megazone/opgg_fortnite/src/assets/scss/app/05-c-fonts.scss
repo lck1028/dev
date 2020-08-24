@@ -1,0 +1,18 @@
+.c-fonts{
+	&--align-left{
+		text-align:left;
+	}
+	&--align-center{
+		text-align:center;
+	}
+	&--align-right{
+		text-align:right;
+	}
+	&--state-plus{
+		color:map-get( $themeCommon, plus );
+	}
+	&--state-minus{
+		color:map-get( $themeCommon, minus );
+	}
+}
+
