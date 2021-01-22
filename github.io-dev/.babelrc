@@ -1,0 +1,9 @@
+/*
+ * @babel/plugin-transform-runtime 추가
+ * gulpfile.babel.js 에서 async, await 오류로 인해 추가함
+ */
+
+{
+  "presets": ["@babel/preset-env"],
+  "plugins": ["@babel/plugin-transform-runtime"]
+}

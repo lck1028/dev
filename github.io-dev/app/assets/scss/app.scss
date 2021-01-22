@@ -1,0 +1,12 @@
+$red : red;
+$blue : blue;
+
+@import './etc/test';
+
+html{}
+body{
+    background-color:$red;
+}
+p{
+    color:#000000;
+}

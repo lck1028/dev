@@ -1,0 +1,1 @@
+{"version":3,"file":"../app.css","sources":["app.scss","etc/test.scss"],"sourcesContent":["$red : red;\n$blue : blue;\n\n@import './etc/test';\n\nbody{\n    background-color:$red;\n}","\n\n.test{\n    color:$red;\n}"],"names":[],"mappings":"ACEA,AAAA,KAAK,CAAA;EACD,KAAK,EDHF,GAAG;CCIT;;ADCD,AAAA,IAAI,CAAA;EACA,gBAAgB,EANb,GAAG;CAOT"}
