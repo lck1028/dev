@@ -1,10 +1,22 @@
+/* line 3, app/assets/scss/etc/test.scss */
 .test {
-  color: red;
+	color: red;
+	background-color: blue;
 }
 
+/* line 7, app/assets/scss/etc/test.scss */
+p {
+	font-size: 3331222px;
+}
 
+/* line 11, app/assets/scss/app.scss */
+p {
+	color: #000000;
+}
+
+/* line 14, app/assets/scss/app.scss */
 body {
-  background-color: red;
+	background-color: yellow;
 }
 
 /*# sourceMappingURL=maps/app.css.map */

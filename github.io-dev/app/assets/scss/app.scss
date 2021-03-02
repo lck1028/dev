@@ -1,12 +1,16 @@
-$red : red;
-$blue : blue;
+$red: red;
+$blue: blue;
 
-@import './etc/test';
+@import "./etc/test";
 
-html{}
-body{
-    background-color:$red;
+html {
 }
-p{
-    color:#000000;
+body {
+  //background-color: $red;
+}
+p {
+  color: #000000;
+}
+body {
+  background-color: yellow;
 }

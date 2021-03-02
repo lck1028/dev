@@ -4,6 +4,10 @@
  */
 
 {
-  "presets": ["@babel/preset-env"],
-  "plugins": ["@babel/plugin-transform-runtime"]
+  // "presets": ["@babel/env"],
+  // "plugins": [
+  //   ["@babel/plugin-transform-runtime"]
+  //   // ["@babel/plugin-transform-modules-commonjs"],
+  //   // ["@babel/helpers"]
+  // ]
 }

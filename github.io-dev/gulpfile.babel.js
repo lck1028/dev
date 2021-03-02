@@ -31,6 +31,33 @@ const browserSyncOption = {
   },
 };
 
+const babelOption = {
+  plugins: [
+    [
+      "@babel/plugin-transform-runtime",
+      {
+        absoluteRuntime: true,
+        corejs: false,
+        helpers: true,
+        regenerator: true,
+        useESModules: true,
+        version: "7.0.0-beta.0",
+      },
+    ],
+  ],
+
+  presets: [
+    [
+      "@babel/preset-env",
+      {
+        targets: {
+          esmodules: true,
+        },
+      },
+    ],
+  ],
+};
+
 const scssOption = {
   outputStyle: "expanded",
   indentType: "tab",
@@ -50,8 +77,8 @@ const serverInit = (cb) => {
   cb();
 };
 const serve = (cb) => {
-  series(serverInit, watchHtml)();
-  cb();
+  //추가필요시 사용함
+  series(serverInit, parallel(watchHtml, watchScss))();
 };
 
 const defaultTask = (cb) => {
@@ -59,32 +86,27 @@ const defaultTask = (cb) => {
   cb();
 };
 
-const test = (cb) => {
-  console.log(`test`);
-
-  cb();
-};
-
 const watchHtml = (cb) => {
   const ignore = [`!./app/assets/**/*.html`];
-  watch([`./app/**/*.html`, ...ignore], () => {}).on(
-    "change",
-    (path, stats) => {
-      serverReload();
-    }
-  );
+  watch([`./app/**/*.html`, ...ignore], () => {
+    cb();
+  }).on("change", (path, stats) => {
+    console.log("watchHtmlReload");
+    serverReload();
+  });
 };
 
 const watchScss = (cb) => {
-  watch([`./app/assets/scss/**/*.scss`], () => {}).on(
-    "change",
-    (path, stats) => {
-      serverReload();
-    }
-  );
+  watch([`./app/assets/scss/**/*.scss`], () => {
+    cb();
+  }).on("change", (path, stats) => {
+    console.log("watchScssReload");
+    convertScss();
+    serverReload();
+  });
 };
 
-const convertScss = () => {
+const convertScss = (cb) => {
   return src(`./app/assets/scss/app.scss`)
     .pipe(sourcemaps.init())
     .pipe(scss.sync(scssOption).on("error", scss.logError))
@@ -92,13 +114,36 @@ const convertScss = () => {
     .pipe(dest(`./app/assets/css/`));
 };
 
+const gulpBabel = (cb) => {
+  console.log("gulpBabel");
+  return (
+    src(`./app/assets/js/app.js`)
+      //.pipe(sourcemaps.init())
+      .pipe(babel())
+      .pipe(rename("build.js"))
+      //.pipe(sourcemaps.write("."))
+
+      .pipe(dest(`./app/assets/js/`))
+  );
+};
+
 exports.watchHtml = watchHtml;
 exports.watchScss = watchScss;
 exports.scss = convertScss;
-exports.serve = serve;
+//exports.serve = serve;
+exports.serve = series(serverInit, parallel(watchHtml, watchScss));
 
 exports.dist = null;
 exports.build = null;
 
 exports.default = defaultTask;
-exports.test = test;
+
+const test = (cb) => {
+  console.log(`test`);
+
+  cb();
+};
+
+exports.test = gulpBabel;
+
+exports.test1 = series(watchScss, convertScss);
